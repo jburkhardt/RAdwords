@@ -1,0 +1,71 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+AttributeValues,Attribute Values,attributeValues,List,,Attribute,
+ValidationDetails,Approval Status,approvalStatus,List,,Attribute,
+AccountCurrencyCode,Currency,currency,String,,Attribute,
+AccountDescriptiveName,Account,account,String,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+"
+AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
+AdGroupName,Ad group,adGroup,String,,Attribute,
+AdId,Ad ID,adID,Long,,Attribute,
+AdNetworkType1,Network,network,AdNetworkType1,,Segment,
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
+AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,,Metric,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+CampaignName,Campaign,campaign,String,,Attribute,
+Clicks,Clicks,clicks,Long,,Metric,
+ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+"
+ConversionCategoryName,Conversion category,conversionCategory,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
+"
+ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Conversions,Converted clicks,convertedClicks,Long,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
+ConversionTypeName,Conversion name,conversionName,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
+"
+ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+Cost,Cost,cost,Money,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
+Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+CustomerDescriptiveName,Client name,clientName,String,,Attribute,
+Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+"
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+"
+Device,Device,device,DeviceType,,Segment,"Prevents zero-impression rows from being returned.
+"
+DevicePreference,Device preference,devicePreference,FeedItemDevicePreference,,Attribute,
+ExternalCustomerId,Customer ID,customerID,Long,,Attribute,
+FeedId,Feed ID,feedID,Long,,Attribute,
+FeedItemId,Feed item ID,feedItemID,Long,,Attribute,
+Impressions,Impressions,impressions,Long,,Metric,
+IsSelfAction,This extension vs. Other,thisExtensionVsOther,Boolean,,Attribute,
+Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+"
+PlaceholderType,Feed placeholder type,feedPlaceholderType,Integer,,Attribute,
+PrimaryCompanyName,Company name,companyName,String,,Attribute,
+PrimaryUserLogin,Login email,loginEmail,String,,Attribute,
+Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Slot,Top vs. side,topVsSide,Slot,,Segment,
+Status,Feed item status,feedItemStatus,Status,,Attribute,
+TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
+Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
+"

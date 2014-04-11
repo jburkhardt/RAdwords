@@ -1,0 +1,32 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
+AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+Clicks,Clicks,clicks,Long,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Conversions,Converted clicks,convertedClicks,Long,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
+ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+Cost,Cost,cost,Money,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
+CriteriaDestinationUrl,Keyword/Placement destination URL,keywordPlacementDestinationURL,String,,Attribute,"In the Destination URL report, this field behaves as a segment.
+"
+Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+DestinationUrl,Keyword/Placement destination URL,keywordPlacementDestinationURL,String,,Attribute,
+Id,Criterion ID,criterionID,Long,,Attribute,
+Impressions,Impressions,impressions,Long,,Metric,
+IsNegative,Is negative,isNegative,Boolean,,Attribute,"Prevents zero-impression rows from being returned in Ad Performance Report.
+"
+TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,

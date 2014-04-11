@@ -1,0 +1,37 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,,Attribute,
+AccountDescriptiveName,Account,account,String,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+"
+AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
+AdGroupName,Ad group,adGroup,String,,Attribute,
+AdNetworkType1,Network,network,AdNetworkType1,,Segment,
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+CampaignName,Campaign,campaign,String,,Attribute,
+ConversionRate,Free click rate,freeClickRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Conversions,Free clicks,freeClicks,Long,,Metric,
+ConversionTrackerId,Free click type,freeClickType,Long,,Attribute,
+CreativeId,Ad ID,adID,Long,,Attribute,
+CriteriaParameters,Keyword / Placement,keywordPlacement,String,,Attribute,"In the Destination URL report, this field behaves as a segment.
+"
+CriteriaTypeName,Match type,matchType,String,,Attribute,
+CriterionId,Keyword ID,keywordID,Long,,Attribute,
+CustomerDescriptiveName,Client name,clientName,String,,Attribute,
+Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+"
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+"
+ExternalCustomerId,Customer ID,customerID,Long,,Attribute,
+Impressions,Impressions,impressions,Long,,Metric,
+Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+PrimaryCompanyName,Company name,companyName,String,,Attribute,
+PrimaryUserLogin,Login email,loginEmail,String,,Attribute,
+Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
+"

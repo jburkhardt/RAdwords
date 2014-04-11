@@ -1,0 +1,38 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+BudgetReferenceCount,# Campaigns,campaigns,Integer,,Metric,
+DeliveryMethod,Delivery method,deliveryMethod,BudgetDeliveryMethod,,Attribute,
+Period,Budget period,budgetPeriod,BudgetPeriod,,Segment,
+Amount,Budget,budget,Money,,Attribute,
+AssociatedCampaignId,Campaign ID,campaignID,Long,,Attribute,
+AssociatedCampaignName,Campaign,campaign,String,,Attribute,
+AssociatedCampaignStatus,Campaign state,campaignState,CampaignStatus,,Attribute,
+AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,,Metric,
+BudgetCampaignAssociationStatus,Budget usage,budgetUsage,BudgetCampaignAssociationStatus,,Segment,
+BudgetId,Budget ID,budgetID,Long,,Attribute,
+BudgetName,Budget Name,budgetName,String,,Attribute,
+BudgetStatus,Budget state,budgetState,BudgetStatus,,Attribute,
+Clicks,Clicks,clicks,Long,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Conversions,Converted clicks,convertedClicks,Long,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
+ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+Cost,Cost,cost,Money,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
+Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Impressions,Impressions,impressions,Long,,Metric,
+IsBudgetExplicitlyShared,Explicitly shared,explicitlyShared,Boolean,,Attribute,
+TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,

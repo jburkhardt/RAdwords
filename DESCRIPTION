@@ -1,0 +1,19 @@
+Package: RAdwords
+Tyoe: Package
+Title: RAdwords: Getting Adwords data into R
+Description: The aim of RAdwords is getting Adwords data into R. Therefore the
+    package implements three main features. First, the package provides an
+    authentication process for R with the Adwords API via OAUTH2. Second, the
+    package offers an interface to apply the Adwords query language in R and
+    query the Adwords API with ad-hoc reports. Third, the received data are
+    transformed into suitable data formats for further data processing and data
+    analysis.
+Version: 0.1
+Author: Johannes Burkhardt <johannes.burkhardt@gmail.com>
+Maintainer: Johannes Burkhardt <johannes.burkhardt@gmail.com>
+Depends:
+    R (>= 3.0.3),
+    RCurl,
+    rjson
+License: MIT + file LICENSE
+URL: https://github.com/jburkhardt/RAdwords

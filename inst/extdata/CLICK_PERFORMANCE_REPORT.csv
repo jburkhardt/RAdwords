@@ -1,0 +1,29 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+Page,Page,page,Integer,,Segment,
+AdFormat,Ad type,adType,AdFormat,,Segment,
+AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
+AdNetworkType1,Network,network,AdNetworkType1,,Segment,
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+CityCriteriaId,City,city,Integer,,Segment,"Name of the city as a string.
+"
+ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+"
+CountryCriteriaId,Country/Territory,countryTerritory,Integer,,Segment,"Name of the country as a string.
+"
+CreativeId,Ad ID,adID,Long,,Attribute,
+CriteriaId,Keyword ID,keywordID,Long,,Attribute,
+CriteriaParameters,Keyword / Placement,keywordPlacement,String,,Attribute,"In the Destination URL report, this field behaves as a segment.
+"
+Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+"
+Device,Device,device,DeviceType,,Segment,"Prevents zero-impression rows from being returned.
+"
+GclId,Google Click ID,googleClickID,String,,Attribute,
+MetroCriteriaId,Metro area,metroArea,Integer,,Segment,"Name of the metro as a string.
+"
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+"
+RegionCriteriaId,Region,region,Integer,,Segment,"Name of the region as a string.
+"
+Slot,Top vs. side,topVsSide,Slot,,Segment,

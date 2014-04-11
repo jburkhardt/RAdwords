@@ -1,0 +1,50 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
+AdGroupName,Ad group,adGroup,String,,Attribute,
+AverageCpc,Ad Avg. CPC,adAvgCPC,Money,,Metric,
+AveragePosition,Ad Avg. position,adAvgPosition,Double,,Metric,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+CampaignName,Campaign,campaign,String,,Attribute,
+Clicks,Ad Clicks,adClicks,Long,,Metric,
+CombinedAdsOrganicClicks,Combined Clicks,combinedClicks,Long,,Metric,
+CombinedAdsOrganicClicksPerQuery,Combined Clicks/Query,combinedClicksQuery,Double,,Metric,
+CombinedAdsOrganicQueries,Combined Queries,combinedQueries,Long,,Metric,
+Ctr,Ad CTR,adCTR,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+"
+Impressions,Ad Impressions,adImpressions,Long,,Metric,
+KeywordId,Keyword ID,keywordID,long,,Attribute,"In the Ad Performance Report this field contains the ID of the criterion that triggered the ad, segmenting the report and preventing zero impressions. The ID can be for any type of criterion, including placements, verticals, etc. Cross-reference with the Criteria Report to determine the criteria type and details.
+"
+KeywordTextMatchingQuery,Keyword,keyword,String,,Attribute,
+MatchType,Match type,matchType,QueryMatchType,"AUTO / auto
+BROAD / broad
+BROAD_SESSION / broad (session-based)
+EXACT / exact
+EXPANDED / broad
+PHRASE / phrase
+",Attribute,"Predicate values / display values:
+AUTO / auto
+BROAD / broad
+BROAD_SESSION / broad (session-based)
+EXACT / exact
+EXPANDED / broad
+PHRASE / phrase
+"
+OrganicAveragePosition,Organic Average Position,organicAveragePosition,Double,,Metric,
+OrganicClicks,Organic Clicks,organicClicks,Long,,Metric,
+OrganicClicksPerQuery,Organic Clicks/Query,organicClicksQuery,Double,,Metric,
+OrganicImpressions,Organic Listings,organicListings,Long,,Metric,
+OrganicImpressionsPerQuery,Organic Listings/Query,organicListingsQuery,Double,,Metric,
+OrganicQueries,Organic Queries,organicQueries,Long,,Metric,
+SearchQuery,Query,query,String,,Segment,
+SerpType,Search Result Type,searchResultType,SerpType,"UNKNOWN / unknown
+ADS_ONLY / Ad shown only
+ORGANIC_ONLY / Organic shown only
+ADS_AND_ORGANIC / Both shown
+",Segment,"Predicate values / display values:
+UNKNOWN / unknown
+ADS_ONLY / Ad shown only
+ORGANIC_ONLY / Organic shown only
+ADS_AND_ORGANIC / Both shown
+"

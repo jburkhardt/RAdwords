@@ -1,0 +1,65 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
+AdGroupName,Ad group,adGroup,String,,Attribute,
+AggregatorId,MCA Id,mCAId,Long,,Segment,
+AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
+Brand,Brand,brand,String,,Segment,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+CampaignName,Campaign,campaign,String,,Attribute,
+CategoryL1,Category (1st level),category1stLevel,String,,Segment,
+CategoryL2,Category (2nd level),category2ndLevel,String,,Segment,
+CategoryL3,Category (3rd level),category3rdLevel,String,,Segment,
+CategoryL4,Category (4th level),category4thLevel,String,,Segment,
+CategoryL5,Category (5th level),category5thLevel,String,,Segment,
+Clicks,Clicks,clicks,Long,,Metric,
+ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+"
+ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Conversions,Converted clicks,convertedClicks,Long,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
+ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+Cost,Cost,cost,Money,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
+CountryCriteriaId,Country/Territory,countryTerritory,Integer,,Segment,"Name of the country as a string.
+"
+Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+CustomAttribute0,Custom label 0,customLabel0,String,,Segment,
+CustomAttribute1,Custom label 1,customLabel1,String,,Segment,
+CustomAttribute2,Custom label 2,customLabel2,String,,Segment,
+CustomAttribute3,Custom label 3,customLabel3,String,,Segment,
+CustomAttribute4,Custom label 4,customLabel4,String,,Segment,
+Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+"
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+"
+Impressions,Impressions,impressions,Long,,Metric,
+LanguageCriteriaId,Language,language,Integer,,Segment,
+MerchantId,MC Id,mCId,Long,,Segment,
+Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+OfferId,Item Id,itemId,String,,Segment,
+ProductCondition,Condition,condition,ShoppingProductCondition,,Segment,
+ProductTypeL1,Product type (1st level),productType1stLevel,String,,Segment,
+ProductTypeL2,Product type (2nd level),productType2ndLevel,String,,Segment,
+ProductTypeL3,Product type (3rd level),productType3rdLevel,String,,Segment,
+ProductTypeL4,Product type (4th level),productType4thLevel,String,,Segment,
+ProductTypeL5,Product type (5th level),productType5thLevel,String,,Segment,
+Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+StoreId,Store Id,storeId,String,,Segment,
+TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
+Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
+"

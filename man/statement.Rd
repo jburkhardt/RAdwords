@@ -1,0 +1,49 @@
+\name{statement}
+\alias{statement}
+\title{Build Adwords Query Language Statement}
+\usage{
+statement(select = c("AccountDescriptiveName", "AccountId", "Impressions",
+  "Clicks", "Cost", "Date"), report = "ACCOUNT_PERFORMANCE_REPORT", where,
+  start = "20120101", end = "20120110")
+}
+\arguments{
+  \item{select}{Attributes}
+
+  \item{report}{Report type}
+
+  \item{where}{Condition list, e.g. "CampaignName
+  STARTS_WITH 'A' AND Clicks > 100", multiple conditions
+  can be only combined with AND Operators: = | != | > | >=
+  | < | <= | IN | NOT_IN | STARTS_WITH |
+  STARTS_WITH_IGNORE_CASE | CONTAINS | CONTAINS_IGNORE_CASE
+  | DOES_NOT_CONTAIN | DOES_NOT_CONTAIN_IGNORE_CASE}
+
+  \item{start}{Beginning of date range. Format: 20120101}
+
+  \item{end}{End of date rage. Format: 20120110}
+}
+\value{
+The statement neccessary for the \code{\link{getData}}
+function.
+}
+\description{
+Generates and builds the Adwords Query Language Statement
+for querying the Adwords API.
+}
+\examples{
+body <- statement(select=c('CampaignName','Clicks','Cost','Ctr'),
+                  report="CAMPAIGN_PERFORMANCE_REPORT",
+                  where="CampaignName STARTS_WITH 'A' AND Clicks > 100",
+                  start="20140320",
+                  end="20140321")
+body <- statement(select=c('KeywordText','Clicks','Cost','Ctr'),
+                  report="KEYWORDS_PERFORMANCE_REPORT",
+                  where="Clicks > 100",
+                  start="20140320",
+                  end="20140321")
+body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr','ConversionRate'),
+                  report="ACCOUNT_PERFORMANCE_REPORT",
+                  start="20140320",
+                  end="20140321")
+}
+

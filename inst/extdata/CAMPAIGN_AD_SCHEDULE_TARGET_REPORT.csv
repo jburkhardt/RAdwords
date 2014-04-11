@@ -1,0 +1,43 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,,Metric,
+BidModifier,Bid adj.,bidAdj,Double,,Metric,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+CampaignName,Campaign,campaign,String,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,,Attribute,
+Clicks,Clicks,clicks,Long,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Conversions,Converted clicks,convertedClicks,Long,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
+ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+Cost,Cost,cost,Money,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
+Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+"
+Id,Ad Schedule,adSchedule,Long,,Attribute,
+Impressions,Impressions,impressions,Long,,Metric,
+Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+"
+Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,
+Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
+"

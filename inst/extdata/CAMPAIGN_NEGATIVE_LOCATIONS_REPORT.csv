@@ -1,0 +1,5 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+Id,Location,location,Long,,Attribute,
+IsNegative,Is negative,isNegative,Boolean,,Attribute,"Prevents zero-impression rows from being returned in Ad Performance Report.
+"

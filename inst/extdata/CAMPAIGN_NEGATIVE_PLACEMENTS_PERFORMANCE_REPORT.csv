@@ -1,0 +1,11 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+UserListId,Exclusion,exclusion,Long,,Attribute,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+DisplayName,Criteria Display Name,criteriaDisplayName,String,,Attribute,
+Id,Keyword ID,keywordID,Long,,Attribute,
+IsNegative,Is negative,isNegative,Boolean,,Attribute,"Prevents zero-impression rows from being returned in Ad Performance Report.
+"
+KeywordMatchType,Match type,matchType,KeywordMatchType,,Attribute,
+KeywordText,Exclusion,exclusion,String,,Attribute,"Only use with the Keywords report.
+"
+PlacementUrl,Exclusion,exclusion,String,,Attribute,

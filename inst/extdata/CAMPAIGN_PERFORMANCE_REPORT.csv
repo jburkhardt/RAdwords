@@ -1,0 +1,148 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+ConversionRateManyPerClickSignificance,Conversion rate ACE indicator,conversionRateACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+ConversionRateSignificance,Click conversion rate ACE indicator,clickConversionRateACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+Period,Budget period,budgetPeriod,BudgetPeriod,,Segment,
+ViewThroughConversionsSignificance,View-through conv. ACE indicator,viewThroughConvACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+AccountCurrencyCode,Currency,currency,String,,Attribute,
+AccountDescriptiveName,Account,account,String,,Attribute,
+AccountId,Account ID,accountID,Integer,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+"
+AdNetworkType1,Network,network,AdNetworkType1,,Segment,
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
+AdvertiserExperimentSegmentationBin,ACE split,aCESplit,AdvertiserExperimentSegmentationBin,,Segment,"Prevents zero-impression rows from being returned.
+"
+AdvertisingChannelType,Advertising Channel,advertisingChannel,AdvertisingChannelType,,Segment,
+Amount,Budget,budget,Money,,Attribute,
+AssistClicks,Assist Clicks,assistClicks,Long,,Metric,
+AssistImpressions,Assist Impr.,assistImpr,Long,,Metric,
+AssistImpressionsOverLastClicks,Assist Impr. / Last Clicks,assistImprLastClicks,Double,,Metric,
+AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
+AveragePageviews,Pages / visit,pagesVisit,Double,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,,Metric,
+AverageTimeOnSite,Avg. visit duration (seconds),avgVisitDurationSeconds,Double,,Metric,
+AvgCostForOfflineInteraction,Avg. CPP,avgCPP,Money,,Metric,
+BiddingStrategy,Bidding strategy,biddingStrategy,Type,,Attribute,
+BounceRate,Bounce rate,bounceRate,Double,,Metric,
+BudgetId,Budget ID,budgetID,Long,,Attribute,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+CampaignName,Campaign,campaign,String,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,,Attribute,
+ClickAssistedConversions,Click Assisted Conv.,clickAssistedConv,Long,,Metric,
+ClickAssistedConversionsOverLastClickConversions,Click Assisted Conv. / Last Click Conv.,clickAssistedConvLastClickConv,Double,,Metric,
+ClickAssistedConversionValue,Click Assisted Conv. Value,clickAssistedConvValue,Double,,Metric,
+Clicks,Clicks,clicks,Long,,Metric,
+ClickSignificance,Clicks ACE indicator,clicksACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+"
+ContentBudgetLostImpressionShare,Content Lost IS (budget),contentLostISBudget,Double,,Metric,
+ContentImpressionShare,Content Impr. share,contentImprShare,Double,,Metric,
+ContentRankLostImpressionShare,Content Lost IS (rank),contentLostISRank,Double,,Metric,
+ConversionCategoryName,Conversion category,conversionCategory,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
+"
+ConversionManyPerClickSignificance,Conversion ACE indicator,conversionACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+ConversionOptimizerBidType,Conversion optimizer bid type,conversionOptimizerBidType,ConversionOptimizerBidType,,Attribute,
+ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Conversions,Converted clicks,convertedClicks,Long,,Metric,
+ConversionSignificance,Converted clicks ACE indicator,convertedClicksACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
+ConversionTypeName,Conversion name,conversionName,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
+"
+ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+Cost,Cost,cost,Money,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
+CostPerConversionManyPerClickSignificance,Cost/conversion ACE indicator,costConversionACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+CostPerConversionSignificance,Cost/converted click ACE indicator,costConvertedClickACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+CostPerEstimatedTotalConversion,Cost / est. total conv.,costEstTotalConv,Money,,Metric,
+CostSignificance,Cost ACE indicator,costACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+CpcSignificance,CPC ACE indicator,cPCACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+CpmSignificance,CPM ACE indicator,cPMACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+CtrSignificance,CTR ACE indicator,cTRACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+CustomerDescriptiveName,Client name,clientName,String,,Attribute,
+Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+"
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+"
+Device,Device,device,DeviceType,,Segment,"Prevents zero-impression rows from being returned.
+"
+DisplaySelect,Display Select,displaySelect,Boolean,,Attribute,
+EnhancedCpcEnabled,Enhanced CPC enabled,enhancedCPCEnabled,Boolean,,Attribute,
+EstimatedCrossDeviceConversions,Est. cross-device conv.,estCrossDeviceConv,Long,,Metric,
+EstimatedTotalConversionRate,Est. total conv. rate,estTotalConvRate,Double,,Metric,
+EstimatedTotalConversions,Est. total conv.,estTotalConv,Long,,Metric,
+EstimatedTotalConversionValue,Est. total conv. value,estTotalConvValue,Double,,Metric,
+EstimatedTotalConversionValuePerClick,Est. total conv. value / click,estTotalConvValueClick,Double,,Metric,
+EstimatedTotalConversionValuePerCost,Est. total conv. value / cost,estTotalConvValueCost,Double,,Metric,
+ExternalCustomerId,Customer ID,customerID,Long,,Attribute,
+HourOfDay,Hour of day,hourOfDay,Integer,,Segment,
+Id,Campaign ID,campaignID,Long,,Attribute,
+ImpressionAssistedConversions,Impr. Assisted Conv.,imprAssistedConv,Long,,Metric,
+ImpressionAssistedConversionsOverLastClickConversions,Impr. Assisted Conv. / Last Click Conv.,imprAssistedConvLastClickConv,Double,,Metric,
+ImpressionAssistedConversionValue,Impr. Assisted Conv. Value,imprAssistedConvValue,Double,,Metric,
+Impressions,Impressions,impressions,Long,,Metric,
+ImpressionSignificance,Impressions ACE indicator,impressionsACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+InvalidClickRate,Invalid click rate,invalidClickRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+InvalidClicks,Invalid clicks,invalidClicks,Long,,Metric,
+IsBudgetExplicitlyShared,Budget explicitly shared,budgetExplicitlyShared,Boolean,,Attribute,
+Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+"
+Name,Campaign,campaign,String,,Attribute,
+NumOfflineImpressions,Phone impressions,phoneImpressions,Long,,Metric,
+NumOfflineInteractions,Phone calls,phoneCalls,Long,,Metric,
+OfflineInteractionCost,Phone cost,phoneCost,Money,,Metric,
+OfflineInteractionRate,PTR,ptr,Double,,Metric,
+PercentNewVisitors,% new visits,newVisits,Double,,Metric,
+PositionSignificance,Position ACE indicator,positionACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+"
+PrimaryCompanyName,Company name,companyName,String,,Attribute,
+PrimaryUserLogin,Login email,loginEmail,String,,Attribute,
+Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+RelativeCtr,Relative CTR,relativeCTR,Double,,Metric,
+SearchBudgetLostImpressionShare,Search Lost IS (budget),searchLostISBudget,Double,,Metric,
+SearchExactMatchImpressionShare,Search Exact match IS,searchExactMatchIS,Double,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the field ClickType.
+"
+SearchImpressionShare,Search Impr. share,searchImprShare,Double,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the fields ClickType and HourOfDay.
+"
+SearchRankLostImpressionShare,Search Lost IS (rank),searchLostISRank,Double,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the field ClickType.
+"
+Slot,Top vs. side,topVsSide,Slot,,Segment,
+Status,Campaign state,campaignState,CampaignStatus,,Attribute,
+TotalBudget,Budget,budget,Money,,Metric,
+TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+TotalCost,Total cost,totalCost,Money,,Metric,
+ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
+ValuePerEstimatedTotalConversion,Value / est. total conv.,valueEstTotalConv,Double,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,
+Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
+"

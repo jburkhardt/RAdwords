@@ -1,0 +1,56 @@
+Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
+AdExtensionId,Ad Extension ID,adExtensionID,Long,,Attribute,
+AdExtensionType,Ad Extension Type,adExtensionType,AdExtensionType,,Attribute,
+AdNetworkType1,Network,network,AdNetworkType1,,Segment,
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
+ApprovalStatus,Status,status,ApprovalStatus,,Attribute,
+AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,,Metric,
+AvgCostForOfflineInteraction,Avg. CPP,avgCPP,Money,,Metric,
+CampaignId,Campaign ID,campaignID,Long,,Attribute,
+Clicks,Clicks,clicks,Long,,Metric,
+ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+"
+ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Conversions,Converted clicks,convertedClicks,Long,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
+ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+Cost,Cost,cost,Money,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
+Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+"
+Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+"
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+"
+Device,Device,device,DeviceType,,Segment,"Prevents zero-impression rows from being returned.
+"
+Impressions,Impressions,impressions,Long,,Metric,
+LocationExtensionSource,Location Extension Source,locationExtensionSource,Source,,Attribute,
+Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+"
+NumOfflineImpressions,Phone impressions,phoneImpressions,Long,,Metric,
+NumOfflineInteractions,Phone calls,phoneCalls,Long,,Metric,
+OfflineInteractionCost,Phone cost,phoneCost,Money,,Metric,
+OfflineInteractionRate,PTR,ptr,Double,,Metric,
+Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Slot,Top vs. side,topVsSide,Slot,,Segment,
+Status,State,state,Status,,Attribute,
+TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+"
+ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,
+Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
+"
+Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
+"
