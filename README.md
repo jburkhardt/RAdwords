@@ -10,8 +10,8 @@ Third, the received **data are transformed into suitable data formats** for furt
 
 The package can be installed directly from this repository with:
 
-require(devtools)  
-install_github('RAdwords', 'jburkhardt')
+`require(devtools)`
+`install_github('RAdwords', 'jburkhardt')`
 
 
 ### Usage ###
@@ -20,29 +20,29 @@ install_github('RAdwords', 'jburkhardt')
 In order to access the Adwords API you have to set up a [Google API project](https://developers.google.com/console/help/) for native apps. The Google API project provides a **Client Id** and **Client Secret** which is necessary for the authentication. Moreover you need to have a [Adwords MCC](https://developers.google.com/adwords/api/docs/signingup) with an **Adwords developer token**.
 
 #### Authentication: ####
-The function `<getToken>` manages the complete authentication process. Meaning `<getToken>` authenticates the R app for the first time, loads the access token or refreshes the access token if expired. Hence, you only run `<getToken()>` to authenticate whether it is your initial R Session or a later instance.
+The function `getToken` manages the complete authentication process. Meaning `getToken` authenticates the R app for the first time, loads the access token or refreshes the access token if expired. Hence, you only run `getToken()` to authenticate whether it is your initial R Session or a later instance.
 
 ##### What's happening in details? #####
-Once the API projects for native application is set up, `<getAuth>` is able to authenticate the R app with the credentials (Client Id, Client Secret) from the Google API project. The Google authentication server returns a client token, which later is used by `<loadToken>` to receive the access token. If the access token is expired after one hour, it can be updated with `<refreshToken>`. The access token in combination with the Adwords developer token enables a connection with the Adwords API.
+Once the API projects for native application is set up, `getAuth` is able to authenticate the R app with the credentials (Client Id, Client Secret) from the Google API project. The Google authentication server returns a client token, which later is used by `loadToken` to receive the access token. If the access token is expired after one hour, it can be updated with `refreshToken`. The access token in combination with the Adwords developer token enables a connection with the Adwords API.
 
 #### Create Statement: ####
-`<statement>` creates the Adwords Query Language Statement.
+`statement` creates the Adwords Query Language Statement.
 
 #### Receiving Data: ####
-`<getData>` queries the data from the Adwords API and transforms the data into an R dataframe.
+`getData` queries the data from the Adwords API and transforms the data into an R dataframe.
 
 ### Example ###
 
 #### Authentication ####
-getToken()
+`getToken()`
 #### Create Statement ####
-body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),
-                  report="ACCOUNT_PERFORMANCE_REPORT",
-                  start="20140320",
-                  end="20140321")
+`body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),`
+                  `report="ACCOUNT_PERFORMANCE_REPORT",`
+                  `start="20140320",`
+                  `end="20140321")`
 #### Query Adwords API and get data as dataframe ####
-data <- getData(clientCustomerId='xxx-xxx-xxxx',statement=body)
+`data <- getData(clientCustomerId='xxx-xxx-xxxx',statement=body)`
 #### Get available report types ####
-reports()
+`reports()`
 #### Get available metrics/attributes of specific reporty type ####
-metrics(report='ACCOUNT_PERFORMANCE_REPORT')
+`metrics(report='ACCOUNT_PERFORMANCE_REPORT')`
