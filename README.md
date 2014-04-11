@@ -10,7 +10,7 @@ Third, the received **data are transformed into suitable data formats** for furt
 
 The package can be installed directly from this repository with:
 
-`require(devtools)`
+`require(devtools)`  
 `install_github('RAdwords', 'jburkhardt')`
 
 
@@ -36,10 +36,10 @@ Once the API projects for native application is set up, `getAuth` is able to aut
 #### Authentication ####
 `getToken()`
 #### Create Statement ####
-`body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),
-                  report="ACCOUNT_PERFORMANCE_REPORT",
-                  start="20140320",
-                  end="20140321")`
+`body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),  
+                  report="ACCOUNT_PERFORMANCE_REPORT",  
+                  start="20140320",  
+                  end="20140321")`  
 #### Query Adwords API and get data as dataframe ####
 `data <- getData(clientCustomerId='xxx-xxx-xxxx',statement=body)`
 #### Get available report types ####
