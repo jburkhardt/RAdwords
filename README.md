@@ -51,6 +51,6 @@ Once the API projects for native application is set up, `getAuth` is able to aut
 
 The authentication process could be substituted by the [httr](https://github.com/hadley/httr) package.
 
-### Acknowledgment ###
+### Acknowledgement ###
 Special thanks to my fellow [Matt Bannert](https://github.com/mbannert) for his constant help during my little R career!  
 Moreover I want to mention the [ga-auth-data](https://github.com/skardhamar/ga-auth-data) repository, which I basically modified for the authentication with Adwords. Thanks [Bror Skardhamar](https://github.com/skardhamar)!
