@@ -1,3 +1,4 @@
+export(changeNames)
 export(getAuth)
 export(getData)
 export(getToken)
