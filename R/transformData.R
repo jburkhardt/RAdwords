@@ -27,6 +27,8 @@ transformData <- function(data, report=reportType){
   data <- data[-1,]
   #eliminate row with total values
   data <- data[-nrow(data),]
+  #eliminate " " spaces in column names
+  names(data) <- gsub(" ","",names(data))
   #change data format of variables
   if("Day" %in% colnames(data)){
     data$Day <- as.Date(data$Day)
