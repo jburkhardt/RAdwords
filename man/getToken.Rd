@@ -35,14 +35,14 @@ Secret) from the Api project, the developer token from the
 Adwords MCC and retrieves the client token from the Google
 authentication server. The credential information are
 cached in a R object in the current workspace.\cr
-Optionally the credentials can be saved in a hidden RData
-file in the current working directory. In this case the
-credentials can be relaoded if the workspace gets cleared,
-otherwise the credentials have to be provided again. If the
-credentials are saved in the current working directory, a
-.gitignore is generated for the credential information or
-appends an existing .gitignore by the credential
-information.
+Optionally the credentials and access token can be saved in
+hidden RData files in the current working directory. In
+this case the credentials and access token can be relaoded
+if the workspace gets cleared, otherwise the credentials
+have to be provided again. If the credentials are saved in
+the current working directory, a .gitignore is generated
+for the credential information or appends an existing
+.gitignore by the credential information.
 }
 \examples{
 getToken()

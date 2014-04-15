@@ -13,7 +13,7 @@
 #' \cr
 #' getToken() asks for the credentials (Client Id, Client Secret) from the Api project, the developer token from the Adwords MCC and retrieves the client token
 #' from the Google authentication server. The credential information are cached in a R object in the current workspace.\cr
-#' Optionally the credentials can be saved in a hidden RData file in the current working directory. In this case the credentials can be relaoded if
+#' Optionally the credentials and access token can be saved in hidden RData files in the current working directory. In this case the credentials and access token can be relaoded if
 #' the workspace gets cleared, otherwise the credentials have to be provided again. If the credentials are saved in the current working directory,
 #' a .gitignore is generated for the credential information or appends an existing .gitignore by the credential information.
 #' 
@@ -26,24 +26,20 @@
 getToken <- function(){
   # This function manages the whole authentication process and executes the relevant functions.
   if (exists(as.character(substitute(access.token)))){
-    # case: access token exists
+    # case: access token exists in workspace
     if ((as.numeric(Sys.time()) - access.token.timeStamp) >= 3600){
       # case: access token is deprecated
       refreshToken()
     }
   }
-  
   if (!exists(as.character(substitute(access.token)))){
-    # case: no access token
-    
-    if (file.exists('.credentials.RData')){
-      #loads credentials if RData file exists in working directory.
-      load('.credentials.RData')
-    }
-    
-    if (exists(as.character(substitute(credentials)))){
-      # case: no access token, but credentials
-      loadToken()
+    # access token does not exist in workspace
+    if (file.exists('.access.token.RData')){
+      # access token exists in RData file object in local working directory
+      # loads token if RData file exists in working directory.
+      load('.credentials.RData', envir= .GlobalEnv)
+      load('.access.token.RData', envir = .GlobalEnv)
+      refreshToken()
     }
     else {
       # case: no access token, no credentials

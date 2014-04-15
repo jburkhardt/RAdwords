@@ -27,6 +27,16 @@ loadToken = function() {
     } else {
       assign("access.token.timeStamp", as.numeric(Sys.time()), envir = .GlobalEnv)
       assign("access.token", a, envir = .GlobalEnv)
+      #
+      if (saveCred == 'Yes'){
+        if (!file.exists(".gitignore")){
+          cat(".access.token.RData",file=".gitignore",sep="\n")
+        }
+        if (file.exists(".gitignore")){
+          cat(".access.token.RData",file=".gitignore",append=TRUE)
+        }
+        save(access.token, access.token.timeStamp, file=".access.token.RData")
+      }
     }
   }
 }

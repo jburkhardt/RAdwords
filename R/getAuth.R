@@ -63,6 +63,7 @@ getAuth = function() {
         If Yes, credentials are saved in a hidden RData file in the current working directory. Additionaly the file will be added to the .gitignore.')
       saveCred <- readline(as.character(cat("\n\nYes or No",
                                           ":=>")))
+    assign("saveCred", saveCred, envir = .GlobalEnv)
     if (saveCred == 'Yes'){
       if (!file.exists(".gitignore")){
         cat(".credentials.RData",file=".gitignore",sep="\n")
