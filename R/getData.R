@@ -9,12 +9,13 @@
 #' @param statement awql statement generated with \code{\link{statement}}.
 #' @param transformation If TRUE, data will be transformed with \code{\link{transformData}} into suitable R dataframe.
 #' Else, the data are returned in raw format.
+#' @param changeNames If TRUE, the display names of the transformed data are converted into more nicer/practical names. Requires transformation = TRUE
 #' @export
 #' @examples
 #' data <- getData(clientCustomerId='xxx-xxx-xxxx',statement=body,transformation=TRUE)
 #' #body: object generated with statement()
 #' @return Dataframe with the Adwords Data.
-getData <- function(clientCustomerId, statement, transformation=TRUE){
+getData <- function(clientCustomerId, statement, transformation=TRUE, changeNames=TRUE){
   # getData posts the Adwords Query Language Statement and retrieves the data.
   #
   # Args:
@@ -37,6 +38,9 @@ getData <- function(clientCustomerId, statement, transformation=TRUE){
                  verbose = TRUE)
   if (transformation==TRUE){
     data <- transformData(data, report=reportType)
+    if (changeNames==TRUE){
+     data <-changeNames(data)
+    }
   }
   return(data)
   }
