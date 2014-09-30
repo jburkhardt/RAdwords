@@ -43,7 +43,7 @@ getToken <- function(){
     }
     else {
       # case: no access token, no credentials
-      getAuth()
+      credential_env <- getAuth()
       loadToken()
     }
   }
