@@ -1,4 +1,4 @@
-## RAdwords: Getting Adwords data into R ##
+## RAdwords: Loading Adwords data into R ##
 
 **RAdwords** is a R package with the aim to load Adwords data into R. Therefore the package implements three main features.
 First, the package provides an **authentication process** for **R** with the **Adwords API** via OAUTH2.
@@ -8,7 +8,7 @@ Third, the received **data are transformed into suitable data formats** for furt
 
 ### Installation ###
 
-The package can be installed directly from this repository with:
+The package can be installed directly from this Github repository with:
 
 `require(devtools)`  
 `install_github('RAdwords', 'jburkhardt')`

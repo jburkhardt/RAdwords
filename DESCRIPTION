@@ -1,7 +1,7 @@
 Package: RAdwords
 Tyoe: Package
-Title: RAdwords: Getting Adwords data into R
-Description: The aim of RAdwords is getting Adwords data into R. Therefore the
+Title: RAdwords: Loading Adwords data into R
+Description: The aim of RAdwords is loading Adwords data into R. Therefore the
     package implements three main features. First, the package provides an
     authentication process for R with the Adwords API via OAUTH2. Second, the
     package offers an interface to apply the Adwords query language in R and
