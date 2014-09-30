@@ -1,5 +1,5 @@
 Package: RAdwords
-Tyoe: Package
+Type: Package
 Title: RAdwords: Loading Adwords data into R
 Description: The aim of RAdwords is loading Adwords data into R. Therefore the
     package implements three main features. First, the package provides an
