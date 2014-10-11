@@ -41,7 +41,7 @@ getData <- function(clientCustomerId, access,
                  postfields=statement,
                  verbose = TRUE)
   if (transformation==TRUE){
-    data <- transformData(data, report="ACCOUNT_PERFOMANCE_REPORT")
+    data <- transformData(data,report=attributes(statement)$reportType)
     if (changeNames==TRUE){
      data <-changeNames(data)
     }
