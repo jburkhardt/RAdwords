@@ -6,23 +6,27 @@
 #' The data are retrieved from the Adwords API as a dataframe.
 #' 
 #' @param clientCustomerId Adwords client customer Id
-#' @param access list that contains the access token information (expires)
-#' @param credlist list that contains credentials information (does not expire)
+#' @param google_auth list of authentication
 #' @param statement awql statement generated with \code{\link{statement}}.
 #' @param transformation If TRUE, data will be transformed with \code{\link{transformData}} into suitable R dataframe.
 #' Else, the data are returned in raw format.
 #' @param changeNames If TRUE, the display names of the transformed data are converted into more nicer/practical names. Requires transformation = TRUE
 #' @export
 #' @return Dataframe with the Adwords Data.
-getData <- function(clientCustomerId, access,
-                    credlist,
+getData <- function(clientCustomerId,
+                    google_auth,
                     statement,
                     transformation=TRUE,
                     changeNames=TRUE){
+  
+  # for a better overview split google auth
+  access <- google_auth$access
+  credlist <- google_auth$credentials
+  
   # because access token can expire 
   # we need to check whether this is the case
   if(as.numeric(Sys.time())-3600 >= access$timeStamp){
-    refreshToken(access,credlist) 
+    refreshToken(google_auth) 
   } 
   # getData posts the Adwords Query Language Statement and retrieves the data.
   #
@@ -34,7 +38,7 @@ getData <- function(clientCustomerId, access,
   # Returns:
   #   Dataframe with the Adwords Data.
   google.auth <- paste(access$token_type, access$access_token)
-  data <- getURL("https://adwords.google.com/api/adwords/reportdownload/v201402", httpheader = c("Authorization" = google.auth,
+  data <- RCurl::getURL("https://adwords.google.com/api/adwords/reportdownload/v201402", httpheader = c("Authorization" = google.auth,
                                                                                                  "developerToken" = credlist$auth.developerToken,
                                                                                                  "clientCustomerId" = clientCustomerId,
                                                                                                  "returnMoneyInMicros" = "false"),

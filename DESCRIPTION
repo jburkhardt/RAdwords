@@ -9,10 +9,12 @@ Description: The aim of RAdwords is loading Adwords data into R. Therefore the
     transformed into suitable data formats for further data processing and data
     analysis.
 Version: 0.1
-Author: Johannes Burkhardt <johannes.burkhardt@gmail.com>
+Author: Johannes Burkhardt <johannes.burkhardt@gmail.com>, Matthias Bannert
+    <matthias.bannert@gmail.com>
 Maintainer: Johannes Burkhardt <johannes.burkhardt@gmail.com>
 Depends:
-    R (>= 3.0.3),
+    R (>= 3.0.3)
+Imports:
     RCurl,
     rjson
 License: GPL (>= 2) | MIT + file LICENSE

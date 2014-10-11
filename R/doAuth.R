@@ -9,45 +9,34 @@
 doAuth <- function(save = T){
   # do user interaction to store credentials in list
   # does not expire
-  if(!file.exists(".google.auth.RData")){
+  if(file.exists(".google.auth.RData")){
     load(".google.auth.RData")
   } else{
     credentials <- getAuth()  
-  }
+    access_token <- loadToken(credentials)
+    # credentials can be saved in workspace 
+    # for use with cron jobs etc
+    google_auth <- list()
+    google_auth$credentials <- credentials
+    google_auth$access <- access_token
     
-  # now check whether we have unexpired 
-  # access token from the file
-  
-  
-  # get access token to communicate with API
-  # access token can expire
-  access_token <- loadToken(credentials)
-
-  
-  # credentials can be saved in workspace 
-  # for use with cron jobs etc
-  if(save){
-    save(credentials,access_token,file=".google.auth.RData")
-    
-    # make sure your credentials are ignored by svn and git ####
-    if (!file.exists(".gitignore")){
-      cat(".google.auth.RData",file=".gitignore",sep="\n")
-    } 
-    if (file.exists(".gitignore")){
-      cat(".google.auth.RData",file=".gitignore",append=TRUE)
-    }
-    if (file.exists(".svnignore")){
-      cat(".google.auth.RData",file=".svnignore",append=TRUE)
-    }
-    if (!file.exists(".svnignore")){
-      cat(".google.auth.RData",file=".svnignore",append=TRUE)
+    if(save){
+      save("google_auth",file=".google.auth.RData")
+      
+      # make sure your credentials are ignored by svn and git ####
+      if (!file.exists(".gitignore")){
+        cat(".google.auth.RData",file=".gitignore",sep="\n")
+      } 
+      if (file.exists(".gitignore")){
+        cat(".google.auth.RData",file=".gitignore",append=TRUE)
+      }
     }
   }
-  
-  access_token
+  if(exists("google_auth")){
+    google_auth  
+  } else {
+    cat("an error occurred.")
+  }
   
 }
-
-
-
 

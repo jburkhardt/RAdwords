@@ -5,15 +5,13 @@
 \alias{transformation}
 \title{Get Adwords Data}
 \usage{
-getData(clientCustomerId, access, credlist, statement, transformation = TRUE,
+getData(clientCustomerId, google_auth, statement, transformation = TRUE,
   changeNames = TRUE)
 }
 \arguments{
 \item{clientCustomerId}{Adwords client customer Id}
 
-\item{access}{list that contains the access token information (expires)}
-
-\item{credlist}{list that contains credentials information (does not expire)}
+\item{google_auth}{list of authentication}
 
 \item{statement}{awql statement generated with \code{\link{statement}}.}
 

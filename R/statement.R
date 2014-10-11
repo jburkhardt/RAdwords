@@ -49,7 +49,6 @@ statement <- function(select= c("AccountDescriptiveName",
   #
   # Returns:
   #   The statement for the RCurl post.
-#TODO: Solve this as a list
   selectA <- paste(select,collapse=",")
   
   if(missing(where)){
