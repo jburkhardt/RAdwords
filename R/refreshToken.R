@@ -14,7 +14,7 @@ refreshToken = function(google_auth) {
   # Returns:
   #   New access.token with corresponding time stamp
   
-    rt = fromJSON(postForm('https://accounts.google.com/o/oauth2/token', 
+    rt = rjson::fromJSON(RCurl::postForm('https://accounts.google.com/o/oauth2/token', 
                            refresh_token=google_auth$access$refresh_token, 
                            client_id=google_auth$credentials$c.id,
                            client_secret=google_auth$credentials$c.secret, 

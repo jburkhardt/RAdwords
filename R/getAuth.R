@@ -3,9 +3,6 @@
 #' @description getAuth authenticates the R app at the Google authentication server using OAUTH2 and receives the client token.
 #' Usually you need not to run getAuth() explicitly since the whole authentication process is managed by \code{\link{doAuth}}.
 #' 
-#' @export
-#' @import RCurl
-#' @import rjson
 #' @return Client token from Google authentication server.
 #' Dataframe with the credential information which is cached in working space 
 #' and optionally saved as RData file in current working directory.
@@ -50,7 +47,7 @@ getAuth = function() {
                  'redirect_uri=urn:ietf:wg:oauth:2.0:oob&',
                  'access_type=offline&',
                  'approval_prompt=force', sep='', collapse='')
-    getURL(url)
+    RCurl::getURL(url)
     browseURL(url)
     # Manual next-step: input code-parameter to c.token variable and run loadToken()
     cat('Authentication process needs your Client token in order to receive the access token from the API. Copy the Client token from your webbrowser and paste it here.')
