@@ -3,7 +3,10 @@
 \alias{doAuth}
 \title{Invoke the Authentication Process with Google}
 \usage{
-doAuth()
+doAuth(save = T)
+}
+\arguments{
+\item{save}{logical denotes whether authentication information should be saved on disk. Defaults to TRUE.}
 }
 \description{
 This function starts the authentication process with Google.
