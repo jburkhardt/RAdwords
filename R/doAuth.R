@@ -9,7 +9,7 @@
 doAuth <- function(save = T){
   # do user interaction to store credentials in list
   # does not expire
-  if(!file.exists(".google.auth.RData")){
+  if(file.exists(".google.auth.RData")){
     load(".google.auth.RData")
   } else{
     credentials <- getAuth()  
