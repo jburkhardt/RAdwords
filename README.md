@@ -11,7 +11,7 @@ Third, the received **data are transformed into suitable data formats** for furt
 The package can be installed directly from this Github repository with:
 
 `require(devtools)`  
-`install_github('RAdwords', 'jburkhardt')`
+`install_github('jburkhardt/RAdwords')`
 
 
 ### Usage ###
@@ -34,14 +34,15 @@ Once the API projects for native application is set up, `getAuth` is able to aut
 ### Example ###
 
 #### Authentication ####
-`getToken()`
+`library(RAdwords)`
+`google_auth <- doAuth()`
 #### Create Statement ####
 `body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),  
                   report="ACCOUNT_PERFORMANCE_REPORT",  
                   start="20140320",  
                   end="20140321")`  
 #### Query Adwords API and get data as dataframe ####
-`data <- getData(clientCustomerId='xxx-xxx-xxxx',statement=body)`
+`data <- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)`
 #### Get available report types ####
 `reports()`
 #### Get available metrics/attributes of specific reporty type ####
@@ -53,4 +54,4 @@ The authentication process could be substituted by the [httr](https://github.com
 
 ### Acknowledgement ###
 Special thanks to my fellow [Matt Bannert](https://github.com/mbannert) for his constant help during my little R career!  
-Moreover I want to mention the [ga-auth-data](https://github.com/skardhamar/ga-auth-data) repository, which I basically modified for the authentication with Adwords. Thanks [Bror Skardhamar](https://github.com/skardhamar)!
+Moreover I want to mention the [ga-auth-data](https://github.com/skardhamar/ga-auth-data) repository, which we basically modified for the authentication with Adwords. Thanks [Bror Skardhamar](https://github.com/skardhamar)!
