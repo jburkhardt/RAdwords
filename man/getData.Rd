@@ -5,11 +5,15 @@
 \alias{transformation}
 \title{Get Adwords Data}
 \usage{
-getData(clientCustomerId, statement, transformation = TRUE,
+getData(clientCustomerId, access, credlist, statement, transformation = TRUE,
   changeNames = TRUE)
 }
 \arguments{
 \item{clientCustomerId}{Adwords client customer Id}
+
+\item{access}{list that contains the access token information (expires)}
+
+\item{credlist}{list that contains credentials information (does not expire)}
 
 \item{statement}{awql statement generated with \code{\link{statement}}.}
 
@@ -24,9 +28,5 @@ Dataframe with the Adwords Data.
 \description{
 getData posts the Adwords Query Language (awql) Statement which is generated with \code{\link{statement}}.
 The data are retrieved from the Adwords API as a dataframe.
-}
-\examples{
-data <- getData(clientCustomerId='xxx-xxx-xxxx',statement=body,transformation=TRUE)
-#body: object generated with statement()
 }
 

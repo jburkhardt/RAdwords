@@ -28,11 +28,13 @@
 #'                   start="20140320",
 #'                   end="20140321") 
 #' @return The statement neccessary for the \code{\link{getData}} function.
-statement <- function(select= c("AccountDescriptiveName","AccountId","Impressions","Clicks","Cost","Date"),
+statement <- function(select= c("AccountDescriptiveName",
+                                "AccountId","Impressions",
+                                "Clicks","Cost","Date"),
                       report="ACCOUNT_PERFORMANCE_REPORT",
                       where,
                       start="20120101",
-                      end="20120110"){
+                      end="20120110"){  
   # Generates and builds the Adwords Query Language Statement for querying the Adwords API.
   #
   # Args:
@@ -47,15 +49,8 @@ statement <- function(select= c("AccountDescriptiveName","AccountId","Impression
   #
   # Returns:
   #   The statement for the RCurl post.
-  assign("reportType", report, envir = .GlobalEnv)
-  for(i in 1:length(select)){
-    if (i == 1) {
-      selectA <- select[i]
-    }
-    else {
-      selectA <- paste(selectA,",",select[i],sep='')
-    }
-  }
+#TODO: Solve this as a list
+  selectA <- paste(select,collapse=",")
   
   if(missing(where)){
     body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"+DURING+",start,",",end,"&__fmt=CSV",sep='')
@@ -63,6 +58,7 @@ statement <- function(select= c("AccountDescriptiveName","AccountId","Impression
   if(!missing(where)){
     body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"+WHERE+",where,"+DURING+",start,",",end,"&__fmt=CSV",sep='')
   }
-  
+  # attach report Type as attributes of body
+  attr(body,"reportType") <- report  
   return(body)
 }

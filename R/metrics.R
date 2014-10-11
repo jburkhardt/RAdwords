@@ -5,8 +5,6 @@
 #' @param report Report type
 #' 
 #' @export
-#' @examples
-#' metrics(report="ACCOUNT_PERFORMANCE_REPORT")
 #' @return List of available metrics/attributes.
 #' 
 metrics <- function(report="ACCOUNT_PERFORMANCE_REPORT"){

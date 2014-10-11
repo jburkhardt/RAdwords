@@ -43,6 +43,7 @@ transformData <- function(data, report=reportType){
       data[,var] <- data[,var]/100
     }
   }
+  Behavior = NULL
   #eliminate ',' thousend separater in data and convert values into numeric data
   metricVar <- as.character(subset(reportType, Behavior == 'Metric')$Display.Name)
   for(var in metricVar){
