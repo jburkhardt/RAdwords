@@ -11,7 +11,6 @@ doAuth <- function(save = T){
   # does not expire
   if(file.exists(".google.auth.RData")){
     load(".google.auth.RData")
-    access_token <- loadToken(google_auth$credentials)
   } else{
     credentials <- getAuth()  
     access_token <- loadToken(credentials)

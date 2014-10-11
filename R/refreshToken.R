@@ -16,7 +16,7 @@ refreshToken = function(google_auth) {
   
     rt = fromJSON(postForm('https://accounts.google.com/o/oauth2/token', 
                            refresh_token=google_auth$access$refresh_token, 
-                           client_id=google_auth$credentialst$c.id,
+                           client_id=google_auth$credentials$c.id,
                            client_secret=google_auth$credentials$c.secret, 
                            grant_type="refresh_token", 
                            style="POST"))
