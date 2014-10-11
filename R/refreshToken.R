@@ -3,11 +3,10 @@
 #' @description refreshToken returns a new valid access token. The access token deprecates after one hour and has to updated with the refresh token.
 #' Usually you need not to run refreshToken() explicitly since the whole authentication process is managed by \code{\link{doAuth}}.
 #' 
-#' @param credlist list of credentials
-#' @param access list that contains access token information 
+#' @param google_auth list of credentials and access token
 #' @export
 #' @return New access token with corresponding time stamp.
-refreshToken = function(access,credlist) {
+refreshToken = function(google_auth) {
   # This function refreshes the access token. The access token deprecates after one hour and has to updated with the refresh token.
   #
   # Args:
@@ -16,9 +15,9 @@ refreshToken = function(access,credlist) {
   #   New access.token with corresponding time stamp
   
     rt = fromJSON(postForm('https://accounts.google.com/o/oauth2/token', 
-                           refresh_token=access$refresh_token, 
-                           client_id=credlist$c.id,
-                           client_secret=credlist$c.secret, 
+                           refresh_token=google_auth$access$refresh_token, 
+                           client_id=google_auth$credentialst$c.id,
+                           client_secret=google_auth$credentials$c.secret, 
                            grant_type="refresh_token", 
                            style="POST"))
     access <- rt

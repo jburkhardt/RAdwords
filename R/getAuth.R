@@ -56,23 +56,6 @@ getAuth = function() {
     cat('Authentication process needs your Client token in order to receive the access token from the API. Copy the Client token from your webbrowser and paste it here.')
     credentials$c.token <- readline(as.character(cat("\n\nPaste the client token here",
                                                      ":=>")))
-    #create object credentials in global environment
-    # Ask for saving credentials
-    cat('Do you want to save the credentials locally in your current working directory?\n
-        If No, credentials are only cached the workspace. New login is necessary when workspace is not saved after R session.\n
-        If Yes, credentials are saved in a hidden RData file in the current working directory. Additionaly the file will be added to the .gitignore.')
-    saveCred <- readline(as.character(cat("\n\nYes or No",
-                                          ":=>")))
-    #     assign("saveCred", saveCred, envir = credential_env)
-    if (saveCred == 'Yes'){
-      if (!file.exists(".gitignore")){
-        cat(".credentials.RData",file=".gitignore",sep="\n")
-      }
-      if (file.exists(".gitignore")){
-        cat(".credentials.RData",file=".gitignore",append=TRUE)
-      }
-      save(credentials, file=".credentials.RData")
-    }
   }
   # return one environment that contains all the values...
   # call it by credential_env <- getAuth()    

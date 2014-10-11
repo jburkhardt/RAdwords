@@ -36,15 +36,13 @@ doAuth <- function(save = T){
     if (file.exists(".gitignore")){
       cat(".google.auth.RData",file=".gitignore",append=TRUE)
     }
-    if (file.exists(".svnignore")){
-      cat(".google.auth.RData",file=".svnignore",append=TRUE)
-    }
-    if (!file.exists(".svnignore")){
-      cat(".google.auth.RData",file=".svnignore",append=TRUE)
-    }
   }
   
-  access_token
+  google_auth <- list()
+  google_auth$credentials <- credentials
+  google_auth$access <- access_token
+  
+  google_auth
   
 }
 

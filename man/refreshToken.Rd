@@ -3,12 +3,10 @@
 \alias{refreshToken}
 \title{Refresh Access Token}
 \usage{
-refreshToken(access, credlist)
+refreshToken(google_auth)
 }
 \arguments{
-\item{access}{list that contains access token information}
-
-\item{credlist}{list of credentials}
+\item{google_auth}{list of credentials and access token}
 }
 \value{
 New access token with corresponding time stamp.
