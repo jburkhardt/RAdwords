@@ -23,7 +23,7 @@ doAuth <- function(save = T){
   google_auth$access <- access_token
   
   if(save){
-    save(google_auth,file=".google.auth.RData")
+    save("google_auth",file=".google.auth.RData")
     
     # make sure your credentials are ignored by svn and git ####
     if (!file.exists(".gitignore")){
