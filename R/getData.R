@@ -21,7 +21,7 @@ getData <- function(clientCustomerId,
   
   # for a better overview split google auth
   access <- google_auth$access
-  credlist <- google_auth$credlist
+  credlist <- google_auth$credentials
   
   # because access token can expire 
   # we need to check whether this is the case
