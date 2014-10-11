@@ -11,23 +11,19 @@ doAuth <- function(save = T){
   # does not expire
   if(file.exists(".google.auth.RData")){
     load(".google.auth.RData")
+    access_token <- loadToken(google_auth$credentials)
   } else{
     credentials <- getAuth()  
+    access_token <- loadToken(credentials)
   }
-    
-  # now check whether we have unexpired 
-  # access token from the file
-  
-  
-  # get access token to communicate with API
-  # access token can expire
-  access_token <- loadToken(credentials)
-
-  
   # credentials can be saved in workspace 
   # for use with cron jobs etc
+  google_auth <- list()
+  google_auth$credentials <- credentials
+  google_auth$access <- access_token
+  
   if(save){
-    save(credentials,access_token,file=".google.auth.RData")
+    save(google_auth,file=".google.auth.RData")
     
     # make sure your credentials are ignored by svn and git ####
     if (!file.exists(".gitignore")){
@@ -37,15 +33,8 @@ doAuth <- function(save = T){
       cat(".google.auth.RData",file=".gitignore",append=TRUE)
     }
   }
-  
-  google_auth <- list()
-  google_auth$credentials <- credentials
-  google_auth$access <- access_token
-  
+    
   google_auth
   
 }
-
-
-
 
