@@ -2,13 +2,9 @@
 
 export(changeNames)
 export(doAuth)
-export(getAuth)
 export(getData)
-export(loadToken)
 export(metrics)
 export(refreshToken)
 export(reports)
 export(statement)
 export(transformData)
-import(RCurl)
-import(rjson)
