@@ -47,7 +47,8 @@ statement <- function(select= c("AccountDescriptiveName","AccountId","Impression
   #
   # Returns:
   #   The statement for the RCurl post.
-  assign("reportType", report, envir = .GlobalEnv)
+#TODO: Solve this as a list
+  # assign("reportType", report, envir = .GlobalEnv)
   for(i in 1:length(select)){
     if (i == 1) {
       selectA <- select[i]
