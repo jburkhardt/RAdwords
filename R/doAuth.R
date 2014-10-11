@@ -14,26 +14,29 @@ doAuth <- function(save = T){
   } else{
     credentials <- getAuth()  
     access_token <- loadToken(credentials)
-  }
-  # credentials can be saved in workspace 
-  # for use with cron jobs etc
-  google_auth <- list()
-  google_auth$credentials <- credentials
-  google_auth$access <- access_token
-  
-  if(save){
-    save("google_auth",file=".google.auth.RData")
+    # credentials can be saved in workspace 
+    # for use with cron jobs etc
+    google_auth <- list()
+    google_auth$credentials <- credentials
+    google_auth$access <- access_token
     
-    # make sure your credentials are ignored by svn and git ####
-    if (!file.exists(".gitignore")){
-      cat(".google.auth.RData",file=".gitignore",sep="\n")
-    } 
-    if (file.exists(".gitignore")){
-      cat(".google.auth.RData",file=".gitignore",append=TRUE)
+    if(save){
+      save("google_auth",file=".google.auth.RData")
+      
+      # make sure your credentials are ignored by svn and git ####
+      if (!file.exists(".gitignore")){
+        cat(".google.auth.RData",file=".gitignore",sep="\n")
+      } 
+      if (file.exists(".gitignore")){
+        cat(".google.auth.RData",file=".gitignore",append=TRUE)
+      }
     }
   }
-    
-  google_auth
+  if(exists("google_auth")){
+    google_auth  
+  } else {
+    cat("an error occurred.")
+  }
   
 }
 
