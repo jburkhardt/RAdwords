@@ -1,67 +1,145 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-DisplayName,Criteria Display Name,criteriaDisplayName,String,,Attribute,
-IsBidOnPath,Added,added,boolean,,Attribute,
-IsPathExcluded,Excluded,excluded,boolean,,Attribute,
-AccountCurrencyCode,Currency,currency,String,,Attribute,
-AccountDescriptiveName,Account,account,String,,Attribute,
-AccountTimeZoneId,Time zone,timeZone,String,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,False,,Attribute,
+AccountDescriptiveName,Account,account,String,False,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,False,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
-AdFormat,Ad type,adType,AdFormat,,Segment,
-AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
-AdGroupName,Ad group,adGroup,String,,Attribute,
-AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,,Attribute,
-AdNetworkType1,Network,network,AdNetworkType1,,Segment,
-AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
-AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
-AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-CampaignName,Campaign,campaign,String,,Attribute,
-CampaignStatus,Campaign state,campaignState,CampaignStatus,,Attribute,
-Clicks,Clicks,clicks,Long,,Metric,
-ConversionCategoryName,Conversion category,conversionCategory,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
+AdFormat,Ad type,adType,AdFormat,False,"UNKNOWN / unknown
+TEXT / text
+IMAGE / image
+DYNAMIC_IMAGE / dynamic_image
+FLASH / flash
+VIDEO / video
+HTML / html
+AUDIO / audio
+COMPOSITE / composite
+PRINT / print
+",Segment,"Predicate values / display values:
+UNKNOWN / unknown
+TEXT / text
+IMAGE / image
+DYNAMIC_IMAGE / dynamic_image
+FLASH / flash
+VIDEO / video
+HTML / html
+AUDIO / audio
+COMPOSITE / composite
+PRINT / print
 "
-ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
+AdGroupName,Ad group,adGroup,String,False,,Attribute,
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
 "
-ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+AdNetworkType1,Network,network,AdNetworkType1,False,"SEARCH / Search Network
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Search Network
+CONTENT / Display Network
 "
-Conversions,Converted clicks,convertedClicks,Long,,Metric,
-ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
-ConversionTypeName,Conversion name,conversionName,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,False,"SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
 "
-ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+AverageCpc,Avg. CPC,avgCPC,Money,False,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,False,,Metric,
+CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
+CampaignName,Campaign,campaign,String,False,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
 "
-Cost,Cost,cost,Money,,Metric,
-CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
-CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
-CriteriaParameters,URL,url,String,,Attribute,"In the Destination URL report, this field behaves as a segment.
+Clicks,Clicks,clicks,Long,False,,Metric,
+ConversionCategoryName,Conversion category,conversionCategory,String,False,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
 "
-Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+ConversionRate,Click conversion rate,clickConversionRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-CustomerDescriptiveName,Client name,clientName,String,,Attribute,
-Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+ConversionRateManyPerClick,Conv. rate,convRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+ConversionTypeName,Conversion name,conversionName,String,False,,Attribute,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
 "
-Domain,Domain,domain,String,,Attribute,
-ExternalCustomerId,Customer ID,customerID,Long,,Attribute,
-Impressions,Impressions,impressions,Long,,Metric,
-IsAutoOptimized,Targeting Mode,targetingMode,boolean,,Attribute,
-Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+ConversionValue,Total conv. value,totalConvValue,Double,False,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,False,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,False,,Metric,
+Cost,Cost,cost,Money,False,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,False,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,False,,Metric,
+CriteriaParameters,URL,url,String,False,,Attribute,"In the Destination URL report, this field behaves as a segment.
 "
-MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+Ctr,CTR,ctr,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-PrimaryCompanyName,Company name,companyName,String,,Attribute,
-PrimaryUserLogin,Login email,loginEmail,String,,Attribute,
-Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+CustomerDescriptiveName,Client name,clientName,String,False,,Attribute,
+Date,Day,day,Date,False,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,False,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
 "
-TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+DisplayName,Criteria Display Name,criteriaDisplayName,String,False,,Attribute,
+Domain,Domain,domain,String,False,,Attribute,
+ExternalCustomerId,Customer ID,customerID,Long,False,,Attribute,
+Impressions,Impressions,impressions,Long,False,,Metric,
+IsAutoOptimized,Targeting Mode,targetingMode,boolean,False,,Segment,
+IsBidOnPath,Added,added,boolean,False,,Attribute,
+IsPathExcluded,Excluded,excluded,boolean,False,,Attribute,
+Month,Month,month,String,False,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,False,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
 "
-ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,
-Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
-"
+PrimaryCompanyName,Company name,companyName,String,False,,Attribute,
+Quarter,Quarter,quarter,String,False,,Segment,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,False,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,False,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,False,,Metric,
+Week,Week,week,String,False,,Segment,
+Year,Year,year,Integer,False,,Segment,

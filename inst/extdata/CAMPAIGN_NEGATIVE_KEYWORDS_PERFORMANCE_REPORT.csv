@@ -1,10 +1,22 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-UserListId,Negative keyword,negativeKeyword,Long,,Attribute,
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-Id,Keyword ID,keywordID,Long,,Attribute,
-IsNegative,Is negative,isNegative,Boolean,,Attribute,"Prevents zero-impression rows from being returned in Ad Performance Report.
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,,Attribute,
+AccountDescriptiveName,Account,account,String,True,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,True,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
-KeywordMatchType,Match type,matchType,KeywordMatchType,,Attribute,
-KeywordText,Negative keyword,negativeKeyword,String,,Attribute,"Only use with the Keywords report.
+CampaignId,Campaign ID,campaignID,Long,True,,Attribute,
+CustomerDescriptiveName,Client name,clientName,String,True,,Attribute,
+ExternalCustomerId,Customer ID,customerID,Long,True,,Attribute,
+Id,Keyword ID,keywordID,Long,True,,Attribute,
+IsNegative,Is negative,isNegative,Boolean,True,,Attribute,
+KeywordMatchType,Match type,matchType,KeywordMatchType,True,"EXACT / Exact
+PHRASE / Phrase
+BROAD / Broad
+",Attribute,"Predicate values / display values:
+EXACT / Exact
+PHRASE / Phrase
+BROAD / Broad
 "
-PlacementUrl,Negative keyword,negativeKeyword,String,,Attribute,
+KeywordText,Negative keyword,negativeKeyword,String,True,,Attribute,
+PlacementUrl,Negative keyword,negativeKeyword,String,True,,Attribute,
+PrimaryCompanyName,Company name,companyName,String,True,,Attribute,
+UserListId,Negative keyword,negativeKeyword,Long,True,,Attribute,

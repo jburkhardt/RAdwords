@@ -1,37 +1,57 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-AccountCurrencyCode,Currency,currency,String,,Attribute,
-AccountDescriptiveName,Account,account,String,,Attribute,
-AccountTimeZoneId,Time zone,timeZone,String,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,False,,Attribute,
+AccountDescriptiveName,Account,account,String,False,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,False,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
-AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
-AdGroupName,Ad group,adGroup,String,,Attribute,
-AdNetworkType1,Network,network,AdNetworkType1,,Segment,
-AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-CampaignName,Campaign,campaign,String,,Attribute,
-ConversionRate,Free click rate,freeClickRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
+AdGroupName,Ad group,adGroup,String,False,,Attribute,
+AdNetworkType1,Network,network,AdNetworkType1,False,"SEARCH / Search Network
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Search Network
+CONTENT / Display Network
 "
-Conversions,Free clicks,freeClicks,Long,,Metric,
-ConversionTrackerId,Free click type,freeClickType,Long,,Attribute,
-CreativeId,Ad ID,adID,Long,,Attribute,
-CriteriaParameters,Keyword / Placement,keywordPlacement,String,,Attribute,"In the Destination URL report, this field behaves as a segment.
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,False,"SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
 "
-CriteriaTypeName,Match type,matchType,String,,Attribute,
-CriterionId,Keyword ID,keywordID,Long,,Attribute,
-CustomerDescriptiveName,Client name,clientName,String,,Attribute,
-Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
+CampaignName,Campaign,campaign,String,False,,Attribute,
+ConversionRate,Free click rate,freeClickRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+ConversionTrackerId,Free click type,freeClickType,Long,False,,Segment,
+Conversions,Free clicks,freeClicks,Long,False,,Metric,
+CreativeId,Ad ID,adID,Long,False,,Attribute,
+CriteriaParameters,Keyword / Placement,keywordPlacement,String,False,,Attribute,"In the Destination URL report, this field behaves as a segment.
 "
-ExternalCustomerId,Customer ID,customerID,Long,,Attribute,
-Impressions,Impressions,impressions,Long,,Metric,
-Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+CriteriaTypeName,Match type,matchType,String,False,,Attribute,
+CriterionId,Keyword ID,keywordID,Long,False,,Attribute,
+CustomerDescriptiveName,Client name,clientName,String,False,,Attribute,
+Date,Day,day,Date,False,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,False,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
 "
-PrimaryCompanyName,Company name,companyName,String,,Attribute,
-PrimaryUserLogin,Login email,loginEmail,String,,Attribute,
-Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
-"
+ExternalCustomerId,Customer ID,customerID,Long,False,,Attribute,
+Impressions,Impressions,impressions,Long,False,,Metric,
+Month,Month,month,String,False,,Segment,
+PrimaryCompanyName,Company name,companyName,String,False,,Attribute,
+Quarter,Quarter,quarter,String,False,,Segment,
+Week,Week,week,String,False,,Segment,
+Year,Year,year,Integer,False,,Segment,

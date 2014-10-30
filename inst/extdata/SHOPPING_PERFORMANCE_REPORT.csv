@@ -1,65 +1,105 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
-AdGroupName,Ad group,adGroup,String,,Attribute,
-AggregatorId,MCA Id,mCAId,Long,,Segment,
-AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
-Brand,Brand,brand,String,,Segment,
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-CampaignName,Campaign,campaign,String,,Attribute,
-CategoryL1,Category (1st level),category1stLevel,String,,Segment,
-CategoryL2,Category (2nd level),category2ndLevel,String,,Segment,
-CategoryL3,Category (3rd level),category3rdLevel,String,,Segment,
-CategoryL4,Category (4th level),category4thLevel,String,,Segment,
-CategoryL5,Category (5th level),category5thLevel,String,,Segment,
-Clicks,Clicks,clicks,Long,,Metric,
-ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
+AdGroupName,Ad group,adGroup,String,False,,Attribute,
+AggregatorId,MCA Id,mCAId,Long,False,,Attribute,
+AverageCpc,Avg. CPC,avgCPC,Money,False,,Metric,
+Brand,Brand,brand,String,False,,Attribute,
+CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
+CampaignName,Campaign,campaign,String,False,,Attribute,
+CategoryL1,Category (1st level),category1stLevel,String,False,,Attribute,
+CategoryL2,Category (2nd level),category2ndLevel,String,False,,Attribute,
+CategoryL3,Category (3rd level),category3rdLevel,String,False,,Attribute,
+CategoryL4,Category (4th level),category4thLevel,String,False,,Attribute,
+CategoryL5,Category (5th level),category5thLevel,String,False,,Attribute,
+ClickType,Click type,clickType,ClickType,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+",Segment,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+Predicate values / display values:
+URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
 "
-ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+Clicks,Clicks,clicks,Long,False,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+ConversionRateManyPerClick,Conv. rate,convRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-Conversions,Converted clicks,convertedClicks,Long,,Metric,
-ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
-ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+ConversionValue,Total conv. value,totalConvValue,Double,False,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,False,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,False,,Metric,
+Cost,Cost,cost,Money,False,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,False,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,False,,Metric,
+CountryCriteriaId,Country/Territory,countryTerritory,Integer,False,,Attribute,"Name of the country as a string.
 "
-Cost,Cost,cost,Money,,Metric,
-CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
-CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
-CountryCriteriaId,Country/Territory,countryTerritory,Integer,,Segment,"Name of the country as a string.
+Ctr,CTR,ctr,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+CustomAttribute0,Custom label 0,customLabel0,String,False,,Attribute,
+CustomAttribute1,Custom label 1,customLabel1,String,False,,Attribute,
+CustomAttribute2,Custom label 2,customLabel2,String,False,,Attribute,
+CustomAttribute3,Custom label 3,customLabel3,String,False,,Attribute,
+CustomAttribute4,Custom label 4,customLabel4,String,False,,Attribute,
+Date,Day,day,Date,False,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,False,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
 "
-CustomAttribute0,Custom label 0,customLabel0,String,,Segment,
-CustomAttribute1,Custom label 1,customLabel1,String,,Segment,
-CustomAttribute2,Custom label 2,customLabel2,String,,Segment,
-CustomAttribute3,Custom label 3,customLabel3,String,,Segment,
-CustomAttribute4,Custom label 4,customLabel4,String,,Segment,
-Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+Impressions,Impressions,impressions,Long,False,,Metric,
+LanguageCriteriaId,Language,language,Integer,False,,Attribute,
+MerchantId,MC Id,mCId,Long,False,,Attribute,
+Month,Month,month,String,False,,Segment,
+OfferId,Item Id,itemId,String,False,,Attribute,
+ProductCondition,Condition,condition,ShoppingProductCondition,False,"UNKNOWN / unknown
+OLD / Used
+NEW / New
+REFURBISHED / Refurbished
+",Segment,"Predicate values / display values:
+UNKNOWN / unknown
+OLD / Used
+NEW / New
+REFURBISHED / Refurbished
 "
-DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
-"
-Impressions,Impressions,impressions,Long,,Metric,
-LanguageCriteriaId,Language,language,Integer,,Segment,
-MerchantId,MC Id,mCId,Long,,Segment,
-Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-OfferId,Item Id,itemId,String,,Segment,
-ProductCondition,Condition,condition,ShoppingProductCondition,,Segment,
-ProductTypeL1,Product type (1st level),productType1stLevel,String,,Segment,
-ProductTypeL2,Product type (2nd level),productType2ndLevel,String,,Segment,
-ProductTypeL3,Product type (3rd level),productType3rdLevel,String,,Segment,
-ProductTypeL4,Product type (4th level),productType4thLevel,String,,Segment,
-ProductTypeL5,Product type (5th level),productType5thLevel,String,,Segment,
-Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-StoreId,Store Id,storeId,String,,Segment,
-TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
-"
-ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
-Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
-"
+ProductTypeL1,Product type (1st level),productType1stLevel,String,False,,Attribute,
+ProductTypeL2,Product type (2nd level),productType2ndLevel,String,False,,Attribute,
+ProductTypeL3,Product type (3rd level),productType3rdLevel,String,False,,Attribute,
+ProductTypeL4,Product type (4th level),productType4thLevel,String,False,,Attribute,
+ProductTypeL5,Product type (5th level),productType5thLevel,String,False,,Attribute,
+Quarter,Quarter,quarter,String,False,,Segment,
+StoreId,Store Id,storeId,String,False,,Attribute,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,False,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,False,,Metric,
+Week,Week,week,String,False,,Segment,
+Year,Year,year,Integer,False,,Segment,

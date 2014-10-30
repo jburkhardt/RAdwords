@@ -1,43 +1,83 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
-AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
-AveragePosition,Avg. position,avgPosition,Double,,Metric,
-BidModifier,Bid adj.,bidAdj,Double,,Metric,
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-CampaignName,Campaign,campaign,String,,Attribute,
-CampaignStatus,Campaign state,campaignState,CampaignStatus,,Attribute,
-Clicks,Clicks,clicks,Long,,Metric,
-ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,,Attribute,
+AccountDescriptiveName,Account,account,String,True,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,True,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
-ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+AverageCpc,Avg. CPC,avgCPC,Money,True,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,True,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,True,,Metric,
+BidModifier,Bid adj.,bidAdj,Double,True,,Attribute,
+CampaignId,Campaign ID,campaignID,Long,True,,Attribute,
+CampaignName,Campaign,campaign,String,True,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
 "
-Conversions,Converted clicks,convertedClicks,Long,,Metric,
-ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
-ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+Clicks,Clicks,clicks,Long,True,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-Cost,Cost,cost,Money,,Metric,
-CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
-CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
-Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+ConversionRateManyPerClick,Conv. rate,convRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+ConversionValue,Total conv. value,totalConvValue,Double,True,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,True,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,True,,Metric,
+Cost,Cost,cost,Money,True,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,True,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,,Metric,
+Ctr,CTR,ctr,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-Id,Platform,platform,Long,,Attribute,
-Impressions,Impressions,impressions,Long,,Metric,
-Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+CustomerDescriptiveName,Client name,clientName,String,True,,Attribute,
+Date,Day,day,Date,True,,Segment,
+Device,Device,device,DeviceType,True,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,"Predicate values / display values:
+UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
 "
-MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+ExternalCustomerId,Customer ID,customerID,Long,True,,Attribute,
+Id,Platform,platform,Long,True,,Attribute,
+Impressions,Impressions,impressions,Long,True,,Metric,
+Month,Month,month,String,True,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
 "
-Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
-"
-ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,
-Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
-"
+PrimaryCompanyName,Company name,companyName,String,True,,Attribute,
+Quarter,Quarter,quarter,String,True,,Segment,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,True,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,,Metric,
+Week,Week,week,String,True,,Segment,
+Year,Year,year,Integer,True,,Segment,

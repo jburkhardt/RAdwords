@@ -1,5 +1,11 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-Id,Location,location,Long,,Attribute,
-IsNegative,Is negative,isNegative,Boolean,,Attribute,"Prevents zero-impression rows from being returned in Ad Performance Report.
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,,Attribute,
+AccountDescriptiveName,Account,account,String,True,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,True,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
+CampaignId,Campaign ID,campaignID,Long,True,,Attribute,
+CustomerDescriptiveName,Client name,clientName,String,True,,Attribute,
+ExternalCustomerId,Customer ID,customerID,Long,True,,Attribute,
+Id,Location,location,Long,True,,Attribute,
+IsNegative,Is negative,isNegative,Boolean,True,,Attribute,
+PrimaryCompanyName,Company name,companyName,String,True,,Attribute,

@@ -1,129 +1,283 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-ConversionRateManyPerClickSignificance,Conversion rate ACE indicator,conversionRateACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,,Attribute,
+AccountDescriptiveName,Account,account,String,True,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,True,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
-ConversionRateSignificance,Click conversion rate ACE indicator,clickConversionRateACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+AdGroupAdDisapprovalReasons,Disapproval reasons,disapprovalReasons,List,True,,Attribute,"List elements are delimited by the semicolon character (;)
 "
-ImageAdUrl,Image hosting key,imageHostingKey,String,,Attribute,"Prefix this value with ""https://tpc.googlesyndication.com/pageadimg/imgad?id="" to get the full URL.
+AdGroupId,Ad group ID,adGroupID,Long,True,,Attribute,
+AdGroupName,Ad group,adGroup,String,True,,Attribute,
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
 "
-ViewThroughConversionsSignificance,View-through conv. ACE indicator,viewThroughConvACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+AdNetworkType1,Network,network,AdNetworkType1,True,"SEARCH / Search Network
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Search Network
+CONTENT / Display Network
 "
-AccountCurrencyCode,Currency,currency,String,,Attribute,
-AccountDescriptiveName,Account,account,String,,Attribute,
-AccountTimeZoneId,Time zone,timeZone,String,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,True,"SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
 "
-AdGroupAdDisapprovalReasons,Disapproval reasons,disapprovalReasons,List,,Attribute,
-AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
-AdGroupName,Ad group,adGroup,String,,Attribute,
-AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,,Attribute,
-AdNetworkType1,Network,network,AdNetworkType1,,Segment,
-AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
-AdType,Ad type,adType,Type,,Attribute,
-AdvertiserExperimentSegmentationBin,ACE split,aCESplit,AdvertiserExperimentSegmentationBin,,Segment,"Prevents zero-impression rows from being returned.
+AdType,Ad type,adType,Type,True,"DEPRECATED_AD / Other
+IMAGE_AD / Image ad
+MOBILE_AD / Mobile ad
+MOBILE_IMAGE_AD / Mobile ad
+PRODUCT_AD / Product listing ad
+TEMPLATE_AD / Display ad
+TEXT_AD / Text ad
+THIRD_PARTY_REDIRECT_AD / Third party ad
+DYNAMIC_SEARCH_AD / Dynamic search ad
+CALL_ONLY_AD / Call only ad
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+DEPRECATED_AD / Other
+IMAGE_AD / Image ad
+MOBILE_AD / Mobile ad
+MOBILE_IMAGE_AD / Mobile ad
+PRODUCT_AD / Product listing ad
+TEMPLATE_AD / Display ad
+TEXT_AD / Text ad
+THIRD_PARTY_REDIRECT_AD / Third party ad
+DYNAMIC_SEARCH_AD / Dynamic search ad
+CALL_ONLY_AD / Call only ad
+UNKNOWN / unknown
 "
-AssistClicks,Assist Clicks,assistClicks,Long,,Metric,
-AssistImpressions,Assist Impr.,assistImpr,Long,,Metric,
-AssistImpressionsOverLastClicks,Assist Impr. / Last Clicks,assistImprLastClicks,Double,,Metric,
-AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
-AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
-AveragePageviews,Pages / visit,pagesVisit,Double,,Metric,
-AveragePosition,Avg. position,avgPosition,Double,,Metric,
-AverageTimeOnSite,Avg. visit duration (seconds),avgVisitDurationSeconds,Double,,Metric,
-BounceRate,Bounce rate,bounceRate,Double,,Metric,
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-CampaignName,Campaign,campaign,String,,Attribute,
-CampaignStatus,Campaign state,campaignState,CampaignStatus,,Attribute,
-ClickAssistedConversions,Click Assisted Conv.,clickAssistedConv,Long,,Metric,
-ClickAssistedConversionsOverLastClickConversions,Click Assisted Conv. / Last Click Conv.,clickAssistedConvLastClickConv,Double,,Metric,
-ClickAssistedConversionValue,Click Assisted Conv. Value,clickAssistedConvValue,Double,,Metric,
-Clicks,Clicks,clicks,Long,,Metric,
-ClickSignificance,Clicks ACE indicator,clicksACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+AdvertiserExperimentSegmentationBin,ACE split,aCESplit,AdvertiserExperimentSegmentationBin,True,"OUTSIDE_OF_EXPERIMENT / outside experiment
+CONTROL / control
+EXPERIMENT / experiment
+",Segment,"Predicate values / display values:
+OUTSIDE_OF_EXPERIMENT / outside experiment
+CONTROL / control
+EXPERIMENT / experiment
 "
-ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+AssistClicks,Assist Clicks,assistClicks,Long,True,,Metric,
+AssistImpressions,Assist Impr.,assistImpr,Long,True,,Metric,
+AssistImpressionsOverLastClicks,Assist Impr. / Last Clicks,assistImprLastClicks,Double,True,,Metric,
+AverageCpc,Avg. CPC,avgCPC,Money,True,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,True,,Metric,
+AveragePageviews,Pages / visit,pagesVisit,Double,True,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,True,,Metric,
+AverageTimeOnSite,Avg. visit duration (seconds),avgVisitDurationSeconds,Double,True,,Metric,
+BounceRate,Bounce rate,bounceRate,Double,True,,Metric,
+CampaignId,Campaign ID,campaignID,Long,True,,Attribute,
+CampaignName,Campaign,campaign,String,True,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
 "
-ConversionCategoryName,Conversion category,conversionCategory,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
+ClickAssistedConversionValue,Click Assisted Conv. Value,clickAssistedConvValue,Double,True,,Metric,
+ClickAssistedConversions,Click Assisted Conv.,clickAssistedConv,Long,True,,Metric,
+ClickAssistedConversionsOverLastClickConversions,Click Assisted Conv. / Last Click Conv.,clickAssistedConvLastClickConv,Double,True,,Metric,
+ClickSignificance,Clicks ACE indicator,clicksACEIndicator,SignificanceData,True,,Metric,
+ClickType,Click type,clickType,ClickType,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+",Segment,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+Predicate values / display values:
+URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
 "
-ConversionManyPerClickSignificance,Conversion ACE indicator,conversionACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+Clicks,Clicks,clicks,Long,True,,Metric,
+ConversionCategoryName,Conversion category,conversionCategory,String,False,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
 "
-ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+ConversionManyPerClickSignificance,Conversion ACE indicator,conversionACEIndicator,SignificanceData,True,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+ConversionRateManyPerClick,Conv. rate,convRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-Conversions,Converted clicks,convertedClicks,Long,,Metric,
-ConversionSignificance,Converted clicks ACE indicator,convertedClicksACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+ConversionRateManyPerClickSignificance,Conversion rate ACE indicator,conversionRateACEIndicator,SignificanceData,True,,Metric,
+ConversionRateSignificance,Click conversion rate ACE indicator,clickConversionRateACEIndicator,SignificanceData,True,,Metric,
+ConversionSignificance,Converted clicks ACE indicator,convertedClicksACEIndicator,SignificanceData,True,,Metric,
+ConversionTypeName,Conversion name,conversionName,String,False,,Attribute,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
 "
-ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
-ConversionTypeName,Conversion name,conversionName,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
+ConversionValue,Total conv. value,totalConvValue,Double,True,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,True,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,True,,Metric,
+Cost,Cost,cost,Money,True,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,True,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,,Metric,
+CostPerConversionManyPerClickSignificance,Cost/conversion ACE indicator,costConversionACEIndicator,SignificanceData,True,,Metric,
+CostPerConversionSignificance,Cost/converted click ACE indicator,costConvertedClickACEIndicator,SignificanceData,True,,Metric,
+CostSignificance,Cost ACE indicator,costACEIndicator,SignificanceData,True,,Metric,
+CpcSignificance,CPC ACE indicator,cPCACEIndicator,SignificanceData,True,,Metric,
+CpmSignificance,CPM ACE indicator,cPMACEIndicator,SignificanceData,True,,Metric,
+CreativeApprovalStatus,Ad Approval Status,adApprovalStatus,ApprovalStatus,True,"APPROVED / approved
+FAMILY_SAFE / approved
+NON_FAMILY_SAFE / approved (non family)
+PORN / approved (adult)
+UNCHECKED / pending review
+DISAPPROVED / disapproved
+",Attribute,"Predicate values / display values:
+APPROVED / approved
+FAMILY_SAFE / approved
+NON_FAMILY_SAFE / approved (non family)
+PORN / approved (adult)
+UNCHECKED / pending review
+DISAPPROVED / disapproved
 "
-ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+CreativeDestinationUrl,Destination URL,destinationURL,String,True,,Attribute,
+CreativeFinalAppUrls,App final URL,appFinalURL,List,True,,Attribute,"List elements are delimited by the semicolon character (;)
 "
-Cost,Cost,cost,Money,,Metric,
-CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
-CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
-CostPerConversionManyPerClickSignificance,Cost/conversion ACE indicator,costConversionACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+CreativeFinalMobileUrls,Mobile final URL,mobileFinalURL,List,True,,Attribute,"List elements are delimited by the semicolon character (;)
 "
-CostPerConversionSignificance,Cost/converted click ACE indicator,costConvertedClickACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+CreativeFinalUrls,Final URL,finalURL,List,True,,Attribute,"List elements are delimited by the semicolon character (;)
 "
-CostSignificance,Cost ACE indicator,costACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+CreativeTrackingUrlTemplate,Tracking template,trackingTemplate,String,True,,Attribute,
+CreativeUrlCustomParameters,Custom parameter,customParameter,CustomParameters,True,,Attribute,
+Ctr,CTR,ctr,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-CpcSignificance,CPC ACE indicator,cPCACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+CtrSignificance,CTR ACE indicator,cTRACEIndicator,SignificanceData,True,,Metric,
+CustomerDescriptiveName,Client name,clientName,String,True,,Attribute,
+Date,Day,day,Date,True,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,True,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
 "
-CpmSignificance,CPM ACE indicator,cPMACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+Description1,Description line 1,descriptionLine1,String,True,,Attribute,
+Description2,Description line 2,descriptionLine2,String,True,,Attribute,
+Device,Device,device,DeviceType,True,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,"Predicate values / display values:
+UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
 "
-CreativeApprovalStatus,Ad Approval Status,adApprovalStatus,ApprovalStatus,,Attribute,
-CreativeDestinationUrl,Destination URL,destinationURL,String,,Attribute,
-Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+DevicePreference,Device preference,devicePreference,Long,True,,Attribute,
+DisplayUrl,Display URL,displayURL,String,True,,Attribute,
+ExternalCustomerId,Customer ID,customerID,Long,True,,Attribute,
+Headline,Ad,ad,String,True,,Attribute,
+Id,Ad ID,adID,Long,True,,Attribute,
+ImageAdUrl,Image Ad URL,imageAdURL,String,True,,Attribute,"Prefix this value with ""https://tpc.googlesyndication.com/pageadimg/imgad?id="" to get the full URL.
 "
-CtrSignificance,CTR ACE indicator,cTRACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+ImageCreativeName,Image ad name,imageAdName,String,True,,Attribute,
+ImpressionAssistedConversionValue,Impr. Assisted Conv. Value,imprAssistedConvValue,Double,True,,Metric,
+ImpressionAssistedConversions,Impr. Assisted Conv.,imprAssistedConv,Long,True,,Metric,
+ImpressionAssistedConversionsOverLastClickConversions,Impr. Assisted Conv. / Last Click Conv.,imprAssistedConvLastClickConv,Double,True,,Metric,
+ImpressionSignificance,Impressions ACE indicator,impressionsACEIndicator,SignificanceData,True,,Metric,
+Impressions,Impressions,impressions,Long,True,,Metric,
+IsNegative,Is negative,isNegative,Boolean,False,,Attribute,
+KeywordId,Keyword ID,keywordID,Long,False,,Attribute,"In the Ad Performance Report this field contains the ID of the criterion that triggered the ad, segmenting the report and preventing zero impressions. The ID can be for any type of criterion, including placements, verticals, etc. Cross-reference with the Criteria Report to determine the criteria type and details.
 "
-CustomerDescriptiveName,Client name,clientName,String,,Attribute,
-Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+LabelIds,Label IDs,labelIDs,List,True,,Attribute,"List elements are delimited by the semicolon character (;)
 "
-DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+Labels,Labels,labels,List,True,,Attribute,"List elements are delimited by the semicolon character (;)
 "
-Description1,Description line 1,descriptionLine1,String,,Attribute,
-Description2,Description line 2,descriptionLine2,String,,Attribute,
-Device,Device,device,DeviceType,,Segment,"Prevents zero-impression rows from being returned.
+Month,Month,month,String,True,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
 "
-DevicePreference,Device preference,devicePreference,Long,,Attribute,
-DisplayUrl,Display URL,displayURL,String,,Attribute,
-ExternalCustomerId,Customer ID,customerID,Long,,Attribute,
-Headline,Ad,ad,String,,Attribute,
-Id,Ad ID,adID,Long,,Attribute,
-ImageCreativeName,Image ad name,imageAdName,String,,Attribute,
-ImpressionAssistedConversions,Impr. Assisted Conv.,imprAssistedConv,Long,,Metric,
-ImpressionAssistedConversionsOverLastClickConversions,Impr. Assisted Conv. / Last Click Conv.,imprAssistedConvLastClickConv,Double,,Metric,
-ImpressionAssistedConversionValue,Impr. Assisted Conv. Value,imprAssistedConvValue,Double,,Metric,
-Impressions,Impressions,impressions,Long,,Metric,
-ImpressionSignificance,Impressions ACE indicator,impressionsACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
+PercentNewVisitors,% new visits,newVisits,Double,True,,Metric,
+PositionSignificance,Position ACE indicator,positionACEIndicator,SignificanceData,True,,Metric,
+PrimaryCompanyName,Company name,companyName,String,True,,Attribute,
+PromotionLine,Ad,ad,String,True,,Attribute,
+Quarter,Quarter,quarter,String,True,,Segment,
+SharedSetName,List name,listName,String,True,,Attribute,
+Slot,Top vs. Other,topVsOther,Slot,True,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+",Segment,"Predicate values / display values:
+SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
 "
-IsNegative,Is negative,isNegative,Boolean,,Attribute,"Prevents zero-impression rows from being returned in Ad Performance Report.
+Status,Ad state,adState,Status,True,"ENABLED / enabled
+PAUSED / paused
+DISABLED / disabled
+",Attribute,"Predicate values / display values:
+ENABLED / enabled
+PAUSED / paused
+DISABLED / disabled
 "
-KeywordId,Keyword ID,keywordID,Long,,Attribute,"In the Ad Performance Report this field contains the ID of the criterion that triggered the ad, segmenting the report and preventing zero impressions. The ID can be for any type of criterion, including placements, verticals, etc. Cross-reference with the Criteria Report to determine the criteria type and details.
-"
-Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
-"
-PercentNewVisitors,% new visits,newVisits,Double,,Metric,
-PositionSignificance,Position ACE indicator,positionACEIndicator,SignificanceData,,Metric,"Prevents zero-impression rows from being returned.
-"
-PrimaryCompanyName,Company name,companyName,String,,Attribute,
-PrimaryUserLogin,Login email,loginEmail,String,,Attribute,
-PromotionLine,Ad,ad,String,,Attribute,
-Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-SharedSetName,List name,listName,String,,Attribute,
-Slot,Top vs. side,topVsSide,Slot,,Segment,
-Status,Ad state,adState,Status,,Attribute,
-TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
-"
-Url,Destination URL,destinationURL,String,,Attribute,
-ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,
-Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
-"
+Url,Destination URL,destinationURL,String,True,,Attribute,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,True,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,,Metric,
+ViewThroughConversionsSignificance,View-through conv. ACE indicator,viewThroughConvACEIndicator,SignificanceData,True,,Metric,
+Week,Week,week,String,True,,Segment,
+Year,Year,year,Integer,True,,Segment,

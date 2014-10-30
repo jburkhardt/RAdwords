@@ -1,29 +1,136 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-Page,Page,page,Integer,,Segment,
-AdFormat,Ad type,adType,AdFormat,,Segment,
-AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
-AdNetworkType1,Network,network,AdNetworkType1,,Segment,
-AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-CityCriteriaId,City,city,Integer,,Segment,"Name of the city as a string.
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AdFormat,Ad type,adType,AdFormat,False,"UNKNOWN / unknown
+TEXT / text
+IMAGE / image
+DYNAMIC_IMAGE / dynamic_image
+FLASH / flash
+VIDEO / video
+HTML / html
+AUDIO / audio
+COMPOSITE / composite
+PRINT / print
+",Segment,"Predicate values / display values:
+UNKNOWN / unknown
+TEXT / text
+IMAGE / image
+DYNAMIC_IMAGE / dynamic_image
+FLASH / flash
+VIDEO / video
+HTML / html
+AUDIO / audio
+COMPOSITE / composite
+PRINT / print
 "
-ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
+AdNetworkType1,Network,network,AdNetworkType1,False,"SEARCH / Search Network
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Search Network
+CONTENT / Display Network
 "
-CountryCriteriaId,Country/Territory,countryTerritory,Integer,,Segment,"Name of the country as a string.
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,False,"SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
 "
-CreativeId,Ad ID,adID,Long,,Attribute,
-CriteriaId,Keyword ID,keywordID,Long,,Attribute,
-CriteriaParameters,Keyword / Placement,keywordPlacement,String,,Attribute,"In the Destination URL report, this field behaves as a segment.
+CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
+CityCriteriaId,City,city,Integer,False,,Attribute,"Name of the city as a string.
 "
-Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+ClickType,Click type,clickType,ClickType,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+",Segment,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+Predicate values / display values:
+URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
 "
-Device,Device,device,DeviceType,,Segment,"Prevents zero-impression rows from being returned.
+CountryCriteriaId,Country/Territory,countryTerritory,Integer,False,,Attribute,"Name of the country as a string.
 "
-GclId,Google Click ID,googleClickID,String,,Attribute,
-MetroCriteriaId,Metro area,metroArea,Integer,,Segment,"Name of the metro as a string.
+CreativeId,Ad ID,adID,Long,False,,Attribute,
+CriteriaId,Keyword ID,keywordID,Long,False,,Attribute,
+CriteriaParameters,Keyword / Placement,keywordPlacement,String,False,,Attribute,"In the Destination URL report, this field behaves as a segment.
 "
-MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+Date,Day,day,Date,False,,Segment,
+Device,Device,device,DeviceType,False,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,"Predicate values / display values:
+UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
 "
-RegionCriteriaId,Region,region,Integer,,Segment,"Name of the region as a string.
+GclId,Google Click ID,googleClickID,String,False,,Attribute,
+MetroCriteriaId,Metro area,metroArea,Integer,False,,Attribute,"Name of the metro as a string.
 "
-Slot,Top vs. side,topVsSide,Slot,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,False,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+"
+Page,Page,page,Integer,False,,Attribute,
+RegionCriteriaId,Region,region,Integer,False,,Attribute,"Name of the region as a string.
+"
+Slot,Top vs. Other,topVsOther,Slot,False,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+",Segment,"Predicate values / display values:
+SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+"
+UserListId,User List ID,userListID,Long,False,,Attribute,

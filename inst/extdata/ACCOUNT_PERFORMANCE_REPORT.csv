@@ -1,83 +1,171 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-AccountCurrencyCode,Currency,currency,String,,Attribute,
-AccountDescriptiveName,Account,account,String,,Attribute,
-AccountId,Account ID,accountID,Long,,Attribute,
-AccountTimeZoneId,Time zone,timeZone,String,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,,Attribute,
+AccountDescriptiveName,Account,account,String,True,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,True,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
-AdNetworkType1,Network,network,AdNetworkType1,,Segment,
-AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,,Segment,
-AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
-AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
-AveragePosition,Avg. position,avgPosition,Double,,Metric,
-Clicks,Clicks,clicks,Long,,Metric,
-ClickType,Click type,clickType,ClickType,,Segment,"Prevents zero-impression rows from being returned. The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+AdNetworkType1,Network,network,AdNetworkType1,True,"SEARCH / Search Network
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Search Network
+CONTENT / Display Network
 "
-ContentBudgetLostImpressionShare,Content Lost IS (budget),contentLostISBudget,Double,,Metric,
-ContentImpressionShare,Content Impr. share,contentImprShare,Double,,Metric,
-ContentRankLostImpressionShare,Content Lost IS (rank),contentLostISRank,Double,,Metric,
-ConversionCategoryName,Conversion category,conversionCategory,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,True,"SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
 "
-ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+AverageCpc,Avg. CPC,avgCPC,Money,True,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,True,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,True,,Metric,
+ClickType,Click type,clickType,ClickType,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+",Segment,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+Predicate values / display values:
+URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
 "
-ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+Clicks,Clicks,clicks,Long,True,,Metric,
+ContentBudgetLostImpressionShare,Content Lost IS (budget),contentLostISBudget,Double,True,,Metric,
+ContentImpressionShare,Content Impr. share,contentImprShare,Double,True,,Metric,
+ContentRankLostImpressionShare,Content Lost IS (rank),contentLostISRank,Double,True,,Metric,
+ConversionCategoryName,Conversion category,conversionCategory,String,False,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
 "
-Conversions,Converted clicks,convertedClicks,Long,,Metric,
-ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
-ConversionTrackerId,Conversion Tracker Id,conversionTrackerId,Long,,Attribute,
-ConversionTypeName,Conversion name,conversionName,String,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
+ConversionRate,Click conversion rate,clickConversionRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+ConversionRateManyPerClick,Conv. rate,convRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-Cost,Cost,cost,Money,,Metric,
-CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
-CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
-CostPerEstimatedTotalConversion,Cost / est. total conv.,costEstTotalConv,Money,,Metric,
-Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+ConversionTrackerId,Conversion Tracker Id,conversionTrackerId,Long,False,,Segment,
+ConversionTypeName,Conversion name,conversionName,String,False,,Attribute,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
 "
-CustomerDescriptiveName,Client name,clientName,String,,Attribute,
-Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+ConversionValue,Total conv. value,totalConvValue,Double,True,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,True,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,True,,Metric,
+Cost,Cost,cost,Money,True,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,True,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,,Metric,
+CostPerEstimatedTotalConversion,Cost / est. total conv.,costEstTotalConv,Double,True,,Metric,
+Ctr,CTR,ctr,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+CustomerDescriptiveName,Client name,clientName,String,True,,Attribute,
+Date,Day,day,Date,True,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,True,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
 "
-Device,Device,device,DeviceType,,Segment,"Prevents zero-impression rows from being returned.
+Device,Device,device,DeviceType,True,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,"Predicate values / display values:
+UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
 "
-EstimatedCrossDeviceConversions,Est. cross-device conv.,estCrossDeviceConv,Long,,Metric,
-EstimatedTotalConversionRate,Est. total conv. rate,estTotalConvRate,Double,,Metric,
-EstimatedTotalConversions,Est. total conv.,estTotalConv,Long,,Metric,
-EstimatedTotalConversionValue,Est. total conv. value,estTotalConvValue,Double,,Metric,
-EstimatedTotalConversionValuePerClick,Est. total conv. value / click,estTotalConvValueClick,Double,,Metric,
-EstimatedTotalConversionValuePerCost,Est. total conv. value / cost,estTotalConvValueCost,Double,,Metric,
-ExternalCustomerId,Customer ID,customerID,Long,,Attribute,
-HourOfDay,Hour of day,hourOfDay,Integer,,Segment,
-Impressions,Impressions,impressions,Long,,Metric,
-InvalidClickRate,Invalid click rate,invalidClickRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+EstimatedCrossDeviceConversions,Est. cross-device conv.,estCrossDeviceConv,Long,True,,Metric,
+EstimatedTotalConversionRate,Est. total conv. rate,estTotalConvRate,Double,True,,Metric,
+EstimatedTotalConversionValue,Est. total conv. value,estTotalConvValue,Double,True,,Metric,
+EstimatedTotalConversionValuePerClick,Est. total conv. value / click,estTotalConvValueClick,Double,True,,Metric,
+EstimatedTotalConversionValuePerCost,Est. total conv. value / cost,estTotalConvValueCost,Double,True,,Metric,
+EstimatedTotalConversions,Est. total conv.,estTotalConv,Long,True,,Metric,
+ExternalCustomerId,Customer ID,customerID,Long,True,,Attribute,
+HourOfDay,Hour of day,hourOfDay,Integer,False,,Segment,
+Impressions,Impressions,impressions,Long,True,,Metric,
+InvalidClickRate,Invalid click rate,invalidClickRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-InvalidClicks,Invalid clicks,invalidClicks,Long,,Metric,
-Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+InvalidClicks,Invalid clicks,invalidClicks,Long,True,,Metric,
+Month,Month,month,String,True,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
 "
-MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+PrimaryCompanyName,Company name,companyName,String,True,,Attribute,
+Quarter,Quarter,quarter,String,True,,Segment,
+SearchBudgetLostImpressionShare,Search Lost IS (budget),searchLostISBudget,Double,True,,Metric,
+SearchExactMatchImpressionShare,Search Exact match IS,searchExactMatchIS,Double,True,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the field ClickType.
 "
-PrimaryCompanyName,Company name,companyName,String,,Attribute,
-PrimaryUserLogin,Login email,loginEmail,String,,Attribute,
-Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+SearchImpressionShare,Search Impr. share,searchImprShare,Double,True,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the fields ClickType and HourOfDay on any report. Not compatible with the field Device on the Product Partition Report.
 "
-SearchBudgetLostImpressionShare,Search Lost IS (budget),searchLostISBudget,Double,,Metric,
-SearchExactMatchImpressionShare,Search Exact match IS,searchExactMatchIS,Double,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the field ClickType.
+SearchRankLostImpressionShare,Search Lost IS (rank),searchLostISRank,Double,True,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the field ClickType.
 "
-SearchImpressionShare,Search Impr. share,searchImprShare,Double,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the fields ClickType and HourOfDay.
+Slot,Top vs. Other,topVsOther,Slot,True,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+",Segment,"Predicate values / display values:
+SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
 "
-SearchRankLostImpressionShare,Search Lost IS (rank),searchLostISRank,Double,,Metric,"A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the field ClickType.
-"
-Slot,Top vs. side,topVsSide,Slot,,Segment,
-TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
-"
-ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ValuePerEstimatedTotalConversion,Value / est. total conv.,valueEstTotalConv,Double,,Metric,
-ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,
-Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
-"
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,True,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,,Metric,
+ValuePerEstimatedTotalConversion,Value / est. total conv.,valueEstTotalConv,Double,True,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,,Metric,
+Week,Week,week,String,True,,Segment,
+Year,Year,year,Integer,True,,Segment,

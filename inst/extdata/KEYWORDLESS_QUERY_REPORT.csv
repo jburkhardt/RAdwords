@@ -1,56 +1,104 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-AccountCurrencyCode,Currency,currency,String,,Attribute,
-AccountDescriptiveName,Account,account,String,,Attribute,
-AccountTimeZoneId,Time zone,timeZone,String,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,False,,Attribute,
+AccountDescriptiveName,Account,account,String,False,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,False,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
-AdGroupId,Ad group ID,adGroupID,Long,,Attribute,
-AdGroupName,Ad group,adGroup,String,,Attribute,
-AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,,Attribute,
-AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
-AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
-CampaignId,Campaign ID,campaignID,Long,,Attribute,
-CampaignName,Campaign,campaign,String,,Attribute,
-CampaignStatus,Campaign state,campaignState,CampaignStatus,,Attribute,
-CategoryPaths,Categories,categories,String,,Attribute,
-Clicks,Clicks,clicks,Long,,Metric,
-ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
+AdGroupName,Ad group,adGroup,String,False,,Attribute,
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
 "
-ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+AverageCpc,Avg. CPC,avgCPC,Money,False,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,False,,Metric,
+CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
+CampaignName,Campaign,campaign,String,False,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
 "
-Conversions,Converted clicks,convertedClicks,Long,,Metric,
-ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
-Cost,Cost,cost,Money,,Metric,
-CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
-CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
-CriterionId,Keyword ID,keywordID,Long,,Attribute,
-Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+CategoryPaths,Categories,categories,String,False,,Attribute,
+Clicks,Clicks,clicks,Long,False,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-CustomerDescriptiveName,Client name,clientName,String,,Attribute,
-Date,Day,day,Date,,Segment,"Prevents zero-impression rows from being returned.
+ConversionRateManyPerClick,Conv. rate,convRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-DayOfWeek,Day of week,dayOfWeek,DayOfWeek,,Segment,"Prevents zero-impression rows from being returned.
+Conversions,Converted clicks,convertedClicks,Long,False,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,False,,Metric,
+Cost,Cost,cost,Money,False,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,False,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,False,,Metric,
+CriterionId,Keyword ID,keywordID,Long,False,,Attribute,
+Ctr,CTR,ctr,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-Domain,Domain,domain,String,,Attribute,
-ExternalCustomerId,Customer ID,customerID,Long,,Attribute,
-Impressions,Impressions,impressions,Long,,Metric,
-Line1,Dynamically generated Headline,dynamicallyGeneratedHeadline,String,,Attribute,
-Month,Month,month,String,,Segment,"Prevents zero-impression rows from being returned.
+CustomerDescriptiveName,Client name,clientName,String,False,,Attribute,
+Date,Day,day,Date,False,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,False,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
 "
-MonthOfYear,Month of Year,monthOfYear,MonthOfYear,,Segment,"Prevents zero-impression rows from being returned.
+Domain,Domain,domain,String,False,,Attribute,
+ExternalCustomerId,Customer ID,customerID,Long,False,,Attribute,
+Impressions,Impressions,impressions,Long,False,,Metric,
+Line1,Dynamically generated Headline,dynamicallyGeneratedHeadline,String,False,,Attribute,
+Month,Month,month,String,False,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,False,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
 "
-PrimaryCompanyName,Company name,companyName,String,,Attribute,
-PrimaryUserLogin,Login email,loginEmail,String,,Attribute,
-Quarter,Quarter,quarter,String,,Segment,"Prevents zero-impression rows from being returned.
+PrimaryCompanyName,Company name,companyName,String,False,,Attribute,
+Quarter,Quarter,quarter,String,False,,Segment,
+Query,Search term,searchTerm,String,False,,Attribute,"If the string for this attribute is longer than 128 char bytes, the returned result will NOT be a single aggregated row.
 "
-Query,Search term,searchTerm,String,,Attribute,"If the string for this attribute is longer than 128 char bytes, the returned result will NOT be a single aggregated row.
-"
-Title,Landing Page Title,landingPageTitle,String,,Attribute,
-Url,URL,url,String,,Attribute,
-ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
-Week,Week,week,String,,Segment,"Prevents zero-impression rows from being returned.
-"
-Year,Year,year,Integer,,Segment,"Prevents zero-impression rows from being returned.
-"
+Title,Landing Page Title,landingPageTitle,String,False,,Attribute,
+Url,URL,url,String,False,,Attribute,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,False,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,False,,Metric,
+Week,Week,week,String,False,,Segment,
+Year,Year,year,Integer,False,,Segment,

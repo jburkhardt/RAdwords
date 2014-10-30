@@ -1,42 +1,6 @@
 Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
-AccountCurrencyCode,Currency,currency,String,False,,Attribute,
-AccountDescriptiveName,Account,account,String,False,,Attribute,
-AccountTimeZoneId,Time zone,timeZone,String,False,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
-"
-AdFormat,Ad type,adType,AdFormat,False,"UNKNOWN / unknown
-TEXT / text
-IMAGE / image
-DYNAMIC_IMAGE / dynamic_image
-FLASH / flash
-VIDEO / video
-HTML / html
-AUDIO / audio
-COMPOSITE / composite
-PRINT / print
-",Segment,"Predicate values / display values:
-UNKNOWN / unknown
-TEXT / text
-IMAGE / image
-DYNAMIC_IMAGE / dynamic_image
-FLASH / flash
-VIDEO / video
-HTML / html
-AUDIO / audio
-COMPOSITE / composite
-PRINT / print
-"
 AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
 AdGroupName,Ad group,adGroup,String,False,,Attribute,
-AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,False,"UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
-",Attribute,"Predicate values / display values:
-UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
-"
 AdNetworkType1,Network,network,AdNetworkType1,False,"SEARCH / Search Network
 CONTENT / Display Network
 ",Segment,"Predicate values / display values:
@@ -56,15 +20,34 @@ AverageCpm,Avg. CPM,avgCPM,Money,False,,Metric,
 AveragePosition,Avg. position,avgPosition,Double,False,,Metric,
 CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
 CampaignName,Campaign,campaign,String,False,,Attribute,
-CampaignStatus,Campaign state,campaignState,CampaignStatus,False,"UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
-",Attribute,"Predicate values / display values:
+ClickType,Click type,clickType,ClickType,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
 UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
+",Segment,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+Predicate values / display values:
+URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
 "
 Clicks,Clicks,clicks,Long,False,,Metric,
 ConversionCategoryName,Conversion category,conversionCategory,String,False,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
@@ -81,10 +64,8 @@ ConversionsManyPerClick,Conversions,conversions,Long,False,,Metric,
 Cost,Cost,cost,Money,False,,Metric,
 CostPerConversion,Cost / converted click,costConvertedClick,Money,False,,Metric,
 CostPerConversionManyPerClick,Cost / conv.,costConv,Money,False,,Metric,
-CreativeId,Ad ID,adID,Long,False,,Attribute,
 Ctr,CTR,ctr,Double,False,,Metric,"Percentage returned as ""x.xx%"".
 "
-CustomerDescriptiveName,Client name,clientName,String,False,,Attribute,
 Date,Day,day,Date,False,,Segment,
 DayOfWeek,Day of week,dayOfWeek,DayOfWeek,False,"MONDAY / Monday
 TUESDAY / Tuesday
@@ -102,7 +83,6 @@ FRIDAY / Friday
 SATURDAY / Saturday
 SUNDAY / Sunday
 "
-DestinationUrl,Destination URL,destinationURL,String,False,,Attribute,
 Device,Device,device,DeviceType,False,"UNKNOWN / Other
 DESKTOP / Computers
 HIGH_END_MOBILE / Mobile devices with full browsers
@@ -113,43 +93,9 @@ DESKTOP / Computers
 HIGH_END_MOBILE / Mobile devices with full browsers
 TABLET / Tablets with full browsers
 "
-ExternalCustomerId,Customer ID,customerID,Long,False,,Attribute,
+ExtensionPlaceholderCreativeId,Ad ID,adID,Long,False,,Attribute,
+ExtensionPlaceholderType,Feed placeholder type,feedPlaceholderType,int,False,,Attribute,
 Impressions,Impressions,impressions,Long,False,,Metric,
-KeywordId,Keyword ID,keywordID,long,False,,Attribute,"In the Ad Performance Report this field contains the ID of the criterion that triggered the ad, segmenting the report and preventing zero impressions. The ID can be for any type of criterion, including placements, verticals, etc. Cross-reference with the Criteria Report to determine the criteria type and details.
-"
-KeywordTextMatchingQuery,Keyword,keyword,String,False,,Attribute,
-MatchType,Match type,matchType,QueryMatchType,False,"AUTO / auto
-BROAD / broad
-BROAD_SESSION / broad (session-based)
-EXACT / exact
-EXPANDED / broad
-PHRASE / phrase
-",Segment,"Predicate values / display values:
-AUTO / auto
-BROAD / broad
-BROAD_SESSION / broad (session-based)
-EXACT / exact
-EXPANDED / broad
-PHRASE / phrase
-"
-MatchTypeWithVariant,Match type,matchType,QueryMatchTypeWithVariant,False,"AUTO / auto
-BROAD / broad
-BROAD_SESSION / broad (session-based)
-EXACT / exact
-EXPANDED / broad
-PHRASE / phrase
-NEAR_EXACT / exact (close variant)
-NEAR_PHRASE / phrase (close variant)
-",Segment,"Predicate values / display values:
-AUTO / auto
-BROAD / broad
-BROAD_SESSION / broad (session-based)
-EXACT / exact
-EXPANDED / broad
-PHRASE / phrase
-NEAR_EXACT / exact (close variant)
-NEAR_PHRASE / phrase (close variant)
-"
 Month,Month,month,String,False,,Segment,
 MonthOfYear,Month of Year,monthOfYear,MonthOfYear,False,"JANUARY / January
 FEBRUARY / February
@@ -177,9 +123,22 @@ OCTOBER / October
 NOVEMBER / November
 DECEMBER / December
 "
-PrimaryCompanyName,Company name,companyName,String,False,,Attribute,
 Quarter,Quarter,quarter,String,False,,Segment,
-Query,Search term,searchTerm,String,False,,Attribute,"If the string for this attribute is longer than 128 char bytes, the returned result will NOT be a single aggregated row.
+Slot,Top vs. Other,topVsOther,Slot,False,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+",Segment,"Predicate values / display values:
+SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
 "
 ValuePerConversion,Value / converted click,valueConvertedClick,Double,False,,Metric,
 ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,False,,Metric,

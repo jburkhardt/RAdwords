@@ -1,38 +1,56 @@
-Name,Display Name,XML Attribute,Type,Enum Values,Behavior,Notes
-BudgetReferenceCount,# Campaigns,campaigns,Integer,,Metric,
-DeliveryMethod,Delivery method,deliveryMethod,BudgetDeliveryMethod,,Attribute,
-Period,Budget period,budgetPeriod,BudgetPeriod,,Segment,
-Amount,Budget,budget,Money,,Attribute,
-AssociatedCampaignId,Campaign ID,campaignID,Long,,Attribute,
-AssociatedCampaignName,Campaign,campaign,String,,Attribute,
-AssociatedCampaignStatus,Campaign state,campaignState,CampaignStatus,,Attribute,
-AverageCpc,Avg. CPC,avgCPC,Money,,Metric,
-AverageCpm,Avg. CPM,avgCPM,Money,,Metric,
-AveragePosition,Avg. position,avgPosition,Double,,Metric,
-BudgetCampaignAssociationStatus,Budget usage,budgetUsage,BudgetCampaignAssociationStatus,,Segment,
-BudgetId,Budget ID,budgetID,Long,,Attribute,
-BudgetName,Budget Name,budgetName,String,,Attribute,
-BudgetStatus,Budget state,budgetState,BudgetStatus,,Attribute,
-Clicks,Clicks,clicks,Long,,Metric,
-ConversionRate,Click conversion rate,clickConversionRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+Amount,Budget,budget,Money,True,,Attribute,
+AssociatedCampaignId,Campaign ID,campaignID,Long,True,,Attribute,
+AssociatedCampaignName,Campaign,campaign,String,True,,Attribute,
+AssociatedCampaignStatus,Campaign state,campaignState,CampaignStatus,True,"ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+UNKNOWN / unknown
 "
-ConversionRateManyPerClick,Conv. rate,convRate,Double,,Metric,"Percentage returned as ""x.xx%"".
+AverageCpc,Avg. CPC,avgCPC,Money,True,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,True,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,True,,Metric,
+BudgetCampaignAssociationStatus,Budget usage,budgetUsage,BudgetCampaignAssociationStatus,True,"ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
 "
-Conversions,Converted clicks,convertedClicks,Long,,Metric,
-ConversionsManyPerClick,Conversions,conversions,Long,,Metric,
-ConversionValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+BudgetId,Budget ID,budgetID,Long,True,,Attribute,
+BudgetName,Budget Name,budgetName,String,True,,Attribute,
+BudgetReferenceCount,# Campaigns,campaigns,Integer,True,,Attribute,
+BudgetStatus,Budget state,budgetState,BudgetStatus,True,"ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
 "
-Cost,Cost,cost,Money,,Metric,
-CostPerConversion,Cost / converted click,costConvertedClick,Money,,Metric,
-CostPerConversionManyPerClick,Cost / conv.,costConv,Money,,Metric,
-Ctr,CTR,ctr,Double,,Metric,"Percentage returned as ""x.xx%"".
+Clicks,Clicks,clicks,Long,True,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-Impressions,Impressions,impressions,Long,,Metric,
-IsBudgetExplicitlyShared,Explicitly shared,explicitlyShared,Boolean,,Attribute,
-TotalConvValue,Total conv. value,totalConvValue,Long,,Metric,"The HTTP header returnMoneyInMicros does not affect this field.
+ConversionRateManyPerClick,Conv. rate,convRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
 "
-ValuePerConv,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversion,Value / converted click,valueConvertedClick,Double,,Metric,
-ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ValuePerConvManyPerClick,Value / conv.,valueConv,Double,,Metric,
-ViewThroughConversions,View-through conv.,viewThroughConv,Long,,Metric,
+ConversionValue,Total conv. value,totalConvValue,Double,True,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,True,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,True,,Metric,
+Cost,Cost,cost,Money,True,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,True,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,,Metric,
+Ctr,CTR,ctr,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+DeliveryMethod,Delivery method,deliveryMethod,BudgetDeliveryMethod,True,,Attribute,
+Impressions,Impressions,impressions,Long,True,,Metric,
+IsBudgetExplicitlyShared,Explicitly shared,explicitlyShared,Boolean,True,,Attribute,
+Period,Budget period,budgetPeriod,BudgetPeriod,True,,Attribute,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,True,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,,Metric,
