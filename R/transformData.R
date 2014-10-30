@@ -53,6 +53,13 @@ transformData <- function(data, report=reportType){
       data[,var] <- as.numeric(data[,var])
     }
   }
+  #since v201409 returnMoneyInMicros is deprecated, convert all monetary values
+  monetaryVar <- as.character(subset(reportType, Type == "Money")$Display.Name)
+  for (var in monetaryVar) {
+    if (var %in% colnames(data)) {
+      data[, var] <- data[, var] / 1000000 #convert into micros
+    }
+  }
   #eliminate " " spaces in column names
   names(data) <- gsub(" ","",names(data))
   return(data)
