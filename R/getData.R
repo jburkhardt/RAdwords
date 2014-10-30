@@ -26,7 +26,7 @@ getData <- function(clientCustomerId,
   # because access token can expire 
   # we need to check whether this is the case
   if(as.numeric(Sys.time())-3600 >= access$timeStamp){
-    refreshToken(google_auth) 
+    access <- refreshToken(google_auth) 
   } 
   # getData posts the Adwords Query Language Statement and retrieves the data.
   #
