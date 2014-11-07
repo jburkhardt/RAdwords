@@ -54,6 +54,7 @@ transformData <- function(data, report=reportType){
     }
   }
   #since v201409 returnMoneyInMicros is deprecated, convert all monetary values
+  Type <- NULL
   monetaryVar <- as.character(subset(reportType, Type == "Money")$Display.Name)
   for (var in monetaryVar) {
     if (var %in% colnames(data)) {
