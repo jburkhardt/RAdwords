@@ -1,6 +1,6 @@
 \name{RAdwords}
 \alias{RAdwords}
-\title{RAdwords: Loading Adwords data into R}
+\title{Loading Google Adwords Data Into R}
 \description{
     The aim of \strong{RAdwords} is loading Google Adwords data into R. Therefore the
     package implements three main features.\cr
