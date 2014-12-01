@@ -34,7 +34,7 @@ Once the API projects for native application is set up, `getAuth` is able to aut
 ### Example ###
 
 #### Authentication ####
-`library(RAdwords)`
+`library(RAdwords)`  
 `google_auth <- doAuth()`
 #### Create Statement ####
 `body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),  
@@ -45,9 +45,5 @@ Once the API projects for native application is set up, `getAuth` is able to aut
 `data <- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)`
 #### Get available report types ####
 `reports()`
-#### Get available metrics/attributes of specific reporty type ####
+#### Get available metrics/attributes of specific report type ####
 `metrics(report='ACCOUNT_PERFORMANCE_REPORT')`
-
-### Outlook ###
-
-The authentication process could be substituted by the [httr](https://github.com/hadley/httr) package.
