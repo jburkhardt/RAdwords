@@ -58,6 +58,8 @@ transformData <- function(data, report=reportType){
   monetaryVar <- as.character(subset(reportType, Type == "Money")$Display.Name)
   for (var in monetaryVar) {
     if (var %in% colnames(data)) {
+      data[,var] <- as.character(data[,var]) #Variables like Max. CPC are not recognized as metric in previous task since their "Behavior" is "Attribute". Hence convert all "Money" metrics in numeric again.
+      data[,var] <- suppressWarnings(as.numeric(data[,var]))
       data[, var] <- data[, var] / 1000000 #convert into micros
     }
   }
