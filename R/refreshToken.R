@@ -11,11 +11,11 @@ refreshToken = function(auth,service = 'google') {
   
   if(service == 'bing'){
     url <- sprintf('https://login.live.com/oauth20_token.srf?client_id=%s&client_secret=%s&grant_type=refresh_token&redirect_uri=%s&refresh_token=%s',
-            auth$client_id,
-            auth$client_secret,
-            auth$redirect_uri,
-            auth$refresh_token)
-    access <- rjson::fromJSON(RCurl::postForm(url,style='POST'))
+            auth$credentials$client_id,
+            auth$credentials$client_secret,
+            auth$credentials$redirect_uri,
+            auth$credentials$refresh_token)
+    access <- rjson::fromJSON(RCurl::postForm(url,style="POST"))
     access
   }
   

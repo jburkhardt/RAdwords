@@ -6,3 +6,4 @@
 .RBuildignore
 oAuth2.R
 .bing.auth.RData.bing.auth.RData.bing.auth.RData
+.bing.auth.RData
