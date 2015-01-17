@@ -1,0 +1,6 @@
+.Rproj.user
+.Rhistory
+.RData
+.DS_store
+.RBuildignore
+oAuth2.R
