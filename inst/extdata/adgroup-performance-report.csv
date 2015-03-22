@@ -1,0 +1,342 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,True,,Attribute,"The currency of the Customer account.
+"
+AccountDescriptiveName,Account,account,String,True,True,,Attribute,"The descriptive name of the Customer account.
+"
+AccountTimeZoneId,Time zone,timeZone,String,True,True,,Attribute,"Name of the timezone of the Customer account. For example: ""(GMT-05:00) Eastern Time"".
+"
+ActiveViewCpm,Active View avg. CPM,activeViewAvgCPM,Money,True,True,,Metric,
+ActiveViewImpressions,Active View viewable impressions,activeViewViewableImpressions,Long,True,True,,Metric,
+AdGroupId,Ad group ID,adGroupID,Long,True,True,,Attribute,"The ID of the AdGroup.
+"
+AdGroupName,Ad group,adGroup,String,True,True,,Attribute,"The name of the AdGroup.
+"
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,True,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+AdNetworkType1,Network,network,AdNetworkType1,True,True,"SEARCH / Search Network
+CONTENT / Display Network
+",Segment,"First level network type.
+Predicate values / display values:
+SEARCH / Search Network
+CONTENT / Display Network
+"
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,True,True,"SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Segment,"Second level network type (includes search partners).
+Predicate values / display values:
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+"
+AdvertiserExperimentSegmentationBin,ACE split,aCESplit,AdvertiserExperimentSegmentationBin,True,True,"OUTSIDE_OF_EXPERIMENT / outside experiment
+CONTROL / control
+EXPERIMENT / experiment
+",Segment,"Predicate values / display values:
+OUTSIDE_OF_EXPERIMENT / outside experiment
+CONTROL / control
+EXPERIMENT / experiment
+"
+AverageCpc,Avg. CPC,avgCPC,Money,True,True,,Metric,"The total cost of all clicks divided by the total number of clicks received.
+"
+AverageCpm,Avg. CPM,avgCPM,Money,True,True,,Metric,"Average Cost-per-thousand impressions (CPM).
+"
+AveragePageviews,Pages / session,pagesSession,Double,True,True,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,True,True,,Metric,"Your ad's position relative to those of other advertisers.
+"
+AverageTimeOnSite,Avg. session duration (seconds),avgSessionDurationSeconds,Double,True,True,,Metric,
+AvgCostForOfflineInteraction,Avg. CPP,avgCPP,Money,True,True,,Metric,
+BidType,Conversion optimizer bid type,conversionOptimizerBidType,BidType,True,True,"TARGET_CPA / target cpa
+",Attribute,"The bid type.
+Predicate values / display values:
+TARGET_CPA / target cpa
+"
+BiddingStrategyId,Bid Strategy ID,bidStrategyID,Long,True,True,,Attribute,"The ID of the BiddingStrategyConfiguration.
+"
+BiddingStrategyName,Bid Strategy Name,bidStrategyName,String,True,True,,Attribute,"The name of the BiddingStrategyConfiguration.
+"
+BiddingStrategyType,Bid Strategy Type,bidStrategyType,BiddingStrategyType,True,True,"BUDGET_OPTIMIZER / auto
+CONVERSION_OPTIMIZER / max/target cpa
+MANUAL_CPC / cpc
+MANUAL_CPM / cpm
+PAGE_ONE_PROMOTED / Target search page location
+TARGET_SPEND / Maximize clicks
+ENHANCED_CPC / Enhanced CPC
+TARGET_CPA / Target CPA
+TARGET_ROAS / Target ROAS
+TARGET_OUTRANK_SHARE / Target Outranking Share
+NONE / None
+UNKNOWN / unknown
+",Attribute,"The type of the BiddingStrategyConfiguration.
+Predicate values / display values:
+BUDGET_OPTIMIZER / auto
+CONVERSION_OPTIMIZER / max/target cpa
+MANUAL_CPC / cpc
+MANUAL_CPM / cpm
+PAGE_ONE_PROMOTED / Target search page location
+TARGET_SPEND / Maximize clicks
+ENHANCED_CPC / Enhanced CPC
+TARGET_CPA / Target CPA
+TARGET_ROAS / Target ROAS
+TARGET_OUTRANK_SHARE / Target Outranking Share
+NONE / None
+UNKNOWN / unknown
+"
+BounceRate,Bounce rate,bounceRate,Double,True,True,,Metric,"Percentage of clicks where the user only visited a single page on your site, formatted as ""x.xx%"".
+"
+CampaignId,Campaign ID,campaignID,Long,True,True,,Attribute,"The ID of the Campaign.
+"
+CampaignName,Campaign,campaign,String,True,True,,Attribute,"The name of the Campaign.
+"
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"The status of the Campaign.
+Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+ClickAssistedConversionValue,Click Assisted Conv. Value,clickAssistedConvValue,Double,True,True,,Metric,"The total value of all conversions for which this keyword, ad, ad group, or campaign triggered assist clicks.
+"
+ClickAssistedConversions,Click Assisted Conv.,clickAssistedConv,Long,True,True,,Metric,"The total number of conversions for which this keyword, ad, ad group, or campaign contributed one or more assist clicks.
+"
+ClickAssistedConversionsOverLastClickConversions,Click Assisted Conv. / Last Click Conv.,clickAssistedConvLastClickConv,Double,True,True,,Metric,"The total number of conversions for which this keyword, ad, ad group, or campaign received assist clicks divided by the total number of conversions for which it triggered the last click.
+"
+ClickConversionRate,Click conversion rate,clickConversionRate,Double,True,True,,Metric,
+ClickConversionRateSignificance,Click conversion rate ACE indicator,clickConversionRateACEIndicator,SignificanceData,True,True,,Metric,
+ClickSignificance,Clicks ACE indicator,clicksACEIndicator,SignificanceData,True,True,,Metric,
+ClickType,Click type,clickType,ClickType,True,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+",Segment,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+Predicate values / display values:
+URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+"
+Clicks,Clicks,clicks,Long,True,True,,Metric,"The number of clicks.
+"
+ContentBidCriterionTypeGroup,Content Network Bid Dimension,contentNetworkBidDimension,CriterionTypeGroup,True,True,"KEYWORD / Keyword
+USER_INTEREST_AND_LIST / User Interest and List
+VERTICAL / Vertical
+GENDER / Gender
+AGE_RANGE / Age
+PLACEMENT / Placement
+NONE / None
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+KEYWORD / Keyword
+USER_INTEREST_AND_LIST / User Interest and List
+VERTICAL / Vertical
+GENDER / Gender
+AGE_RANGE / Age
+PLACEMENT / Placement
+NONE / None
+UNKNOWN / unknown
+"
+ContentImpressionShare,Content Impr. share,contentImprShare,Double,True,True,,Metric,"The impressions you’ve received on the Display Network divided by the estimated number of impressions you were eligible to receive. A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"".
+"
+ContentRankLostImpressionShare,Content Lost IS (rank),contentLostISRank,Double,True,True,,Metric,"The estimated percentage of impressions on the Display Network that your ads didn't receive due to poor Ad Rank. A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"".
+"
+ConversionCategoryName,Conversion category,conversionCategory,String,True,False,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
+"
+ConversionManyPerClickSignificance,Conversion ACE indicator,conversionACEIndicator,SignificanceData,True,True,,Metric,
+ConversionRateManyPerClick,Conv. rate,convRate,Double,True,True,,Metric,"The number of conversions divided by total clicks that can be tracked to conversions. Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClickSignificance,Conversion rate ACE indicator,conversionRateACEIndicator,SignificanceData,False,True,,Metric,
+ConversionTrackerId,Conversion Tracker Id,conversionTrackerId,Long,True,False,,Segment,
+ConversionTypeName,Conversion name,conversionName,String,True,False,,Attribute,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
+"
+ConversionValue,Total conv. value,totalConvValue,Double,True,True,,Metric,"The sum of conversion values for all conversions.
+"
+ConversionsManyPerClick,Conversions,conversions,Long,True,True,,Metric,"This column reports total conversions, across all the conversion actions you're tracking. How you've chosen to count your conversions (unique or all) affects the number shown in this column.
+"
+ConvertedClicks,Converted clicks,convertedClicks,Long,True,True,,Metric,
+ConvertedClicksSignificance,Converted clicks ACE indicator,convertedClicksACEIndicator,SignificanceData,True,True,,Metric,
+Cost,Cost,cost,Money,True,True,,Metric,"The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this period. Other costs such as cost-per-call aren't included. For a sum of all costs, use the TotalCost column.
+"
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,True,,Metric,
+CostPerConversionManyPerClickSignificance,Cost/conversion ACE indicator,costConversionACEIndicator,SignificanceData,True,True,,Metric,
+CostPerConvertedClick,Cost / converted click,costConvertedClick,Money,True,True,,Metric,
+CostPerConvertedClickSignificance,Cost/converted click ACE indicator,costConvertedClickACEIndicator,SignificanceData,True,True,,Metric,
+CostPerEstimatedTotalConversion,Cost / est. total conv.,costEstTotalConv,Double,True,True,,Metric,
+CostSignificance,Cost ACE indicator,costACEIndicator,SignificanceData,True,True,,Metric,
+CpcBid,Default max. CPC,defaultMaxCPC,Money,True,True,,Attribute,
+CpcSignificance,CPC ACE indicator,cPCACEIndicator,SignificanceData,True,True,,Metric,
+CpmBid,Max. CPM,maxCPM,Money,True,True,,Attribute,
+CpmSignificance,CPM ACE indicator,cPMACEIndicator,SignificanceData,True,True,,Metric,
+Ctr,CTR,ctr,Double,True,True,,Metric,"The number of clicks your ad receives (Clicks) divided by the number of times your ad is shown (Impressions). Percentage returned as ""x.xx%"".
+"
+CtrSignificance,CTR ACE indicator,cTRACEIndicator,SignificanceData,True,True,,Metric,
+CustomerDescriptiveName,Client name,clientName,String,True,True,,Attribute,"The descriptive name of the Customer.
+"
+Date,Day,day,Date,True,True,,Segment,"The date formatted as yyyy-MM-dd.
+"
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,True,True,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"The name of the day of the week, e.g., ""Monday"".
+Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+"
+Device,Device,device,DeviceType,True,True,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,"Predicate values / display values:
+UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+"
+EnhancedCpcEnabled,Enhanced CPC enabled,enhancedCPCEnabled,Enum,True,True,"TRUE / true
+FALSE / false
+",Attribute,"Predicate values / display values:
+TRUE / true
+FALSE / false
+"
+EstimatedCrossDeviceConversions,Est. cross-device conv.,estCrossDeviceConv,Long,True,True,,Metric,"Conversions from when a customer clicks on an AdWords ad on one device, then converts on a different device or browser. Cross-device conversions are already included in your EstimatedTotalConversions column.
+"
+EstimatedTotalConversionRate,Est. total conv. rate,estTotalConvRate,Double,True,True,,Metric,"EstimatedTotalConversions divided by total clicks that can be conversion-tracked. This is how often a click on your ad resulted in a conversion.
+"
+EstimatedTotalConversionValue,Est. total conv. value,estTotalConvValue,Double,True,True,,Metric,"The total value of all of your conversions, including those that are estimated.
+"
+EstimatedTotalConversionValuePerClick,Est. total conv. value / click,estTotalConvValueClick,Double,True,True,,Metric,
+EstimatedTotalConversionValuePerCost,Est. total conv. value / cost,estTotalConvValueCost,Double,True,True,,Metric,
+EstimatedTotalConversions,Est. total conv.,estTotalConv,Long,True,True,,Metric,"Best estimate of the total number of conversions that AdWords drives. Includes website, cross-device, and phone call conversions.
+"
+ExternalCustomerId,Customer ID,customerID,Long,True,True,,Attribute,"The Customer ID.
+"
+HourOfDay,Hour of day,hourOfDay,Integer,True,False,,Segment,"The hour of day as a number between 0 and 23, inclusive.
+"
+ImpressionAssistedConversionValue,Impr. Assisted Conv. Value,imprAssistedConvValue,Double,True,True,,Metric,
+ImpressionAssistedConversions,Impr. Assisted Conv.,imprAssistedConv,Long,True,True,,Metric,
+ImpressionAssistedConversionsOverLastClickConversions,Impr. Assisted Conv. / Last Click Conv.,imprAssistedConvLastClickConv,Double,True,True,,Metric,
+ImpressionSignificance,Impressions ACE indicator,impressionsACEIndicator,SignificanceData,True,True,,Metric,
+Impressions,Impressions,impressions,Long,True,True,,Metric,"Count of how often your ad has appeared on a search results page or website on the Google Network.
+"
+LabelIds,Label IDs,labelIDs,List,True,True,,Attribute,"List elements are delimited by the semicolon character (;)
+"
+Labels,Labels,labels,List,True,True,,Attribute,"List elements are delimited by the semicolon character (;)
+"
+Month,Month,month,String,True,True,,Segment,"The first day of the month, formatted as yyyy-MM-dd.
+"
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,True,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"The name of the month of the year, e.g., ""December"".
+Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+"
+NumOfflineImpressions,Phone impressions,phoneImpressions,Long,True,True,,Metric,
+NumOfflineInteractions,Phone calls,phoneCalls,Long,True,True,,Metric,
+OfflineInteractionCost,Phone cost,phoneCost,Money,True,True,,Metric,
+OfflineInteractionRate,PTR,ptr,Double,True,True,,Metric,
+PercentNewVisitors,% new sessions,newSessions,Double,True,True,,Metric,
+PositionSignificance,Position ACE indicator,positionACEIndicator,SignificanceData,True,True,,Metric,
+PrimaryCompanyName,Company name,companyName,String,True,True,,Attribute,
+Quarter,Quarter,quarter,String,True,True,,Segment,"The first day of the quarter, formatted as yyyy-MM-dd. Uses the calendar year for quarters, e.g., the second quarter of 2014 starts on 2014-04-01.
+"
+RelativeCtr,Relative CTR,relativeCTR,Double,True,True,,Metric,"Your clickthrough rate (Ctr) divided by the average clickthrough rate of all advertisers on the websites that show your ads. Measures how your ads perform on Display Network sites compared to other ads on the same sites.
+"
+SearchExactMatchImpressionShare,Search Exact match IS,searchExactMatchIS,Double,True,True,,Metric,"The impressions you've received divided by the estimated number of impressions you were eligible to receive on the Search Network for search terms that matched your keywords exactly (or were close variants of your keyword). A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the field ClickType.
+"
+SearchImpressionShare,Search Impr. share,searchImprShare,Double,True,True,,Metric,"The impressions you’ve received on the Search Network divided by the estimated number of impressions you were eligible to receive. A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the fields ClickType and HourOfDay on any report. Not compatible with the field Device on the Product Partition Report.
+"
+SearchRankLostImpressionShare,Search Lost IS (rank),searchLostISRank,Double,True,True,,Metric,"The estimated percentage of impressions on the Search Network that your ads didn't receive due to poor Ad Rank. A percentage returned as ""xx.xx%"", or the special values ""< 10%"" or ""> 90%"". Not compatible with the field ClickType.
+"
+Slot,Top vs. Other,topVsOther,Slot,True,True,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+",Segment,"The position of the Ad.
+Predicate values / display values:
+SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+"
+TargetCpa,Max. CPA (converted clicks),maxCPAConvertedClicks,Money,True,True,,Attribute,
+TotalCost,Total cost,totalCost,Money,True,True,,Metric,"The total aggregated cost, which includes total click costs and any other costs, such as phone cost.
+"
+TrackingUrlTemplate,Tracking template,trackingTemplate,String,True,True,,Attribute,
+UrlCustomParameters,Custom parameter,customParameter,CustomParameters,False,True,,Attribute,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,True,,Metric,"The total value of all conversions divided by the total number of conversions.
+"
+ValuePerConvertedClick,Value / converted click,valueConvertedClick,Double,True,True,,Metric,
+ValuePerEstimatedTotalConversion,Value / est. total conv.,valueEstTotalConv,Double,True,True,,Metric,"The value, on average, of your total estimated conversions.
+"
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,True,,Metric,"The value, on average, of your total estimated conversions.
+"
+ViewThroughConversionsSignificance,View-through conv. ACE indicator,viewThroughConvACEIndicator,SignificanceData,False,True,,Metric,
+Week,Week,week,String,True,True,,Segment,"The date for the Monday of the week, formatted as yyyy-MM-dd.
+"
+Year,Year,year,Integer,True,True,,Segment,"The year, formatted as yyyy.
+"
