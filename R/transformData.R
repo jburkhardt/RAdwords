@@ -5,11 +5,14 @@
 #' 
 #' @param data Raw csv data from Adwords API.
 #' @param report Report type.
+#' @param apiVersion set automatically by \code{\link{getData}}. Supported are 201502 or 201409. Default is 201502.
 #' 
 #' @export
 #' 
 #' @return Dataframe with the Adwords Data.
-transformData <- function(data, report=reportType){
+transformData <- function(data,
+                          report=reportType,
+                          apiVersion="201502"){
   # Transforms the csv into a dataframe. Moreover the variables are converted into suitable formats.
   #
   # Args:
@@ -31,17 +34,25 @@ transformData <- function(data, report=reportType){
   if("Day" %in% colnames(data)){
     data$Day <- as.Date(data$Day)
   }
-  #get metrics for requestet report
-  reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
+  #get metrics for requested report
+  if (apiVersion=="201502"){
+    report <- gsub('_','-',report)
+    report <- tolower(report)
+    reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201502/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
+  }
+  else if (apiVersion=="201409"){
+    reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201409/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
+  }
+  #transform factor into character
+  i <- sapply(data, is.factor)
+  data[i] <- lapply(data[i], as.character)
   #elimitate % in data and convert percentage values into numeric data
-  percVar <- as.character(reportType[grep('x.xx%',reportType$Notes),'Display.Name'])
-  for(var in percVar){
-    if(var %in% colnames(data)){
-      data[,var] <- as.character(data[,var])
-      data[,var] <- sub('%','',data[,var])
-      data[,var] <- as.numeric(data[,var])
-      data[,var] <- data[,var]/100
-    }
+  #find % values
+  perVar <- as.numeric(grep("%",data))
+  #kill % and divide by 100
+  for(i in perVar){
+    data[,i] <- sub("%","",data[,i])
+    data[,i] <- as.numeric(data[,i])/100 
   }
   Behavior = NULL
   #eliminate ',' thousend separater in data and convert values into numeric data
