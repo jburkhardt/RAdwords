@@ -1,0 +1,23 @@
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+MemberCount,Member Count,memberCount,int,False,,Metric,"The number of entities in the shared set.
+"
+Name,Shared Set Name,sharedSetName,String,False,,Attribute,
+ReferenceCount,Reference Count,referenceCount,int,False,,Metric,"The number of campaigns that actively use the shared set.
+"
+SharedSetId,Shared Set ID,sharedSetID,Long,False,,Attribute,
+Status,State,state,Status,False,"ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+"
+Type,Shared Set Type,sharedSetType,SharedSetType,False,"NEGATIVE_KEYWORDS / 
+NEGATIVE_PLACEMENTS / 
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+NEGATIVE_KEYWORDS / 
+NEGATIVE_PLACEMENTS / 
+UNKNOWN / unknown
+"

@@ -1,0 +1,48 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,False,,Attribute,"The currency of the Customer account.
+"
+AccountDescriptiveName,Account,account,String,True,False,,Attribute,"The descriptive name of the Customer account.
+"
+AccountTimeZoneId,Time zone,timeZone,String,True,False,,Attribute,"Name of the timezone of the Customer account. For example: ""(GMT-05:00) Eastern Time"".
+"
+AdGroupId,Ad group ID,adGroupID,Long,True,False,,Attribute,"The ID of the AdGroup.
+"
+AdGroupName,Ad group,adGroup,String,True,False,,Attribute,"The name of the AdGroup.
+"
+AdvertiserPhoneNumber,Business phone number,businessPhoneNumber,String,True,False,,Attribute,
+CallDuration,Duration (seconds),durationSeconds,Long,True,False,,Attribute,"The duration of the call, in seconds.
+"
+CallEndTime,End time,endTime,Long,True,False,,Attribute,"The end date and time of the call.
+"
+CallStartTime,Start time,startTime,Long,True,False,,Attribute,"The start date and time of the call.
+"
+CallStatus,Status,status,CallStatus,True,False,"RECEIVED / Received
+MISSED / Missed
+UNKNOWN / unknown
+",Segment,"The status of the call.
+Predicate values / display values:
+RECEIVED / Received
+MISSED / Missed
+UNKNOWN / unknown
+"
+CallType,Call type,callType,CallType,True,False,"GOOGLE_SEARCH / Manually dialed
+HIGH_END_MOBILE_SEARCH / Mobile click-to-call
+UNKNOWN / unknown
+",Segment,"The type of the call.
+Predicate values / display values:
+GOOGLE_SEARCH / Manually dialed
+HIGH_END_MOBILE_SEARCH / Mobile click-to-call
+UNKNOWN / unknown
+"
+CallerCountryCallingCode,Caller country code,callerCountryCode,String,True,False,,Attribute,
+CallerNationalDesignatedCode,Caller area code,callerAreaCode,String,True,False,,Attribute,
+CampaignId,Campaign ID,campaignID,Long,True,False,,Attribute,"The ID of the Campaign.
+"
+CampaignName,Campaign,campaign,String,True,False,,Attribute,"The name of the Campaign.
+"
+CustomerDescriptiveName,Client name,clientName,String,True,False,,Attribute,"The descriptive name of the Customer.
+"
+ExternalCustomerId,Customer ID,customerID,Long,True,False,,Attribute,"The Customer ID.
+"
+OfflineInteractionCost,Phone cost,phoneCost,Money,True,False,,Metric,
+PrimaryCompanyName,Company name,companyName,String,True,False,,Attribute,

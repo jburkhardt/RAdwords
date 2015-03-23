@@ -1,0 +1,188 @@
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,False,,Attribute,
+AccountDescriptiveName,Account,account,String,False,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,False,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+"
+AdFormat,Ad type,adType,AdFormat,False,"UNKNOWN / unknown
+TEXT / text
+IMAGE / image
+DYNAMIC_IMAGE / dynamic_image
+FLASH / flash
+VIDEO / video
+HTML / html
+AUDIO / audio
+COMPOSITE / composite
+PRINT / print
+",Segment,"Predicate values / display values:
+UNKNOWN / unknown
+TEXT / text
+IMAGE / image
+DYNAMIC_IMAGE / dynamic_image
+FLASH / flash
+VIDEO / video
+HTML / html
+AUDIO / audio
+COMPOSITE / composite
+PRINT / print
+"
+AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
+AdGroupName,Ad group,adGroup,String,False,,Attribute,
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+AdNetworkType1,Network,network,AdNetworkType1,False,"SEARCH / Search Network
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Search Network
+CONTENT / Display Network
+"
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,False,"SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+"
+AverageCpc,Avg. CPC,avgCPC,Money,False,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,False,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,False,,Metric,
+CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
+CampaignName,Campaign,campaign,String,False,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+Clicks,Clicks,clicks,Long,False,,Metric,
+ConversionCategoryName,Conversion category,conversionCategory,String,False,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
+"
+ConversionRate,Click conversion rate,clickConversionRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,False,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionTypeName,Conversion name,conversionName,String,False,,Attribute,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
+"
+ConversionValue,Total conv. value,totalConvValue,Double,False,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,False,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,False,,Metric,
+Cost,Cost,cost,Money,False,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,False,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,False,,Metric,
+CreativeId,Ad ID,adID,Long,False,,Attribute,
+Ctr,CTR,ctr,Double,False,,Metric,"Percentage returned as ""x.xx%"".
+"
+CustomerDescriptiveName,Client name,clientName,String,False,,Attribute,
+Date,Day,day,Date,False,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,False,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+"
+DestinationUrl,Destination URL,destinationURL,String,False,,Attribute,
+Device,Device,device,DeviceType,False,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,"Predicate values / display values:
+UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+"
+ExternalCustomerId,Customer ID,customerID,Long,False,,Attribute,
+Impressions,Impressions,impressions,Long,False,,Metric,
+KeywordId,Keyword ID,keywordID,long,False,,Attribute,"In the Ad Performance Report this field contains the ID of the criterion that triggered the ad, segmenting the report and preventing zero impressions. The ID can be for any type of criterion, including placements, verticals, etc. Cross-reference with the Criteria Report to determine the criteria type and details.
+"
+KeywordTextMatchingQuery,Keyword,keyword,String,False,,Attribute,
+MatchType,Match type,matchType,QueryMatchType,False,"AUTO / auto
+BROAD / broad
+BROAD_SESSION / broad (session-based)
+EXACT / exact
+EXPANDED / broad
+PHRASE / phrase
+",Segment,"Predicate values / display values:
+AUTO / auto
+BROAD / broad
+BROAD_SESSION / broad (session-based)
+EXACT / exact
+EXPANDED / broad
+PHRASE / phrase
+"
+MatchTypeWithVariant,Match type,matchType,QueryMatchTypeWithVariant,False,"AUTO / auto
+BROAD / broad
+BROAD_SESSION / broad (session-based)
+EXACT / exact
+EXPANDED / broad
+PHRASE / phrase
+NEAR_EXACT / exact (close variant)
+NEAR_PHRASE / phrase (close variant)
+",Segment,"Predicate values / display values:
+AUTO / auto
+BROAD / broad
+BROAD_SESSION / broad (session-based)
+EXACT / exact
+EXPANDED / broad
+PHRASE / phrase
+NEAR_EXACT / exact (close variant)
+NEAR_PHRASE / phrase (close variant)
+"
+Month,Month,month,String,False,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,False,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+"
+PrimaryCompanyName,Company name,companyName,String,False,,Attribute,
+Quarter,Quarter,quarter,String,False,,Segment,
+Query,Search term,searchTerm,String,False,,Attribute,"If the string for this attribute is longer than 128 char bytes, the returned result will NOT be a single aggregated row.
+"
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,False,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,False,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,False,,Metric,
+Week,Week,week,String,False,,Segment,
+Year,Year,year,Integer,False,,Segment,

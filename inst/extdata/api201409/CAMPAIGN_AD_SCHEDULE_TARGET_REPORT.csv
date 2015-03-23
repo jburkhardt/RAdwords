@@ -1,0 +1,73 @@
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,,Attribute,
+AccountDescriptiveName,Account,account,String,True,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,True,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+"
+AverageCpc,Avg. CPC,avgCPC,Money,True,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,True,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,True,,Metric,
+BidModifier,Bid adj.,bidAdj,Double,True,,Attribute,
+CampaignId,Campaign ID,campaignID,Long,True,,Attribute,
+CampaignName,Campaign,campaign,String,True,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+Clicks,Clicks,clicks,Long,True,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionValue,Total conv. value,totalConvValue,Double,True,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,True,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,True,,Metric,
+Cost,Cost,cost,Money,True,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,True,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,,Metric,
+Ctr,CTR,ctr,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+CustomerDescriptiveName,Client name,clientName,String,True,,Attribute,
+Date,Day,day,Date,True,,Segment,
+ExternalCustomerId,Customer ID,customerID,Long,True,,Attribute,
+Id,Ad Schedule,adSchedule,Long,True,,Attribute,
+Impressions,Impressions,impressions,Long,True,,Metric,
+Month,Month,month,String,True,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+"
+PrimaryCompanyName,Company name,companyName,String,True,,Attribute,
+Quarter,Quarter,quarter,String,True,,Segment,
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,True,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,,Metric,
+Week,Week,week,String,True,,Segment,
+Year,Year,year,Integer,True,,Segment,

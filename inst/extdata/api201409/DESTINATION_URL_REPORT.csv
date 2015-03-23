@@ -1,0 +1,189 @@
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,,Attribute,
+AccountDescriptiveName,Account,account,String,True,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,True,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+"
+AdGroupId,Ad group ID,adGroupID,Long,True,,Attribute,
+AdGroupName,Ad group,adGroup,String,True,,Attribute,
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+AdNetworkType1,Network,network,AdNetworkType1,True,"SEARCH / Search Network
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Search Network
+CONTENT / Display Network
+"
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,True,"SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Segment,"Predicate values / display values:
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+"
+AverageCpc,Avg. CPC,avgCPC,Money,True,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,True,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,True,,Metric,
+CampaignId,Campaign ID,campaignID,Long,True,,Attribute,
+CampaignName,Campaign,campaign,String,True,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+ClickType,Click type,clickType,ClickType,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+",Segment,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+Predicate values / display values:
+URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+"
+Clicks,Clicks,clicks,Long,True,,Metric,
+ConversionCategoryName,Conversion category,conversionCategory,String,False,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
+"
+ConversionRate,Click conversion rate,clickConversionRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionTrackerId,Conversion Tracker Id,conversionTrackerId,Long,False,,Segment,
+ConversionTypeName,Conversion name,conversionName,String,False,,Attribute,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc).  Prevents zero-conversion rows from being returned.
+"
+ConversionValue,Total conv. value,totalConvValue,Double,True,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,True,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,True,,Metric,
+Cost,Cost,cost,Money,True,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,True,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,,Metric,
+CriteriaDestinationUrl,Keyword/Placement destination URL,keywordPlacementDestinationURL,String,False,,Attribute,"In the Destination URL report, this field behaves as a segment.
+"
+CriteriaParameters,Keyword / Placement,keywordPlacement,String,False,,Attribute,"In the Destination URL report, this field behaves as a segment.
+"
+CriteriaStatus,Keyword/Placement state,keywordPlacementState,UserStatus,False,"ENABLED / enabled
+REMOVED / removed
+PAUSED / paused
+",Attribute,"In the Destination URL report, this field behaves as a segment.
+Predicate values / display values:
+ENABLED / enabled
+REMOVED / removed
+PAUSED / paused
+"
+CriteriaTypeName,Match type,matchType,String,False,,Attribute,
+Ctr,CTR,ctr,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+CustomerDescriptiveName,Client name,clientName,String,True,,Attribute,
+Date,Day,day,Date,True,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,True,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+"
+Device,Device,device,DeviceType,True,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,"Predicate values / display values:
+UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+"
+EffectiveDestinationUrl,Destination URL,destinationURL,String,True,,Attribute,
+ExternalCustomerId,Customer ID,customerID,Long,True,,Attribute,
+Impressions,Impressions,impressions,Long,True,,Metric,
+IsNegative,Is negative,isNegative,Boolean,False,,Attribute,
+Month,Month,month,String,True,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+"
+PrimaryCompanyName,Company name,companyName,String,True,,Attribute,
+Quarter,Quarter,quarter,String,True,,Segment,
+Slot,Top vs. Other,topVsOther,Slot,True,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+",Segment,"Predicate values / display values:
+SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+"
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,True,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,,Metric,
+Week,Week,week,String,True,,Segment,
+Year,Year,year,Integer,True,,Segment,

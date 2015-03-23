@@ -1,0 +1,134 @@
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AdGroupCount,Ad Groups,adGroups,Integer,True,,Metric,
+AdGroupCriteriaCount,Keywords,keywords,Integer,True,,Metric,
+AverageCpc,Avg. CPC,avgCPC,Money,True,,Metric,
+AverageCpm,Avg. CPM,avgCPM,Money,True,,Metric,
+AveragePosition,Avg. position,avgPosition,Double,True,,Metric,
+CampaignCount,Campaigns,campaigns,Integer,True,,Metric,
+Clicks,Clicks,clicks,Long,True,,Metric,
+ConversionRate,Click conversion rate,clickConversionRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionRateManyPerClick,Conv. rate,convRate,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+ConversionValue,Total conv. value,totalConvValue,Double,True,,Metric,
+Conversions,Converted clicks,convertedClicks,Long,True,,Metric,
+ConversionsManyPerClick,Conversions,conversions,Long,True,,Metric,
+Cost,Cost,cost,Money,True,,Metric,
+CostPerConversion,Cost / converted click,costConvertedClick,Money,True,,Metric,
+CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,,Metric,
+Ctr,CTR,ctr,Double,True,,Metric,"Percentage returned as ""x.xx%"".
+"
+Date,Day,day,Date,True,,Segment,
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,True,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"Predicate values / display values:
+MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+"
+Device,Device,device,DeviceType,True,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,"Predicate values / display values:
+UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+"
+HourOfDay,Hour of day,hourOfDay,Integer,False,,Segment,
+Id,Bid Strategy ID,bidStrategyID,Long,True,,Attribute,
+Impressions,Impressions,impressions,Long,True,,Metric,
+Month,Month,month,String,True,,Segment,
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"Predicate values / display values:
+JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+"
+Name,Bid Strategy Name,bidStrategyName,String,True,,Attribute,
+NonRemovedAdGroupCount,Non-Removed Ad Groups,nonRemovedAdGroups,Integer,True,,Metric,
+NonRemovedAdGroupCriteriaCount,Non-Removed Keywords,nonRemovedKeywords,Integer,True,,Metric,
+NonRemovedCampaignCount,Non-Removed Campaigns,nonRemovedCampaigns,Integer,True,,Metric,
+PageOnePromotedBidCeiling,Bid limit (Target search page location),bidLimitTargetSearchPageLocation,Money,True,,Attribute,
+PageOnePromotedBidChangesForRaisesOnly,Bid automation (Target search page location),bidAutomationTargetSearchPageLocation,Boolean,True,,Attribute,
+PageOnePromotedBidModifier,Bid adjustment (Target search page location),bidAdjustmentTargetSearchPageLocation,Double,True,,Attribute,
+PageOnePromotedRaiseBidWhenBudgetConstained,Limited budgets (Target search page location),limitedBudgetsTargetSearchPageLocation,Boolean,True,,Attribute,
+PageOnePromotedRaiseBidWhenBudgetConstrained,Limited budgets (Target search page location),limitedBudgetsTargetSearchPageLocation,Boolean,True,,Attribute,
+PageOnePromotedRaiseBidWhenLowQualityScore,Low quality keywords (Target search page location),lowQualityKeywordsTargetSearchPageLocation,Boolean,True,,Attribute,
+PageOnePromotedStrategyGoal,Location (Target search page location),locationTargetSearchPageLocation,StrategyGoal,True,,Attribute,
+Quarter,Quarter,quarter,String,True,,Segment,
+Status,State,state,BiddingStrategyStatus,True,"ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+"
+TargetCpa,Target CPA,targetCPA,Money,True,,Attribute,
+TargetCpaMaxCpcBidCeiling,Upper Bid limit (Target CPA),upperBidLimitTargetCPA,Money,True,,Attribute,
+TargetCpaMaxCpcBidFloor,Lower Bid limit (Target CPA),lowerBidLimitTargetCPA,Money,True,,Attribute,
+TargetRoas,Target ROAS,targetROAS,Double,True,,Attribute,
+TargetRoasBidCeiling,Upper Bid limit (Target ROAS),upperBidLimitTargetROAS,Money,True,,Attribute,
+TargetRoasBidFloor,Lower Bid limit (Target ROAS),lowerBidLimitTargetROAS,Money,True,,Attribute,
+TargetSpendBidCeiling,Bid limit (Maximize clicks),bidLimitMaximizeClicks,Money,True,,Attribute,
+TargetSpendSpendTarget,Target spend (Maximize clicks),targetSpendMaximizeClicks,Money,True,,Attribute,
+Type,Bid Strategy Type,bidStrategyType,BiddingStrategyType,True,"BUDGET_OPTIMIZER / auto
+CONVERSION_OPTIMIZER / max/target cpa
+MANUAL_CPC / cpc
+MANUAL_CPM / cpm
+PAGE_ONE_PROMOTED / Target search page location
+TARGET_SPEND / Maximize clicks
+ENHANCED_CPC / Enhanced CPC
+TARGET_CPA / Target CPA
+TARGET_ROAS / Target ROAS
+NONE / None
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+BUDGET_OPTIMIZER / auto
+CONVERSION_OPTIMIZER / max/target cpa
+MANUAL_CPC / cpc
+MANUAL_CPM / cpm
+PAGE_ONE_PROMOTED / Target search page location
+TARGET_SPEND / Maximize clicks
+ENHANCED_CPC / Enhanced CPC
+TARGET_CPA / Target CPA
+TARGET_ROAS / Target ROAS
+NONE / None
+UNKNOWN / unknown
+"
+ValuePerConversion,Value / converted click,valueConvertedClick,Double,True,,Metric,
+ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,,Metric,
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,,Metric,
+Week,Week,week,String,True,,Segment,
+Year,Year,year,Integer,True,,Segment,

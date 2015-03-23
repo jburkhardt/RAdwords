@@ -1,0 +1,39 @@
+Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,False,,Attribute,
+AccountDescriptiveName,Account,account,String,False,,Attribute,
+AccountTimeZoneId,Time zone,timeZone,String,False,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+"
+AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
+AdGroupName,Ad group,adGroup,String,False,,Attribute,
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
+CampaignName,Campaign,campaign,String,False,,Attribute,
+CampaignStatus,Campaign state,campaignState,CampaignStatus,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,"Predicate values / display values:
+UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+"
+CustomerDescriptiveName,Client name,clientName,String,False,,Attribute,
+ExternalCustomerId,Customer ID,customerID,Long,False,,Attribute,
+PrimaryCompanyName,Company name,companyName,String,False,,Attribute,
+ReachFrequency,Frequency,frequency,Integer,False,,Attribute,
+ReachFrequencyClicks,Clicks,clicks,Double,False,,Metric,
+ReachFrequencyConv,Conv.,conv,Double,False,,Metric,
+ReachFrequencyConvRate,Conv. rate,convRate,Double,False,,Metric,
+ReachFrequencyCtr,CTR,ctr,Double,False,,Metric,
+ReachFrequencyDate,Day,day,Date,False,,Segment,
+UniqueUserCountAsLong,Unique Users,uniqueUsers,Long,False,,Metric,
