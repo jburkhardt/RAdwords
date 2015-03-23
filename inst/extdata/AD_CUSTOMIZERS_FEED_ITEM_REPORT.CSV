@@ -1,25 +1,9 @@
 Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
-AccountCurrencyCode,Currency,currency,String,True,True,,Attribute,"The currency of the Customer account.
+AdGroupId,Ad group ID,adGroupID,Long,True,False,,Attribute,"The ID of the AdGroup.
 "
-AccountDescriptiveName,Account,account,String,True,True,,Attribute,"The descriptive name of the Customer account.
+AdGroupName,Ad group,adGroup,String,True,False,,Attribute,"The name of the AdGroup.
 "
-AccountTimeZoneId,Time zone,timeZone,String,True,True,,Attribute,"Name of the timezone of the Customer account. For example: ""(GMT-05:00) Eastern Time"".
-"
-ActiveViewCpm,Active View avg. CPM,activeViewAvgCPM,Money,True,True,,Metric,
-ActiveViewImpressions,Active View viewable impressions,activeViewViewableImpressions,Long,True,True,,Metric,
-AdGroupId,Ad group ID,adGroupID,Long,True,True,,Attribute,"The ID of the AdGroup.
-"
-AdGroupName,Ad group,adGroup,String,True,True,,Attribute,"The name of the AdGroup.
-"
-AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,True,True,"UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
-",Attribute,"Predicate values / display values:
-UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
+AdId,Ad ID,adID,Long,True,False,,Attribute,"The ID of the Ad.
 "
 AdNetworkType1,Network,network,AdNetworkType1,True,True,"SEARCH / Search Network
 CONTENT / Display Network
@@ -43,51 +27,11 @@ AverageCpm,Avg. CPM,avgCPM,Money,True,True,,Metric,"Average Cost-per-thousand im
 "
 AveragePosition,Avg. position,avgPosition,Double,True,True,,Metric,"Your ad's position relative to those of other advertisers.
 "
-CampaignId,Campaign ID,campaignID,Long,True,True,,Attribute,"The ID of the Campaign.
+CampaignId,Campaign ID,campaignID,Long,True,False,,Attribute,"The ID of the Campaign.
 "
-CampaignName,Campaign,campaign,String,True,True,,Attribute,"The name of the Campaign.
-"
-CampaignStatus,Campaign state,campaignState,CampaignStatus,True,True,"UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
-",Attribute,"The status of the Campaign.
-Predicate values / display values:
-UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
+CampaignName,Campaign,campaign,String,True,False,,Attribute,"The name of the Campaign.
 "
 ClickConversionRate,Click conversion rate,clickConversionRate,Double,True,True,,Metric,
-ClickType,Click type,clickType,ClickType,True,False,"URL_CLICKS / Headline
-CALLS / Phone calls
-OTHER / Other
-PRODUCT_EXTENSION_CLICKS / Product plusbox offer
-SITELINKS / Sitelink
-PRODUCT_LISTING_AD_CLICKS / Product listing ad
-GET_DIRECTIONS / Driving direction
-OFFER_PRINTS / Print offer
-BREADCRUMBS / Breadcrumbs
-CALL_TRACKING / Manually dialed phone calls
-MOBILE_CALL_TRACKING / Mobile phone calls
-LOCATION_EXPANSION / Get location details
-UNKNOWN / unknown
-",Segment,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
-Predicate values / display values:
-URL_CLICKS / Headline
-CALLS / Phone calls
-OTHER / Other
-PRODUCT_EXTENSION_CLICKS / Product plusbox offer
-SITELINKS / Sitelink
-PRODUCT_LISTING_AD_CLICKS / Product listing ad
-GET_DIRECTIONS / Driving direction
-OFFER_PRINTS / Print offer
-BREADCRUMBS / Breadcrumbs
-CALL_TRACKING / Manually dialed phone calls
-MOBILE_CALL_TRACKING / Mobile phone calls
-LOCATION_EXPANSION / Get location details
-UNKNOWN / unknown
-"
 Clicks,Clicks,clicks,Long,True,True,,Metric,"The number of clicks.
 "
 ConversionCategoryName,Conversion category,conversionCategory,String,True,False,,Segment,"Not compatible with non-conversion stats (AverageCpc, Clicks, etc). Prevents zero-conversion rows from being returned.  Values: ""Other"", ""View of a key page"", ""Purchase/Sale"", ""Signup"", ""Lead""
@@ -106,24 +50,7 @@ Cost,Cost,cost,Money,True,True,,Metric,"The sum of your cost-per-click (CPC) and
 "
 CostPerConversionManyPerClick,Cost / conv.,costConv,Money,True,True,,Metric,
 CostPerConvertedClick,Cost / converted click,costConvertedClick,Money,True,True,,Metric,
-CriteriaDestinationUrl,Keyword/Placement destination URL,keywordPlacementDestinationURL,String,True,False,,Attribute,"In the Destination URL report, this field behaves as a segment.
-"
-CriteriaParameters,Keyword / Placement,keywordPlacement,String,True,False,,Attribute,"In the Destination URL report, this field behaves as a segment.
-"
-CriteriaStatus,Keyword/Placement state,keywordPlacementState,UserStatus,True,False,"ENABLED / enabled
-REMOVED / removed
-PAUSED / paused
-",Attribute,"The status of the Criterion. In the Destination URL report, this field behaves as a segment.
-Predicate values / display values:
-ENABLED / enabled
-REMOVED / removed
-PAUSED / paused
-"
-CriteriaTypeName,Match type,matchType,String,True,False,,Attribute,"The descriptive name of the CriteriaType.
-"
 Ctr,CTR,ctr,Double,True,True,,Metric,"The number of clicks your ad receives (Clicks) divided by the number of times your ad is shown (Impressions). Percentage returned as ""x.xx%"".
-"
-CustomerDescriptiveName,Client name,clientName,String,True,True,,Attribute,"The descriptive name of the Customer.
 "
 Date,Day,day,Date,True,True,,Segment,"The date formatted as yyyy-MM-dd.
 "
@@ -154,16 +81,22 @@ DESKTOP / Computers
 HIGH_END_MOBILE / Mobile devices with full browsers
 TABLET / Tablets with full browsers
 "
-EffectiveDestinationUrl,Destination URL,destinationURL,String,True,True,,Attribute,
-ExternalCustomerId,Customer ID,customerID,Long,True,True,,Attribute,"The Customer ID.
+FeedId,Feed ID,feedID,Long,True,True,,Attribute,"The Feed ID.
+"
+FeedItemAttributes,Attribute Values,attributeValues,Byte,True,True,,Attribute,
+FeedItemEndTime,End date,endDate,Long,True,True,,Attribute,
+FeedItemId,Item ID,itemID,Long,True,True,,Attribute,"The FeedItem ID.
+"
+FeedItemStartTime,Start date,startDate,Long,True,True,,Attribute,
+FeedItemStatus,Item state,itemState,Status,True,True,"ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+",Attribute,"Predicate values / display values:
+ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
 "
 Impressions,Impressions,impressions,Long,True,True,,Metric,"Count of how often your ad has appeared on a search results page or website on the Google Network.
-"
-IsNegative,Is negative,isNegative,Enum,True,False,"TRUE / true
-FALSE / false
-",Attribute,"Predicate values / display values:
-TRUE / true
-FALSE / false
 "
 Month,Month,month,String,True,True,,Segment,"The first day of the month, formatted as yyyy-MM-dd.
 "
@@ -194,7 +127,6 @@ OCTOBER / October
 NOVEMBER / November
 DECEMBER / December
 "
-PrimaryCompanyName,Company name,companyName,String,True,True,,Attribute,
 Quarter,Quarter,quarter,String,True,True,,Segment,"The first day of the quarter, formatted as yyyy-MM-dd. Uses the calendar year for quarters, e.g., the second quarter of 2014 starts on 2014-04-01.
 "
 Slot,Top vs. Other,topVsOther,Slot,True,True,"SearchRhs / Google search: Side
@@ -217,8 +149,6 @@ Unknown /
 ValuePerConversionManyPerClick,Value / conv.,valueConv,Double,True,True,,Metric,"The total value of all conversions divided by the total number of conversions.
 "
 ValuePerConvertedClick,Value / converted click,valueConvertedClick,Double,True,True,,Metric,
-ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,True,,Metric,"The value, on average, of your total estimated conversions.
-"
 Week,Week,week,String,True,True,,Segment,"The date for the Monday of the week, formatted as yyyy-MM-dd.
 "
 Year,Year,year,Integer,True,True,,Segment,"The year, formatted as yyyy.

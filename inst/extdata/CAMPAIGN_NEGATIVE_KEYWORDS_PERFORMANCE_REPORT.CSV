@@ -9,7 +9,6 @@ CampaignId,Campaign ID,campaignID,Long,True,True,,Attribute,"The ID of the Campa
 "
 CustomerDescriptiveName,Client name,clientName,String,True,True,,Attribute,"The descriptive name of the Customer.
 "
-DisplayName,Criteria Display Name,criteriaDisplayName,String,True,True,,Attribute,
 ExternalCustomerId,Customer ID,customerID,Long,True,True,,Attribute,"The Customer ID.
 "
 Id,Keyword ID,keywordID,Long,True,True,,Attribute,
@@ -28,9 +27,9 @@ EXACT / Exact
 PHRASE / Phrase
 BROAD / Broad
 "
-KeywordText,Exclusion,exclusion,String,True,True,,Attribute,"The text of the Keyword.
+KeywordText,Negative keyword,negativeKeyword,String,True,True,,Attribute,"The text of the Keyword.
 "
-PlacementUrl,Exclusion,exclusion,String,True,True,,Attribute,
+PlacementUrl,Negative keyword,negativeKeyword,String,True,True,,Attribute,
 PrimaryCompanyName,Company name,companyName,String,True,True,,Attribute,
-UserListId,Exclusion,exclusion,Long,False,True,,Attribute,"The ID of the UserList (audience).
+UserListId,Negative keyword,negativeKeyword,Long,False,True,,Attribute,"The ID of the UserList (audience).
 "

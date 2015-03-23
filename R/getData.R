@@ -38,7 +38,7 @@ getData <- function(clientCustomerId,
   # Returns:
   #   Dataframe with the Adwords Data.
   google.auth <- paste(access$token_type, access$access_token)
-  data <- RCurl::getURL("https://adwords.google.com/api/adwords/reportdownload/v201409", httpheader = c("Authorization" = google.auth,
+  data <- RCurl::getURL("https://adwords.google.com/api/adwords/reportdownload/v201502", httpheader = c("Authorization" = google.auth,
                                                                                                  "developerToken" = credlist$auth.developerToken,
                                                                                                  "clientCustomerId" = clientCustomerId),
                  postfields=statement,

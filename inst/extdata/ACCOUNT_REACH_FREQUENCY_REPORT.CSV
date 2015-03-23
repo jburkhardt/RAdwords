@@ -3,18 +3,6 @@ AccountCurrencyCode,Currency,currency,String,True,False,,Attribute,
 AccountDescriptiveName,Account,account,String,True,False,,Attribute,
 AccountTimeZoneId,Time zone,timeZone,String,True,False,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
 "
-CampaignId,Campaign ID,campaignID,Long,True,False,,Attribute,
-CampaignName,Campaign,campaign,String,True,False,,Attribute,
-CampaignStatus,Campaign state,campaignState,CampaignStatus,True,False,"UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
-",Attribute,"Predicate values / display values:
-UNKNOWN / unknown
-ENABLED / enabled
-PAUSED / paused
-REMOVED / removed
-"
 CustomerDescriptiveName,Client name,clientName,String,True,False,,Attribute,
 ExternalCustomerId,Customer ID,customerID,Long,True,False,,Attribute,
 PrimaryCompanyName,Company name,companyName,String,True,False,,Attribute,

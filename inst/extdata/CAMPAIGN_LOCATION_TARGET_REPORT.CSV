@@ -50,8 +50,14 @@ Date,Day,day,Date,True,True,,Segment,"The date formatted as yyyy-MM-dd.
 "
 ExternalCustomerId,Customer ID,customerID,Long,True,True,,Attribute,"The Customer ID.
 "
-Id,Ad Schedule,adSchedule,Long,True,True,,Attribute,
+Id,Location,location,Long,True,True,,Attribute,
 Impressions,Impressions,impressions,Long,True,True,,Metric,"Count of how often your ad has appeared on a search results page or website on the Google Network.
+"
+IsNegative,Is negative,isNegative,Enum,True,True,"TRUE / true
+FALSE / false
+",Attribute,"Predicate values / display values:
+TRUE / true
+FALSE / false
 "
 Month,Month,month,String,True,True,,Segment,"The first day of the month, formatted as yyyy-MM-dd.
 "

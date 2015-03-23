@@ -1,28 +1,41 @@
-Name,Display Name,XML Attribute,Type,Supports Zero Impressions,Enum Values,Behavior,Notes
-AccountCurrencyCode,Currency,currency,String,False,,Attribute,
-AccountDescriptiveName,Account,account,String,False,,Attribute,
-AccountTimeZoneId,Time zone,timeZone,String,False,,Attribute,"Name of the timezone. For example: ""(GMT-05:00) Eastern Time"".
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,False,,Attribute,"The currency of the Customer account.
 "
-AdGroupId,Ad group ID,adGroupID,Long,False,,Attribute,
-AdGroupName,Ad group,adGroup,String,False,,Attribute,
-AverageCpc,Ad Avg. CPC,adAvgCPC,Money,False,,Metric,
-AveragePosition,Ad Avg. position,adAvgPosition,Double,False,,Metric,
-CampaignId,Campaign ID,campaignID,Long,False,,Attribute,
-CampaignName,Campaign,campaign,String,False,,Attribute,
-Clicks,Ad Clicks,adClicks,Long,False,,Metric,
-CombinedAdsOrganicClicks,Combined Clicks,combinedClicks,Long,False,,Metric,
-CombinedAdsOrganicClicksPerQuery,Combined Clicks/Query,combinedClicksQuery,Double,False,,Metric,
-CombinedAdsOrganicQueries,Combined Queries,combinedQueries,Long,False,,Metric,
-Ctr,Ad CTR,adCTR,Double,False,,Metric,"Percentage returned as ""x.xx%"".
+AccountDescriptiveName,Account,account,String,True,False,,Attribute,"The descriptive name of the Customer account.
 "
-CustomerDescriptiveName,Client name,clientName,String,False,,Attribute,
-Date,Day,day,Date,False,,Segment,
-ExternalCustomerId,Customer ID,customerID,Long,False,,Attribute,
-Impressions,Ad Impressions,adImpressions,Long,False,,Metric,
-KeywordId,Keyword ID,keywordID,long,False,,Attribute,"In the Ad Performance Report this field contains the ID of the criterion that triggered the ad, segmenting the report and preventing zero impressions. The ID can be for any type of criterion, including placements, verticals, etc. Cross-reference with the Criteria Report to determine the criteria type and details.
+AccountTimeZoneId,Time zone,timeZone,String,True,False,,Attribute,"Name of the timezone of the Customer account. For example: ""(GMT-05:00) Eastern Time"".
 "
-KeywordTextMatchingQuery,Keyword,keyword,String,False,,Attribute,
-MatchType,Match type,matchType,QueryMatchType,False,"AUTO / auto
+AdGroupId,Ad group ID,adGroupID,Long,True,False,,Attribute,"The ID of the AdGroup.
+"
+AdGroupName,Ad group,adGroup,String,True,False,,Attribute,"The name of the AdGroup.
+"
+AverageCpc,Ad Avg. CPC,adAvgCPC,Money,True,False,,Metric,"The total cost of all clicks divided by the total number of clicks received.
+"
+AveragePosition,Ad Avg. position,adAvgPosition,Double,True,False,,Metric,"Your ad's position relative to those of other advertisers.
+"
+CampaignId,Campaign ID,campaignID,Long,True,False,,Attribute,"The ID of the Campaign.
+"
+CampaignName,Campaign,campaign,String,True,False,,Attribute,"The name of the Campaign.
+"
+Clicks,Ad Clicks,adClicks,Long,True,False,,Metric,"The number of clicks.
+"
+CombinedAdsOrganicClicks,Combined Clicks,combinedClicks,Long,True,False,,Metric,
+CombinedAdsOrganicClicksPerQuery,Combined Clicks/Query,combinedClicksQuery,Double,True,False,,Metric,
+CombinedAdsOrganicQueries,Combined Queries,combinedQueries,Long,True,False,,Metric,
+Ctr,Ad CTR,adCTR,Double,True,False,,Metric,"The number of clicks your ad receives (Clicks) divided by the number of times your ad is shown (Impressions). Percentage returned as ""x.xx%"".
+"
+CustomerDescriptiveName,Client name,clientName,String,True,False,,Attribute,"The descriptive name of the Customer.
+"
+Date,Day,day,Date,True,False,,Segment,"The date formatted as yyyy-MM-dd.
+"
+ExternalCustomerId,Customer ID,customerID,Long,True,False,,Attribute,"The Customer ID.
+"
+Impressions,Ad Impressions,adImpressions,Long,True,False,,Metric,"Count of how often your ad has appeared on a search results page or website on the Google Network.
+"
+KeywordId,Keyword ID,keywordID,long,False,False,,Attribute,"In the Ad Performance Report this field contains the ID of the criterion that triggered the ad, segmenting the report and preventing zero impressions. The ID can be for any type of criterion, including placements, verticals, etc. Cross-reference with the Criteria Report to determine the criteria type and details.
+"
+KeywordTextMatchingQuery,Keyword,keyword,String,True,False,,Attribute,
+MatchType,Match type,matchType,QueryMatchType,True,False,"AUTO / auto
 BROAD / broad
 BROAD_SESSION / broad (session-based)
 EXACT / exact
@@ -36,19 +49,20 @@ EXACT / exact
 EXPANDED / broad
 PHRASE / phrase
 "
-OrganicAveragePosition,Organic Average Position,organicAveragePosition,Double,False,,Metric,
-OrganicClicks,Organic Clicks,organicClicks,Long,False,,Metric,
-OrganicClicksPerQuery,Organic Clicks/Query,organicClicksQuery,Double,False,,Metric,
-OrganicImpressions,Organic Listings,organicListings,Long,False,,Metric,
-OrganicImpressionsPerQuery,Organic Listings/Query,organicListingsQuery,Double,False,,Metric,
-OrganicQueries,Organic Queries,organicQueries,Long,False,,Metric,
-PrimaryCompanyName,Company name,companyName,String,False,,Attribute,
-SearchQuery,Query,query,String,False,,Attribute,
-SerpType,Search Result Type,searchResultType,SerpType,False,"UNKNOWN / unknown
+OrganicAveragePosition,Organic Average Position,organicAveragePosition,Double,True,False,,Metric,
+OrganicClicks,Organic Clicks,organicClicks,Long,True,False,,Metric,
+OrganicClicksPerQuery,Organic Clicks/Query,organicClicksQuery,Double,True,False,,Metric,
+OrganicImpressions,Organic Listings,organicListings,Long,True,False,,Metric,
+OrganicImpressionsPerQuery,Organic Listings/Query,organicListingsQuery,Double,True,False,,Metric,
+OrganicQueries,Organic Queries,organicQueries,Long,True,False,,Metric,
+PrimaryCompanyName,Company name,companyName,String,True,False,,Attribute,
+SearchQuery,Query,query,String,True,False,,Attribute,
+SerpType,Search Result Type,searchResultType,SerpType,True,False,"UNKNOWN / unknown
 ADS_ONLY / Ad shown only
 ORGANIC_ONLY / Organic shown only
 ADS_AND_ORGANIC / Both shown
-",Segment,"Predicate values / display values:
+",Segment,"The type of search result.
+Predicate values / display values:
 UNKNOWN / unknown
 ADS_ONLY / Ad shown only
 ORGANIC_ONLY / Organic shown only
