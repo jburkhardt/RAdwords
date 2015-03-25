@@ -1,10 +1,21 @@
-RAdwords 0.1.2
+RAdwords v0.1.2 (Release Date: 2015-03-23)
 ----------------------------------------------------------------
 
 NEW FEATURES
 
-* Google Adwords API versions v201409 and v201502 become selectable. `getData()`, `metrics()` and `reports()` gain new `apiVersion` attribute for controlling whether the old or new Google Adwords API version is queried. API version v201502 is set to default.
-
+* Google Adwords API versions v201409 and v201502 become selectable.
+*`getData()`, `metrics()` and `reports()` gain new `apiVersion` attribute for controlling whether the old or new Google Adwords API version is queried. API version v201502 is set to default.
 * API version v201409 will be deprecated on July 14th 2015 by Google.
-
 * Version v201502 supports new Report Types and some variable names changed. Changes are listed here: https://developers.google.com/adwords/api/docs/guides/migration/v201502
+
+
+RAdwords v0.1.1 (Release Date: 2011-11-11)
+----------------------------------------------------------------
+
+* migration towards Google Adwords API version v201409
+
+
+RAdwords v0.1.0 (Release Date: 2011-10-11)
+----------------------------------------------------------------
+
+* initial cran release
