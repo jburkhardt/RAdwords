@@ -13,9 +13,9 @@ Author: Johannes Burkhardt <johannes.burkhardt@gmail.com>, Matthias Bannert
     <matthias.bannert@gmail.com>
 Maintainer: Johannes Burkhardt <johannes.burkhardt@gmail.com>
 Depends:
-    R (>= 3.0.3)
+    R (>= 3.1.3)
 Imports:
     RCurl,
     rjson
-License: GPL (>= 2) | MIT + file LICENSE
+License: MIT + file LICENSE
 URL: https://github.com/jburkhardt/RAdwords
