@@ -2,7 +2,7 @@
 
 **RAdwords** is a R package with the aim to load Adwords data into R. Therefore the package implements three main features.
 First, the package provides an **authentication process** for **R** with the **Adwords API** via OAUTH2.
-Second, the package offers an interface to apply the [Adwords query language](https://developers.google.com/adwords/api/docs/guides/awql) in R and **query the Adwords API** with [ad-hoc reports](https://developers.google.com/adwords/api/docs/guides/reporting}{ad-hoc reports).
+Second, the package offers an interface to apply the [Adwords query language](https://developers.google.com/adwords/api/docs/guides/awql) in R and **query the Adwords API** with [ad-hoc reports](https://developers.google.com/adwords/api/docs/guides/reporting).
 Third, the received **data are transformed into suitable data formats** for further data processing and data analysis.
 
 
