@@ -40,11 +40,13 @@ getData <- function(clientCustomerId,
   # Returns:
   #   Dataframe with the Adwords Data.
   google.auth <- paste(access$token_type, access$access_token)
+  cert <- system.file("CurlSSL", "ca-bundle.crt", package = "RCurl")#SSL certification Fix for Windows
   data <- RCurl::getURL(paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep=""), httpheader = c("Authorization" = google.auth,
                                                                                                  "developerToken" = credlist$auth.developerToken,
                                                                                                  "clientCustomerId" = clientCustomerId),
                  postfields=statement,
-                 verbose = TRUE)
+                 verbose = TRUE,
+                 cainfo = cert)#add SSL certificate
   if (transformation==TRUE){
     data <- transformData(data,report=attributes(statement)$reportType,apiVersion=apiVersion)
     if (changeNames==TRUE){

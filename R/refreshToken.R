@@ -19,7 +19,8 @@ refreshToken = function(google_auth) {
                            client_id=google_auth$credentials$c.id,
                            client_secret=google_auth$credentials$c.secret, 
                            grant_type="refresh_token", 
-                           style="POST"))
+                           style="POST",
+                           .opts = list(ssl.verifypeer = FALSE))) #Fix SSL Certificate problem on Windows
     access <- rt
     
     access
