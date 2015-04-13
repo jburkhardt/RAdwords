@@ -48,12 +48,19 @@ transformData <- function(data,
   data[i] <- lapply(data[i], as.character)
   #elimitate % in data and convert percentage values into numeric data
   #find % values
-  perVar <- as.numeric(grep("%",data))
-  #kill % and divide by 100
-  for(i in perVar){
-    data[,i] <- sub("%","",data[,i])
-    data[,i] <- as.numeric(data[,i])/100 
+  doubleVar <- as.character(subset(reportType, Type == 'Double')$Display.Name)
+  for(var in doubleVar){
+    if(var %in% colnames(data)){
+      data[,var] <- sub("%","",data[,var])
+      data[,var] <- as.numeric(data[,var])/100 
+    }
   }
+#   perVar <- as.numeric(grep("%",data))
+#   #kill % and divide by 100
+#   for(i in perVar){
+#     data[,i] <- sub("%","",data[,i])
+#     data[,i] <- as.numeric(data[,i])/100 
+#   }
   Behavior = NULL
   #eliminate ',' thousend separater in data and convert values into numeric data
   metricVar <- as.character(subset(reportType, Behavior == 'Metric')$Display.Name)
