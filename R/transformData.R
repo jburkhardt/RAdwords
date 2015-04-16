@@ -48,6 +48,7 @@ transformData <- function(data,
   data[i] <- lapply(data[i], as.character)
   #elimitate % in data and convert percentage values into numeric data
   #find % values
+  Type <- NULL # pass note in R CMD check
   doubleVar <- as.character(subset(reportType, Type == 'Double')$Display.Name)
   for(var in doubleVar){
     if(var %in% colnames(data)){
