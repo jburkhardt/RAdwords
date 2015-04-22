@@ -46,12 +46,17 @@ transformData <- function(data,
   #transform factor into character
   i <- sapply(data, is.factor)
   data[i] <- lapply(data[i], as.character)
-  #elimitate % in data and convert percentage values into numeric data
-  #find % values
+  #elimitate % in numeric data (Type=Double) however ignore % in non-double variables like ad text
+  #and convert percentage values into numeric data
+  #define double variables
   Type <- NULL # pass note in R CMD check
   doubleVar <- as.character(subset(reportType, Type == 'Double')$Display.Name)
+  #find variables containing %
+  perVar <- as.numeric(grep("%",data))
+  perVar <- names(data)[perVar]
+  #transform variable of type double which contain %
   for(var in doubleVar){
-    if(var %in% colnames(data)){
+    if(var %in% colnames(data) && var %in% perVar){
       data[,var] <- sub("%","",data[,var])
       data[,var] <- as.numeric(data[,var])/100 
     }
