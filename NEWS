@@ -1,3 +1,11 @@
+RAdwords v0.1.5 (Release Date: 2015-04-22)
+----------------------------------------------------------------
+
+BUG FIXES
+
+* Transformation of raw data (previous bug fix v0.1.4) conflicting with variable of type double. transformData() adjusted accordingly.
+
+
 RAdwords v0.1.4 (Release Date: 2015-04-13)
 ----------------------------------------------------------------
 
