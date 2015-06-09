@@ -46,7 +46,8 @@ getData <- function(clientCustomerId,
                                                                                                  "clientCustomerId" = clientCustomerId),
                  postfields=statement,
                  verbose = TRUE,
-                 cainfo = cert)#add SSL certificate
+                 cainfo = cert, #add SSL certificate
+                 ssl.verifypeer = TRUE)
   if (transformation==TRUE){
     data <- transformData(data,report=attributes(statement)$reportType,apiVersion=apiVersion)
     if (changeNames==TRUE){
