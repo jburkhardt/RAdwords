@@ -22,14 +22,24 @@ transformData <- function(data,
   # Returns:
   #   R Dataframe
   data <- read.csv2(textConnection(data),sep=",",header=F)[-1,]
+  data <- as.data.frame(data)
   #Rename columns
   for(i in 1:ncol(data)){
     names(data)[i] <- as.character(data[1,i])
   }
-  #eliminate row with names
-  data <- data[-1,]
-  #eliminate row with total values
-  data <- data[-nrow(data),]
+  
+  if(ncol(data)==1){
+    variableName <- names(data)
+    data <- as.data.frame(data[2:(nrow(data)-1),1])
+    names(data) <- variableName
+  }
+  else if(ncol(data)>1) {
+    #eliminate row with names
+    data <- data[-1,]
+    #eliminate row with total values
+    data <- data[-nrow(data),]
+  }
+
   #change data format of variables
   if("Day" %in% colnames(data)){
     data$Day <- as.Date(data$Day)
