@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>RAdwords by jburkhardt</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>RAdwords</h1>
+        <p>Loading Adwords Data into R</p>
+
+        <p class="view"><a href="https://github.com/jburkhardt/RAdwords">View the Project on GitHub <small>jburkhardt/RAdwords</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/jburkhardt/RAdwords/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jburkhardt/RAdwords/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jburkhardt/RAdwords">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="loading-google-adwords-data-into-r" class="anchor" href="#loading-google-adwords-data-into-r" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading Google Adwords data into R</h2>
+
+<p><strong>RAdwords</strong> is a R package with the aim to load Adwords data into R. Therefore the package implements three main features.
+First, the package provides an <strong>authentication process</strong> for <strong>R</strong> with the <strong>Adwords API</strong> via OAUTH2.
+Second, the package offers an interface to apply the <a href="https://developers.google.com/adwords/api/docs/guides/awql">Adwords query language</a> in R and <strong>query the Adwords API</strong> with <a href="https://developers.google.com/adwords/api/docs/guides/reporting">ad-hoc reports</a>.
+Third, the received <strong>data are transformed into suitable data formats</strong> for further data processing and data analysis.</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>The package can be installed directly from this Github repository with:</p>
+
+<p><code>require(devtools)</code><br>
+<code>install_github('jburkhardt/RAdwords')</code></p>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<h4>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements:</h4>
+
+<p>In order to access the Adwords API you have to set up a <a href="https://developers.google.com/console/help/">Google API project</a> for native apps. The Google API project provides a <strong>Client Id</strong> and <strong>Client Secret</strong> which is necessary for the authentication. Moreover you need to have a <a href="https://developers.google.com/adwords/api/docs/signingup">Adwords MCC</a> with an <strong>Adwords developer token</strong>.</p>
+
+<h4>
+<a id="authentication" class="anchor" href="#authentication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication:</h4>
+
+<p>The function <code>doAuth</code> manages the complete authentication process. Meaning <code>doAuth</code> authenticates the R app for the first time, loads the access token or refreshes the access token if expired. Hence, you only run <code>doAuth()</code> to authenticate whether it is your initial R Session or a later instance.</p>
+
+<h5>
+<a id="whats-happening-in-details" class="anchor" href="#whats-happening-in-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's happening in details?</h5>
+
+<p>Once the API projects for native application is set up, <code>getAuth</code> is able to authenticate the R app with the credentials (Client Id, Client Secret) from the Google API project. The Google authentication server returns a client token, which later is used by <code>loadToken</code> to receive the access token. If the access token is expired after one hour, it can be updated with <code>refreshToken</code>. The access token in combination with the Adwords developer token enables a connection with the Adwords API.</p>
+
+<h4>
+<a id="create-statement" class="anchor" href="#create-statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Statement:</h4>
+
+<p><code>statement</code> creates the Adwords Query Language Statement.</p>
+
+<h4>
+<a id="loading-data" class="anchor" href="#loading-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading Data:</h4>
+
+<p><code>getData</code> queries the data from the Adwords API and transforms the data into an R dataframe.</p>
+
+<h3>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<h4>
+<a id="authentication-1" class="anchor" href="#authentication-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authentication</h4>
+
+<p><code>library(RAdwords)</code><br>
+<code>google_auth &lt;- doAuth()</code></p>
+
+<h4>
+<a id="create-statement-1" class="anchor" href="#create-statement-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Statement</h4>
+
+<p><code>body &lt;- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),  
+                  report="ACCOUNT_PERFORMANCE_REPORT",  
+                  start="20140320",  
+                  end="20140321")</code>  </p>
+
+<h4>
+<a id="query-adwords-api-and-get-data-as-dataframe" class="anchor" href="#query-adwords-api-and-get-data-as-dataframe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Query Adwords API and get data as dataframe</h4>
+
+<p><code>data &lt;- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)</code></p>
+
+<h4>
+<a id="get-available-report-types" class="anchor" href="#get-available-report-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get available report types</h4>
+
+<p><code>reports()</code></p>
+
+<h4>
+<a id="get-available-metricsattributes-of-specific-report-type" class="anchor" href="#get-available-metricsattributes-of-specific-report-type" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get available metrics/attributes of specific report type</h4>
+
+<p><code>metrics(report='ACCOUNT_PERFORMANCE_REPORT')</code></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/jburkhardt">jburkhardt</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
