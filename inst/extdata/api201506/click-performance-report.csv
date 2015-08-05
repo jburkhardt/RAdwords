@@ -1,0 +1,94 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AdFormat,Ad type,adType,AdFormat,True,False,"UNKNOWN / unknown
+TEXT / text
+IMAGE / image
+DYNAMIC_IMAGE / dynamic_image
+FLASH / flash
+VIDEO / video
+HTML / html
+AUDIO / audio
+COMPOSITE / composite
+PRINT / print
+",Attribute,"The ad type.
+"
+AdGroupId,Ad group ID,adGroupID,Long,True,False,,Attribute,"The ID of the AdGroup.
+"
+AdNetworkType1,Network,network,AdNetworkType1,True,False,"UNKNOWN / unknown
+SEARCH / Search Network
+CONTENT / Display Network
+",Attribute,"First level network type.
+"
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,True,False,"UNKNOWN / unknown
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+",Attribute,"Second level network type (includes search partners).
+"
+CampaignId,Campaign ID,campaignID,Long,True,False,,Attribute,"The ID of the Campaign.
+"
+CityCriteriaId,City,city,Integer,True,False,,Attribute,"ID of the city Location associated with the impression. You can look up the corresponding name and other information using <a href=""https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService"">LocationCriterionService</a>.
+"
+ClickType,Click type,clickType,ClickType,True,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Product listing ad
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+UNKNOWN / unknown
+",Attribute,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate.
+"
+CountryCriteriaId,Country/Territory,countryTerritory,Integer,True,False,,Attribute,"ID of the country Location associated with the impression. You can look up the corresponding name and other information using <a href=""https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService"">LocationCriterionService</a>.
+"
+CreativeId,Ad ID,adID,Long,True,False,,Attribute,"ID of the ad.
+"
+CriteriaId,Keyword ID,keywordID,Long,True,False,,Attribute,"The Criterion ID.
+"
+CriteriaParameters,Keyword / Placement,keywordPlacement,String,True,False,,Attribute,"Descriptive string for the Criterion. In the Destination URL report, this field behaves as a segment.
+"
+Date,Day,day,Date,True,False,,Attribute,"The date formatted as yyyy-MM-dd.
+"
+Device,Device,device,DeviceType,True,False,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Attribute,"Device type where the impression was shown.
+"
+GclId,Google Click ID,googleClickID,String,True,False,,Attribute,"The Google Click ID.
+"
+MetroCriteriaId,Metro area,metroArea,Integer,True,False,,Attribute,"ID of the metro area Location associated with the impression. You can look up the corresponding name and other information using <a href=""https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService"">LocationCriterionService</a>.
+"
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,False,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Attribute,"The name of the month of the year, e.g., ""December"".
+"
+Page,Page,page,Integer,False,False,,Attribute,"Page number in search results where the ad was shown.
+"
+RegionCriteriaId,Region,region,Integer,True,False,,Attribute,"ID of the region Location associated with the impression. You can look up the corresponding name and other information using <a href=""https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService"">LocationCriterionService</a>.
+"
+Slot,Top vs. Other,topVsOther,Slot,True,False,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+",Attribute,"The position of the Ad.
+"
+UserListId,User List ID,userListID,Long,True,False,,Attribute,"The ID of the UserList (audience).
+"

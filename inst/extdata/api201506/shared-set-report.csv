@@ -1,0 +1,19 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+MemberCount,Member Count,memberCount,int,True,False,,Metric,"The number of entities in the shared set.
+"
+Name,Shared Set Name,sharedSetName,String,True,False,,Attribute,"The name of the main object in this row. For example, in a Campaign Performance Report this will be the name of each row's Campaign. In an Ad Group Performance Report this will be the name of each row's AdGroup.
+"
+ReferenceCount,Reference Count,referenceCount,int,True,False,,Metric,"The number of campaigns that actively use the shared set.
+"
+SharedSetId,Shared Set ID,sharedSetID,Long,True,False,,Attribute,"The ID of the SharedSet.
+"
+Status,State,state,Status,True,False,"ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+",Attribute,"The status of the main object in this row. For example, in a Campaign Performance Report this will be the status of each row's Campaign. In an Ad Group Performance Report this will be the status of each row's AdGroup.
+"
+Type,Shared Set Type,sharedSetType,SharedSetType,True,False,"NEGATIVE_KEYWORDS / 
+NEGATIVE_PLACEMENTS / 
+UNKNOWN / unknown
+",Attribute,"The type of the main object in this row. For example, in a Bid Goal Performance Report this will be the type of the BiddingStrategyConfiguration. In a Shared Set Report this will be the type of the SharedSet.
+"
