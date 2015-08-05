@@ -1,3 +1,9 @@
+RAdwords v0.1.6 (Release Date: 2015-08-05)
+----------------------------------------------------------------
+
+* Migration towards API version v201506. API versions v201506 and v201502 are selectable.
+* API version v201409 is deprecated since July 14th 2015 by Google.
+
 RAdwords v0.1.5 (Release Date: 2015-04-22)
 ----------------------------------------------------------------
 

@@ -8,7 +8,7 @@
 #' @param clientCustomerId Adwords client customer Id
 #' @param google_auth list of authentication
 #' @param statement awql statement generated with \code{\link{statement}}.
-#' @param apiVersion supports 201502 or 201409, where default is 201502. 
+#' @param apiVersion supports 201506 or 201502, where default is 201506.
 #' @param transformation If TRUE, data will be transformed with \code{\link{transformData}} into suitable R dataframe.
 #' Else, the data are returned in raw format.
 #' @param changeNames If TRUE, the display names of the transformed data are converted into more nicer/practical names. Requires transformation = TRUE
@@ -17,7 +17,7 @@
 getData <- function(clientCustomerId,
                     google_auth,
                     statement,
-                    apiVersion = "201502",
+                    apiVersion = "201506",
                     transformation=TRUE,
                     changeNames=TRUE){
   
