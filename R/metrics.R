@@ -5,6 +5,7 @@
 #' @param report Report type
 #' @param apiVersion Supports 201506 or 201502. Default is 201506.
 #' 
+#' @importFrom utils read.csv
 #' @export
 #' @return List of available metrics/attributes.
 #' 

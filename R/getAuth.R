@@ -3,6 +3,8 @@
 #' @description getAuth authenticates the R app at the Google authentication server using OAUTH2 and receives the client token.
 #' Usually you need not to run getAuth() explicitly since the whole authentication process is managed by \code{\link{doAuth}}.
 #' 
+#' @importFrom utils browseURL
+#' 
 #' @return Client token from Google authentication server.
 #' Dataframe with the credential information which is cached in working space 
 #' and optionally saved as RData file in current working directory.

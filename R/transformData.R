@@ -7,6 +7,7 @@
 #' @param report Report type.
 #' @param apiVersion set automatically by \code{\link{getData}}. Supported are 201506 or 201502. Default is 201506.
 #' 
+#' @importFrom utils read.csv read.csv2
 #' @export
 #' 
 #' @return Dataframe with the Adwords Data.
