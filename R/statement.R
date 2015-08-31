@@ -18,7 +18,7 @@
 #'                   where="CampaignName STARTS_WITH 'A' AND Clicks > 100",
 #'                   start="20140320",
 #'                   end="20140321")
-#' body <- statement(select=c('KeywordText','Clicks','Cost','Ctr'),
+#' body <- statement(select=c('Criteria','Clicks','Cost','Ctr'),
 #'                   report="KEYWORDS_PERFORMANCE_REPORT",
 #'                   where="Clicks > 100",
 #'                   start="20140320",
