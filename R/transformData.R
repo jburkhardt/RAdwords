@@ -103,7 +103,5 @@ transformData <- function(data,
       data[, var] <- data[, var] / 1000000 #convert into micros
     }
   }
-  #eliminate " " spaces in column names
-  names(data) <- gsub(" ","",names(data))
   return(data)
 }

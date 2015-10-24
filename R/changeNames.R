@@ -8,6 +8,8 @@
 #' 
 #' @return New column names of dataframe.
 changeNames <- function(data){
+  #eliminate " " spaces in column names
+  names(data) <- gsub(" ","",names(data))
   names(data)[names(data)=="Avg.CPC"] <- "CPC"
   names(data)[names(data)=="Avg.position"] <- "Position"
   names(data)[names(data)=="Clickconversionrate"] <- "CVR"
