@@ -71,7 +71,7 @@ Third, the received <strong>data are transformed into suitable data formats</str
 <h4>
 <a id="loading-data" class="anchor" href="#loading-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading Data:</h4>
 
-<p><code>getData</code> queries the data from the Adwords API and transforms the data into an R dataframe.</p>
+<p><code>getData</code> queries the data from the Adwords API and transforms the data into an R dataframe. Make sure to use the Adwords Account Id (MCC Id will not work).</p>
 
 <h3>
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
@@ -93,7 +93,8 @@ Third, the received <strong>data are transformed into suitable data formats</str
 <h4>
 <a id="query-adwords-api-and-get-data-as-dataframe" class="anchor" href="#query-adwords-api-and-get-data-as-dataframe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Query Adwords API and get data as dataframe</h4>
 
-<p><code>data &lt;- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)</code></p>
+<p><code>data &lt;- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)
+          #use the Adwords Account Id. MCC Id will not work.</code></p>
 
 <h4>
 <a id="get-available-report-types" class="anchor" href="#get-available-report-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get available report types</h4>
