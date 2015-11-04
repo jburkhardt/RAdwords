@@ -5,7 +5,7 @@
 #' @description getData posts the Adwords Query Language (awql) Statement which is generated with \code{\link{statement}}.
 #' The data are retrieved from the Adwords API as a dataframe.
 #' 
-#' @param clientCustomerId Adwords client customer Id
+#' @param clientCustomerId Adwords Account Id
 #' @param google_auth list of authentication
 #' @param statement awql statement generated with \code{\link{statement}}.
 #' @param apiVersion supports 201506 or 201502, where default is 201506.
@@ -33,7 +33,7 @@ getData <- function(clientCustomerId,
   # getData posts the Adwords Query Language Statement and retrieves the data.
   #
   # Args:
-  #   clientCustomerId: Adwords client customer Id
+  #   clientCustomerId: Adwords Account Id
   #   statement: Object generated with statement() including the Api request.
   #   transformation: If true, transformData() will be applied on data. Else raw csv data will be returned.
   # 

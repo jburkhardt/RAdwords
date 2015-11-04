@@ -37,7 +37,7 @@ body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),
                   start="20140320",
                   end="20140321")
 Query Adwords API and load data as dataframe:
-data <- getData(clientCustomerId='xxx-xxx-xxxx',
+data <- getData(clientCustomerId='xxx-xxx-xxxx', #use Adwords Account Id (MCC Id will not work)
                 google_auth=google_auth,
                 statement=body)
 Get available report types:

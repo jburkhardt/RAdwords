@@ -10,7 +10,7 @@ getData(clientCustomerId, google_auth, statement, apiVersion = "201506",
   transformation = TRUE, changeNames = TRUE)
 }
 \arguments{
-\item{clientCustomerId}{Adwords client customer Id}
+\item{clientCustomerId}{Adwords Account Id}
 
 \item{google_auth}{list of authentication}
 

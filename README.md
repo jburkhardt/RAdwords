@@ -42,7 +42,8 @@ Once the API projects for native application is set up, `getAuth` is able to aut
                   start="20140320",  
                   end="20140321")`  
 #### Query Adwords API and get data as dataframe ####
-`data <- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)`
+`#make sure to use the Adwords Account Id (MCC Id will not work)
+data <- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)`
 #### Get available report types ####
 `reports()`
 #### Get available metrics/attributes of specific report type ####
