@@ -12,6 +12,7 @@
 #' @param transformation If TRUE, data will be transformed with \code{\link{transformData}} into suitable R dataframe.
 #' Else, the data are returned in raw format.
 #' @param changeNames If TRUE, the display names of the transformed data are converted into more nicer/practical names. Requires transformation = TRUE
+#' @param verbose Defaults to FALSE. If TRUE, the curl connection output will be printed.
 #' @export
 #' @return Dataframe with the Adwords Data.
 getData <- function(clientCustomerId,
@@ -19,7 +20,8 @@ getData <- function(clientCustomerId,
                     statement,
                     apiVersion = "201506",
                     transformation=TRUE,
-                    changeNames=TRUE){
+                    changeNames=TRUE,
+                    verbose=FALSE){
   
   # for a better overview split google auth
   access <- google_auth$access
@@ -45,7 +47,7 @@ getData <- function(clientCustomerId,
                                                                                                  "developerToken" = credlist$auth.developerToken,
                                                                                                  "clientCustomerId" = clientCustomerId),
                  postfields=statement,
-                 verbose = TRUE,
+                 verbose = verbose,
                  cainfo = cert, #add SSL certificate
                  ssl.verifypeer = TRUE)
   if (transformation==TRUE){
