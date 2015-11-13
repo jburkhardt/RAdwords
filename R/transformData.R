@@ -46,14 +46,12 @@ transformData <- function(data,
     data$Day <- as.Date(data$Day)
   }
   #get metrics for requested report
+  report <- gsub('_','-',report)
+  report <- tolower(report)
   if (apiVersion=="201509"){
-    report <- gsub('_','-',report)
-    report <- tolower(report)
     reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201509/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
   }
   else if (apiVersion=="201506"){
-    report <- gsub('_','-',report)
-    report <- tolower(report)
     reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201506/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
   }
 #   else if (apiVersion=="201502"){
