@@ -5,7 +5,7 @@
 #' 
 #' @param data Raw csv data from Adwords API.
 #' @param report Report type.
-#' @param apiVersion set automatically by \code{\link{getData}}. Supported are 201506 or 201502. Default is 201506.
+#' @param apiVersion set automatically by \code{\link{getData}}. Supported are 201509 or 201506. Default is 201509.
 #' 
 #' @importFrom utils read.csv read.csv2
 #' @export
@@ -13,7 +13,7 @@
 #' @return Dataframe with the Adwords Data.
 transformData <- function(data,
                           report=reportType,
-                          apiVersion="201506"){
+                          apiVersion="201509"){
   # Transforms the csv into a dataframe. Moreover the variables are converted into suitable formats.
   #
   # Args:
@@ -46,19 +46,24 @@ transformData <- function(data,
     data$Day <- as.Date(data$Day)
   }
   #get metrics for requested report
-  if (apiVersion=="201506"){
+  if (apiVersion=="201509"){
+    report <- gsub('_','-',report)
+    report <- tolower(report)
+    reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201509/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
+  }
+  else if (apiVersion=="201506"){
     report <- gsub('_','-',report)
     report <- tolower(report)
     reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201506/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
   }
-  else if (apiVersion=="201502"){
-    report <- gsub('_','-',report)
-    report <- tolower(report)
-    reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201502/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
-  }
-  else if (apiVersion=="201409"){
-    reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201409/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
-  }
+#   else if (apiVersion=="201502"){
+#     report <- gsub('_','-',report)
+#     report <- tolower(report)
+#     reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201502/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
+#   }
+#   else if (apiVersion=="201409"){
+#     reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201409/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
+#   }
   #transform factor into character
   i <- sapply(data, is.factor)
   data[i] <- lapply(data[i], as.character)
