@@ -1,0 +1,66 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.4.6
+RVersion: 3.2.3
+Repos: CRAN=http://cran.rstudio.com/
+
+Package: RCurl
+Source: CRAN
+Version: 1.95-4.6
+Hash: f07380ac0925611455ecf9dcdb8be545
+Requires: bitops
+
+Package: Rcpp
+Source: CRAN
+Version: 0.12.2
+Hash: 1928c2b7372e3f033217335f3fad25a3
+
+Package: bitops
+Source: CRAN
+Version: 1.0-6
+Hash: 67d0775189fd0041d95abca618c5c07e
+
+Package: brew
+Source: CRAN
+Version: 1.0-6
+Hash: 931f9972deae0f205e1c78a51f33149b
+
+Package: digest
+Source: CRAN
+Version: 0.6.8
+Hash: de202f956596a476d09304e3a2ebf1e5
+
+Package: magrittr
+Source: CRAN
+Version: 1.5
+Hash: bdc4d48c3135e8f3b399536ddf160df4
+
+Package: packrat
+Source: github
+Version: 0.4.4-6
+Hash: 1b529f25f45656922d063f340152b457
+GithubRepo: packrat
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: dfd1c904a0feb74422233f393cc324daf6517ea0
+
+Package: rjson
+Source: CRAN
+Version: 0.2.15
+Hash: def074f38d0cff3b597649ee6f976128
+
+Package: roxygen2
+Source: CRAN
+Version: 5.0.1
+Hash: 764de5dbf10bcd671fde95798bf96112
+Requires: Rcpp, brew, digest, stringi, stringr
+
+Package: stringi
+Source: CRAN
+Version: 1.0-1
+Hash: cf342bc407bd5daec77ed1009d5244e1
+
+Package: stringr
+Source: CRAN
+Version: 1.0.0
+Hash: 2676dd5f88890910962b733b0f9540e1
+Requires: magrittr, stringi
