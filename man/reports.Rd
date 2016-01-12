@@ -4,10 +4,10 @@
 \alias{reports}
 \title{Show available Adwords Reports}
 \usage{
-reports(apiVersion = "201506")
+reports(apiVersion = "201509")
 }
 \arguments{
-\item{apiVersion}{Supports 201506 or 201502. Default is 201506.}
+\item{apiVersion}{Supports 201509 or 201506. Default is 201509.}
 }
 \value{
 Available report types.
