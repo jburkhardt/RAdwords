@@ -13,12 +13,10 @@ reports <- function(apiVersion="201509"){
 #
 # Returns:
 #     Report types
-  if (apiVersion=="201509"){
-      reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201509/'))
-  }
-  else if (apiVersion=="201506"){
-      reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201506/'))
-  }
+  switch (apiVersion,
+    "201509" = reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201509/')),
+    "201506" = reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201506/'))
+  )
   reportTypes <- sub('.csv','',reportTypes)
   reportTypes <- gsub('-','_',reportTypes)
   reportTypes <- toupper(reportTypes)
