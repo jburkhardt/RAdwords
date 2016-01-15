@@ -11,6 +11,7 @@
 #' @param apiVersion supports 20509, 201506, where default is 201509.
 #' @param transformation If TRUE, data will be transformed with \code{\link{transformData}} into suitable R dataframe.
 #' Else, the data are returned in raw format.
+#' @param includeZeroImpressions If TRUE zero impressions will be included. Defaults to FALSE.
 #' @param changeNames If TRUE, the display names of the transformed data are converted into more nicer/practical names. Requires transformation = TRUE
 #' @param verbose Defaults to FALSE. If TRUE, the curl connection output will be printed.
 #' @export
@@ -21,6 +22,7 @@ getData <- function(clientCustomerId,
                     apiVersion = "201509",
                     transformation=TRUE,
                     changeNames=TRUE,
+                    includeZeroImpressions=FALSE,
                     verbose=FALSE){
   
   # for a better overview split google auth
@@ -43,9 +45,11 @@ getData <- function(clientCustomerId,
   #   Dataframe with the Adwords Data.
   google.auth <- paste(access$token_type, access$access_token)
   cert <- system.file("CurlSSL", "ca-bundle.crt", package = "RCurl")#SSL certification Fix for Windows
-  data <- RCurl::getURL(paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep=""), httpheader = c("Authorization" = google.auth,
-                                                                                                 "developerToken" = credlist$auth.developerToken,
-                                                                                                 "clientCustomerId" = clientCustomerId),
+  data <- RCurl::getURL(paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep=""),
+                        httpheader = c("Authorization" = google.auth,
+                                        "developerToken" = credlist$auth.developerToken,
+                                        "clientCustomerId" = clientCustomerId,
+                                       "includeZeroImpressions" = includeZeroImpressions),
                  postfields=statement,
                  verbose = verbose,
                  cainfo = cert, #add SSL certificate

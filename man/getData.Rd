@@ -7,7 +7,8 @@
 \title{Get Adwords Data}
 \usage{
 getData(clientCustomerId, google_auth, statement, apiVersion = "201509",
-  transformation = TRUE, changeNames = TRUE, verbose = FALSE)
+  transformation = TRUE, changeNames = TRUE,
+  includeZeroImpressions = FALSE, verbose = FALSE)
 }
 \arguments{
 \item{clientCustomerId}{Adwords Account Id}
@@ -22,6 +23,8 @@ getData(clientCustomerId, google_auth, statement, apiVersion = "201509",
 Else, the data are returned in raw format.}
 
 \item{changeNames}{If TRUE, the display names of the transformed data are converted into more nicer/practical names. Requires transformation = TRUE}
+
+\item{includeZeroImpressions}{If TRUE zero impressions will be included. Defaults to FALSE.}
 
 \item{verbose}{Defaults to FALSE. If TRUE, the curl connection output will be printed.}
 }
