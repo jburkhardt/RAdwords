@@ -38,7 +38,9 @@ transformData <- function(data,
     #eliminate row with names
     data <- data[-1,]
     #eliminate row with total values
-    data <- data[-nrow(data),]
+    if(report != "PRODUCT_PARTITION_REPORT"){
+      data <- data[-nrow(data), ]
+    }
   }
 
   #change data format of variables
@@ -108,5 +110,5 @@ transformData <- function(data,
   }
   #eliminate " " spaces in column names
   names(data) <- gsub(" ","",names(data))
-  return(data)
+  data
 }
