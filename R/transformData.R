@@ -31,7 +31,12 @@ transformData <- function(data,
   
   if(ncol(data)==1){
     variableName <- names(data)
-    data <- as.data.frame(data[2:(nrow(data)-1),1])
+    #eliminate row with total values
+    if(data[nrow(data), 1] == "Total"){
+        data <- as.data.frame(data[2:(nrow(data)-1),1])
+    } else {
+        data <- as.data.frame(data[2:nrow(data), 1])
+    }
     names(data) <- variableName
   }
   else if(ncol(data)>1) {
