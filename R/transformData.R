@@ -38,7 +38,7 @@ transformData <- function(data,
     #eliminate row with names
     data <- data[-1,]
     #eliminate row with total values
-    if(report != "PRODUCT_PARTITION_REPORT"){
+    if(data[nrow(data), 1] == "Total"){
       data <- data[-nrow(data), ]
     }
   }
