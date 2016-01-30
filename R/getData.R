@@ -54,10 +54,16 @@ getData <- function(clientCustomerId,
                  verbose = verbose,
                  cainfo = cert, #add SSL certificate
                  ssl.verifypeer = TRUE)
-  if (transformation==TRUE){
-    data <- transformData(data,report=attributes(statement)$reportType,apiVersion=apiVersion)
-    if (changeNames==TRUE){
-     data <-changeNames(data)
+  
+  # check 
+  valid <- grepl(attr(statement,"reportType"),data)
+  
+  if (transformation & valid){
+    data <- transformData(data,
+                          report = attributes(statement)$reportType,
+                          apiVersion = apiVersion)
+    if (changeNames){
+     data <- changeNames(data)
     }
   }
   data  
