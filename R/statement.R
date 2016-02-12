@@ -49,6 +49,8 @@ statement <- function(select= c("AccountDescriptiveName",
   #
   # Returns:
   #   The statement for the RCurl post.
+  start <- gsub("-","",start)
+  end <- gsub("-","",end)
   selectA <- paste(select,collapse=",")
   
   if(missing(where)){
