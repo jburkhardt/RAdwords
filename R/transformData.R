@@ -13,7 +13,7 @@
 #' @return Dataframe with the Adwords Data.
 transformData <- function(data,
                           report=reportType,
-                          apiVersion="201509"){
+                          apiVersion="201601"){
   # Transforms the csv into a dataframe. Moreover the variables are converted into suitable formats.
   #
   # Args:
@@ -55,19 +55,15 @@ transformData <- function(data,
   #get metrics for requested report
   report <- gsub('_','-',report)
   report <- tolower(report)
-  if (apiVersion=="201509"){
-    reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201509/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
-  }
-  else if (apiVersion=="201506"){
-    reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201506/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
-  }
+  switch(apiVersion,
+         "201601" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201601/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
+         "201509" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201509/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
+         "201506" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201506/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
+  )
 #   else if (apiVersion=="201502"){
 #     report <- gsub('_','-',report)
 #     report <- tolower(report)
 #     reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201502/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
-#   }
-#   else if (apiVersion=="201409"){
-#     reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201409/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
 #   }
   #transform factor into character
   i <- sapply(data, is.factor)

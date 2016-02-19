@@ -6,7 +6,7 @@
 #' 
 #' @export
 #' @return Available report types.
-reports <- function(apiVersion="201509"){
+reports <- function(apiVersion="201601"){
 # Function which returns all available report types
 #
 # Args: None
@@ -14,6 +14,7 @@ reports <- function(apiVersion="201509"){
 # Returns:
 #     Report types
   switch (apiVersion,
+    "201601" = reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201601/')),
     "201509" = reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201509/')),
     "201506" = reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201506/'))
   )

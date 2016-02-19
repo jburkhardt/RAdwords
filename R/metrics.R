@@ -9,7 +9,7 @@
 #' @export
 #' @return List of available metrics/attributes.
 #' 
-metrics <- function(report="ACCOUNT_PERFORMANCE_REPORT", apiVersion="201509"){
+metrics <- function(report="ACCOUNT_PERFORMANCE_REPORT", apiVersion="201601"){
   # Function which returns all available metrics for a specific report.
   #
   # Args:
@@ -19,6 +19,7 @@ metrics <- function(report="ACCOUNT_PERFORMANCE_REPORT", apiVersion="201509"){
   report <- gsub('_','-',report)
   report <- tolower(report)
   switch(apiVersion,
+         "201601" = report <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201601/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
          "201509" = report <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201509/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
          "201506" = report <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201506/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
          )

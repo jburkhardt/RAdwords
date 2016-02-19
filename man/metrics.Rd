@@ -4,7 +4,7 @@
 \alias{metrics}
 \title{Get Metrics/Attributes of specified Report}
 \usage{
-metrics(report = "ACCOUNT_PERFORMANCE_REPORT", apiVersion = "201509")
+metrics(report = "ACCOUNT_PERFORMANCE_REPORT", apiVersion = "201601")
 }
 \arguments{
 \item{report}{Report type}

@@ -1,3 +1,15 @@
+RAdwords v0.1.8 (Release Date: 2016-02-19)
+----------------------------------------------------------------
+
+* Migration towards API version v201601. API versions v201601, v201509 and v201506 are selectable.
+* Sunset date of API version v201506 is April 11th 2016.
+
+Features:
+
+* statement(): both date formats are valid options: 20160101 or 2016-01-01
+* getData(): - checks is reportType is valid
+             - new function parameters: verbose and includeZeroImpressions
+
 RAdwords v0.1.7 (Release Date: 2015-11-13)
 ----------------------------------------------------------------
 

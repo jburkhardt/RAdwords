@@ -19,7 +19,7 @@
 getData <- function(clientCustomerId,
                     google_auth,
                     statement,
-                    apiVersion = "201509",
+                    apiVersion = "201601",
                     transformation=TRUE,
                     changeNames=TRUE,
                     includeZeroImpressions=FALSE,
