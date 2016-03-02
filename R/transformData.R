@@ -32,10 +32,12 @@ transformData <- function(data,
   if(ncol(data)==1){
     variableName <- names(data)
     #eliminate row with total values
-    if(data[nrow(data), 1] == "Total"){
-        data <- as.data.frame(data[2:(nrow(data)-1),1])
-    } else {
-        data <- as.data.frame(data[2:nrow(data), 1])
+    if(nrow(data)>0){
+      if(data[nrow(data), 1] == "Total"){
+          data <- as.data.frame(data[2:(nrow(data)-1),1])
+      } else {
+          data <- as.data.frame(data[2:nrow(data), 1])
+      }
     }
     names(data) <- variableName
   }
@@ -43,8 +45,10 @@ transformData <- function(data,
     #eliminate row with names
     data <- data[-1,]
     #eliminate row with total values
-    if(data[nrow(data), 1] == "Total"){
-      data <- data[-nrow(data), ]
+    if(nrow(data)>0){
+      if(data[nrow(data), 1] == "Total"){
+        data <- data[-nrow(data), ]
+      }
     }
   }
 
