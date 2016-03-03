@@ -28,32 +28,31 @@ transformData <- function(data,
   for(i in 1:ncol(data)){
     names(data)[i] <- as.character(data[1,i])
   }
-  #### ####
-  #if there are data in the report, non NUll report, then kill total values row
-  #### ####
-  if(nrow(data)>0){
-      if(ncol(data)==1){
-          variableName <- names(data)
-          #eliminate row with total values
-            if(data[nrow(data), 1] == "Total"){
-                data <- as.data.frame(data[2:(nrow(data)-1),1])
-            } else {
-                data <- as.data.frame(data[2:nrow(data), 1])
-            }
-          names(data) <- variableName
-        }
-      else if(ncol(data)>1) {
-        #eliminate row with names
-        data <- data[-1,]
-        #eliminate row with total values
-          if(data[nrow(data), 1] == "Total"){
-            data <- data[-nrow(data), ]
-          }
+  
+  if(ncol(data)==1){
+    variableName <- names(data)
+    #eliminate row with total values
+    if(nrow(data)>0){
+      if(data[nrow(data), 1] == "Total"){
+          data <- as.data.frame(data[2:(nrow(data)-1),1])
+      } else {
+          data <- as.data.frame(data[2:nrow(data), 1])
       }
+    }
+    names(data) <- variableName
   }
-  #### ####
+  else if(ncol(data)>1) {
+    #eliminate row with names
+    data <- data[-1,]
+    #eliminate row with total values
+    if(nrow(data)>0){
+      if(data[nrow(data), 1] == "Total"){
+        data <- data[-nrow(data), ]
+      }
+    }
+  }
+
   #change data format of variables
-  #### ####
   if("Day" %in% colnames(data)){
     data$Day <- as.Date(data$Day)
   }
