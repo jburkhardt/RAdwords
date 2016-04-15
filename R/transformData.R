@@ -83,7 +83,7 @@ transformData <- function(data,
   #transform variable of type double which contain %
   for(var in doubleVar){
     if(var %in% colnames(data) && var %in% perVar){
-      data[,var] <- sub("%","",data[,var])
+      data[, var] <- gsub("%|<|>", "", data[, var])
       data[,var] <- as.numeric(data[,var])/100 
     }
   }
