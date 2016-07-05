@@ -34,8 +34,8 @@ google_auth <- doAuth()
 Create Statement:
 body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),
                   report="ACCOUNT_PERFORMANCE_REPORT",
-                  start="20140320",
-                  end="20140321")
+                  start="2016-03-20",
+                  end="2016-03-21")
 Query Adwords API and load data as dataframe:
 data <- getData(clientCustomerId='xxx-xxx-xxxx', #use Adwords Account Id (MCC Id will not work)
                 google_auth=google_auth,

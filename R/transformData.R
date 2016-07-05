@@ -5,7 +5,7 @@
 #' 
 #' @param data Raw csv data from Adwords API.
 #' @param report Report type.
-#' @param apiVersion set automatically by \code{\link{getData}}. Supported are 201603 or 201601. Default is 201603.
+#' @param apiVersion set automatically by \code{\link{getData}}. Supported are 201605, 201603 and 201601. Default is 201605.
 #' 
 #' @importFrom utils read.csv read.csv2
 #' @export
@@ -13,7 +13,7 @@
 #' @return Dataframe with the Adwords Data.
 transformData <- function(data,
                           report=reportType,
-                          apiVersion="201603"){
+                          apiVersion="201605"){
   # Transforms the csv into a dataframe. Moreover the variables are converted into suitable formats.
   #
   # Args:
@@ -60,6 +60,7 @@ transformData <- function(data,
   report <- gsub('_','-',report)
   report <- tolower(report)
   switch(apiVersion,
+         "201605" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201605/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
          "201603" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201603/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
          "201601" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201601/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
          "201509" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201509/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")

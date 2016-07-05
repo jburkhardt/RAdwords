@@ -1,3 +1,8 @@
+RAdwords v0.1.10 (Release Date: 2016-07-05)
+----------------------------------------------------------------
+
+* Migration towards API version v201605. API versions v201605, v201603, v20161 and v201509 are selectable.
+
 RAdwords v0.1.9 (Release Date: 2016-04-22)
 ----------------------------------------------------------------
 
