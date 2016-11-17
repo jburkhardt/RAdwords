@@ -99,7 +99,7 @@ transformData <- function(data,
   for(var in metricVar){
     if(var %in% colnames(data)){
       data[,var] <- as.character(data[,var])
-      data[,var] <- sub(',','',data[,var])
+      data[,var] <- gsub(',','',data[,var])#kill all commas
       data[,var] <- as.numeric(data[,var])
     }
   }
