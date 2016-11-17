@@ -4,7 +4,7 @@
 \alias{transformData}
 \title{Transform data into R dataframe}
 \usage{
-transformData(data, report = reportType, apiVersion = "201605")
+transformData(data, report = reportType, apiVersion = "201609")
 }
 \arguments{
 \item{data}{Raw csv data from Adwords API.}

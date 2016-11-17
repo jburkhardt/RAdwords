@@ -1,0 +1,10 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountDescriptiveName,Account,account,String,True,False,,Attribute,The descriptive name of the Customer account.
+Criteria,Negative keyword,negativeKeyword,String,True,False,,Attribute,Descriptive string for the Criterion.
+ExternalCustomerId,Customer ID,customerID,Long,True,False,,Attribute,The Customer ID.
+Id,Keyword ID,keywordID,Long,True,False,,Attribute,ID of the main object of this row.
+KeywordMatchType,Match type,matchType,KeywordMatchType,True,False,"EXACT / Exact
+PHRASE / Phrase
+BROAD / Broad
+",Attribute,The match type for the Keyword.
+SharedSetId,Shared Set ID,sharedSetID,Long,True,False,,Attribute,The ID of the SharedSet.

@@ -1,0 +1,19 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,True,,Attribute,The currency of the Customer account.
+AccountDescriptiveName,Account,account,String,True,True,,Attribute,The descriptive name of the Customer account.
+AccountTimeZoneId,Time zone,timeZone,String,True,True,,Attribute,"Name of the timezone selected for the Customer account. For example: ""(GMT-05:00) Eastern Time"". This field does not reflect the current state of daylight saving time for the timezone."
+BaseCampaignId,Base Campaign ID,baseCampaignID,Long,True,True,,Attribute,"The ID of base campaign of trial campaigns. For regular campaigns, this is equal to CampaignId."
+CampaignId,Campaign ID,campaignID,Long,True,True,,Attribute,The ID of the Campaign.
+CampaignName,Campaign,campaign,String,True,True,,Attribute,The name of the Campaign.
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,The status of the Campaign.
+CustomerDescriptiveName,Client name,clientName,String,True,True,,Attribute,The descriptive name of the Customer.
+ExternalCustomerId,Customer ID,customerID,Long,True,True,,Attribute,The Customer ID.
+Id,Location,location,Long,True,True,,Attribute,ID of the main object of this row.
+IsNegative,Is negative,isNegative,Enum,True,True,"TRUE / true
+FALSE / false
+",Attribute,Indicates if the criterion for this row is a negative (exclusion) criterion.
+PrimaryCompanyName,Company name,companyName,String,True,True,,Attribute,Company name of the account.

@@ -1,7 +1,13 @@
+RAdwords v0.1.11 (Release Date: 2016-11-17)
+----------------------------------------------------------------
+
+* Migration towards API version v201607 and v201609
+* Sunset API version version v201509, v201601 and v201603
+
 RAdwords v0.1.10 (Release Date: 2016-07-05)
 ----------------------------------------------------------------
 
-* Migration towards API version v201605. API versions v201605, v201603, v20161 and v201509 are selectable.
+* Migration towards API version v201605. API versions v201605, v201603, v201601 and v201509 are selectable.
 
 RAdwords v0.1.9 (Release Date: 2016-04-22)
 ----------------------------------------------------------------

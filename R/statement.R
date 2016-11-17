@@ -8,33 +8,33 @@
 #' multiple conditions can be only combined with AND
 #' Operators:  = | != | > | >= | < | <= | IN | NOT_IN | STARTS_WITH | STARTS_WITH_IGNORE_CASE |
 #' CONTAINS | CONTAINS_IGNORE_CASE | DOES_NOT_CONTAIN | DOES_NOT_CONTAIN_IGNORE_CASE
-#' @param start Beginning of date range. Format: 20120101
-#' @param end End of date rage. Format: 20120110
+#' @param start Beginning of date range. Format: 2016-01-01
+#' @param end End of date rage. Format: 2016-01-10
 #' 
 #' @export
 #' @examples
 #' body <- statement(select=c('CampaignName','Clicks','Cost','Ctr'),
 #'                   report="CAMPAIGN_PERFORMANCE_REPORT",
 #'                   where="CampaignName STARTS_WITH 'A' AND Clicks > 100",
-#'                   start="20140320",
-#'                   end="20140321")
+#'                   start="2016-03-20",
+#'                   end="2016-03-21")
 #' body <- statement(select=c('Criteria','Clicks','Cost','Ctr'),
 #'                   report="KEYWORDS_PERFORMANCE_REPORT",
 #'                   where="Clicks > 100",
-#'                   start="20140320",
-#'                   end="20140321")    
+#'                   start="2016-03-20",
+#'                   end="2016-03-21")    
 #' body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr','ClickConversionRate'),
 #'                   report="ACCOUNT_PERFORMANCE_REPORT",
-#'                   start="20140320",
-#'                   end="20140321") 
+#'                   start="2016-03-20",
+#'                   end="2016-06-21") 
 #' @return The statement neccessary for the \code{\link{getData}} function.
 statement <- function(select= c("AccountDescriptiveName",
                                 "AccountId","Impressions",
                                 "Clicks","Cost","Date"),
                       report="ACCOUNT_PERFORMANCE_REPORT",
                       where,
-                      start="20120101",
-                      end="20120110"){  
+                      start="2016-01-01",
+                      end="2016-01-10"){  
   # Generates and builds the Adwords Query Language Statement for querying the Adwords API.
   #
   # Args:
