@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>authentication - RAdwords</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "authentication";
+    var mkdocs_page_input_path = "auth.md";
+    var mkdocs_page_url = "/auth/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> RAdwords</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quickstart/">quickstart guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../requirements/">requirements</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>workflow</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">authentication</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#authentication">Authentication</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../reports/">reports and metrics</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../query/">querybuilder</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../getdata/">load data</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">code examples</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../faq/">FAQ / troubleshooting</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bug/">bug reporting</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">RAdwords</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>workflow &raquo;</li>
+        
+      
+    
+    <li>authentication</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="authentication">Authentication</h3>
+<p>Assuming that you completed the steps in the <a href="../requirements/">requirement section</a>, you should be equipped with the following:</p>
+<ul>
+<li>Client ID</li>
+<li>Client Secret</li>
+<li>AdWords Developer Token</li>
+</ul>
+<p>You now can start with the authentication process with <code>doAuth()</code>. Best practice is to save the credential information in a R object.  </p>
+<p>Moreover <code>doAuth()</code> allows to save the credential information in a hidden local file in the current working directory. This can be really handy if you want to load data from the API in a later instance or run batch jobs since you do not have to run the whole authentication process manually again.  </p>
+<p>Start the authentication and follow the instruction in the R console:</p>
+<pre><code class="R">library(RAdwords)
+google_auth &lt;- doAuth()
+</code></pre>
+
+<ol>
+<li>
+<p>Insert the client id and press enter:  </p>
+<p><img alt="Authentication Client ID" src="../images/authProcess1.png" /></p>
+</li>
+<li>
+<p>Insert the client secret and press enter:  </p>
+<p><img alt="Authentication Client Secret" src="../images/authProcess2.png" /></p>
+</li>
+<li>
+<p>Insert the AdWords developer token and press enter:  </p>
+<p><img alt="Authentication Developer Token" src="../images/authProcess3.png" /></p>
+</li>
+<li>
+<p>Web browser opens automatically and provides auth token after Google sign in:  </p>
+<p>Note: Please use same Google login as API project and Adwords MCC.</p>
+<p><img alt="Authentication Developer Token" src="../images/authProcess4.png" /></p>
+<p>Copy the string and paste it back in the R console and press enter.</p>
+</li>
+</ol>
+<p><strong>Congratulations!</strong> You authenticated you R project successfully!  </p>
+<p>In your R session there is a object <code>google_auth</code> which contains an <strong>access token</strong> and a <strong>refresh token</strong>. The access token is valid for one hour. When the access toke expires it can be updated with the refresh token. The package will take care of this automatically.</p>
+<p>Note: Common practice is to organize your R code within a RStudio project.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../reports/" class="btn btn-neutral float-right" title="reports and metrics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../requirements/" class="btn btn-neutral" title="requirements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../requirements/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../reports/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

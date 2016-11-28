@@ -1,0 +1,204 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "RAdwords User Manual\n\n\nWelcome to the official documentation of the R Adwords package for Google Adwords. Radwords enables users of the R Language for Statistical Computing to directly access their Google Adwords account in order to consume and analyze information provided by the Adwords API.\n\n\nGeneral\n\n\nRadwords is a license cost free open source project by \n@jburkhardt\n and \n@mbannert\n.\nOur package implements three main features:\n\n\nFirst\n, the package provides OAUTH2 authentication for R with an user's Google Adwords account. \n\n\nSecond\n, the package offers an R interface to apply the Adwords Query Language from within R. The Adwords API can be used to obtain adhoc reports. \n\n\nThird\n, the received data is transformed to standard R data objects that can be easily analyzed from within R or export to standard file formats.", 
+            "title": "home"
+        }, 
+        {
+            "location": "/#radwords-user-manual", 
+            "text": "Welcome to the official documentation of the R Adwords package for Google Adwords. Radwords enables users of the R Language for Statistical Computing to directly access their Google Adwords account in order to consume and analyze information provided by the Adwords API.", 
+            "title": "RAdwords User Manual"
+        }, 
+        {
+            "location": "/#general", 
+            "text": "Radwords is a license cost free open source project by  @jburkhardt  and  @mbannert .\nOur package implements three main features:  First , the package provides OAUTH2 authentication for R with an user's Google Adwords account.   Second , the package offers an R interface to apply the Adwords Query Language from within R. The Adwords API can be used to obtain adhoc reports.   Third , the received data is transformed to standard R data objects that can be easily analyzed from within R or export to standard file formats.", 
+            "title": "General"
+        }, 
+        {
+            "location": "/quickstart/", 
+            "text": "", 
+            "title": "quickstart guide"
+        }, 
+        {
+            "location": "/install/", 
+            "text": "Installation\n\n\nThe package can be either installed from \nCRAN\n or from \ngithub\n.\n\nAs there are frequent changes with AdWords API we recommend to regularly visit the githup project for updates on the package.\n\n\nCRAN\n\n\ninstall.packages(\nRAdwords\n)\nlibrary(RAdwords)\n\n\n\n\nSource: \nhttps://cran.r-project.org/web/packages/RAdwords/index.html\n\n\nGithub\n\n\nrequire(devtools)\ninstall_github('jburkhardt/RAdwords')\n\n\n\n\nSource: \nhttps://github.com/jburkhardt/RAdwords", 
+            "title": "installation"
+        }, 
+        {
+            "location": "/install/#installation", 
+            "text": "The package can be either installed from  CRAN  or from  github . \nAs there are frequent changes with AdWords API we recommend to regularly visit the githup project for updates on the package.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/install/#cran", 
+            "text": "install.packages( RAdwords )\nlibrary(RAdwords)  Source:  https://cran.r-project.org/web/packages/RAdwords/index.html", 
+            "title": "CRAN"
+        }, 
+        {
+            "location": "/install/#github", 
+            "text": "require(devtools)\ninstall_github('jburkhardt/RAdwords')  Source:  https://github.com/jburkhardt/RAdwords", 
+            "title": "Github"
+        }, 
+        {
+            "location": "/requirements/", 
+            "text": "Requirements\n\n\nIn order to access the AdWords API you have to meet the following requirements:  \n\n\n\n\nValid Google API project (client ID, client secret)\n\n\nValid AdWords MCC (my client center) account\n\n\nValid AdWords API Developer Token\n\n\nDo NOT use an Adwords Testaccount! \n\n\n\n\nMissing one of the above mentioned items you cannot access the AdWords API. \n\n\nWe recommend to use the same email (user account) for the Google API project and the AdWords MCC.\n\n\nGoogle API Project\n\n\nSet up a \nGoogle API project\n for \nnative apps\n. The Google API project provides a \nClient Id\n and \nClient Secret\n which is necessary for the authentication.\n\n\n\n\n\n\nCreate credentials\n\n\nClick Credentials \n Create Credentials \n OAuth client ID\n\n\n\n\n\n\n\n\nSelect Application Type: Other\n\n\n\n\n\n\n\n\nCopy client ID and client secret\n\n\n\n\n\n\n\n\nAdwords MCC\n\n\nMoreover you need to set up an \nAdWords My Client Center\n. A single AdWords account is not sufficient.\n\n\nAdWords Developer Token\n\n\nOnce your AdWords MCC is set up you have to apply for an AdWords developer token. You can do this within the settings of the AdWords MCC account.  \n\n\nNavigate to:\n\n\nAdwords MCC \n Account settings \n AdWords API Center \n Developer Token Details \n Apply for Standard Access\n\n\nImportant:\n  An AdWords API Test Account will not allow you to load data. You need to have \nBasic access\n level at least.", 
+            "title": "requirements"
+        }, 
+        {
+            "location": "/requirements/#requirements", 
+            "text": "In order to access the AdWords API you have to meet the following requirements:     Valid Google API project (client ID, client secret)  Valid AdWords MCC (my client center) account  Valid AdWords API Developer Token  Do NOT use an Adwords Testaccount!    Missing one of the above mentioned items you cannot access the AdWords API.   We recommend to use the same email (user account) for the Google API project and the AdWords MCC.", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/requirements/#google-api-project", 
+            "text": "Set up a  Google API project  for  native apps . The Google API project provides a  Client Id  and  Client Secret  which is necessary for the authentication.    Create credentials  Click Credentials   Create Credentials   OAuth client ID     Select Application Type: Other     Copy client ID and client secret", 
+            "title": "Google API Project"
+        }, 
+        {
+            "location": "/requirements/#adwords-mcc", 
+            "text": "Moreover you need to set up an  AdWords My Client Center . A single AdWords account is not sufficient.", 
+            "title": "Adwords MCC"
+        }, 
+        {
+            "location": "/requirements/#adwords-developer-token", 
+            "text": "Once your AdWords MCC is set up you have to apply for an AdWords developer token. You can do this within the settings of the AdWords MCC account.    Navigate to:  Adwords MCC   Account settings   AdWords API Center   Developer Token Details   Apply for Standard Access  Important:   An AdWords API Test Account will not allow you to load data. You need to have  Basic access  level at least.", 
+            "title": "AdWords Developer Token"
+        }, 
+        {
+            "location": "/auth/", 
+            "text": "Authentication\n\n\nAssuming that you completed the steps in the \nrequirement section\n, you should be equipped with the following:\n\n\n\n\nClient ID\n\n\nClient Secret\n\n\nAdWords Developer Token\n\n\n\n\nYou now can start with the authentication process with \ndoAuth()\n. Best practice is to save the credential information in a R object.  \n\n\nMoreover \ndoAuth()\n allows to save the credential information in a hidden local file in the current working directory. This can be really handy if you want to load data from the API in a later instance or run batch jobs since you do not have to run the whole authentication process manually again.  \n\n\nStart the authentication and follow the instruction in the R console:\n\n\nlibrary(RAdwords)\ngoogle_auth \n- doAuth()\n\n\n\n\n\n\n\n\nInsert the client id and press enter:  \n\n\n\n\n\n\n\n\nInsert the client secret and press enter:  \n\n\n\n\n\n\n\n\nInsert the AdWords developer token and press enter:  \n\n\n\n\n\n\n\n\nWeb browser opens automatically and provides auth token after Google sign in:  \n\n\nNote: Please use same Google login as API project and Adwords MCC.\n\n\n\n\nCopy the string and paste it back in the R console and press enter.\n\n\n\n\n\n\nCongratulations!\n You authenticated you R project successfully!  \n\n\nIn your R session there is a object \ngoogle_auth\n which contains an \naccess token\n and a \nrefresh token\n. The access token is valid for one hour. When the access toke expires it can be updated with the refresh token. The package will take care of this automatically.\n\n\nNote: Common practice is to organize your R code within a RStudio project.", 
+            "title": "authentication"
+        }, 
+        {
+            "location": "/auth/#authentication", 
+            "text": "Assuming that you completed the steps in the  requirement section , you should be equipped with the following:   Client ID  Client Secret  AdWords Developer Token   You now can start with the authentication process with  doAuth() . Best practice is to save the credential information in a R object.    Moreover  doAuth()  allows to save the credential information in a hidden local file in the current working directory. This can be really handy if you want to load data from the API in a later instance or run batch jobs since you do not have to run the whole authentication process manually again.    Start the authentication and follow the instruction in the R console:  library(RAdwords)\ngoogle_auth  - doAuth()    Insert the client id and press enter:       Insert the client secret and press enter:       Insert the AdWords developer token and press enter:       Web browser opens automatically and provides auth token after Google sign in:    Note: Please use same Google login as API project and Adwords MCC.   Copy the string and paste it back in the R console and press enter.    Congratulations!  You authenticated you R project successfully!    In your R session there is a object  google_auth  which contains an  access token  and a  refresh token . The access token is valid for one hour. When the access toke expires it can be updated with the refresh token. The package will take care of this automatically.  Note: Common practice is to organize your R code within a RStudio project.", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/reports/", 
+            "text": "reports and metrics\n\n\nWith RAdwords you can explore the reports and related metrics provided by the AdWords API.  \n\n\nList reports\n\n\nPrints all available reports in the R console.\n\n\nreports()\n\n\n\n\nList metrics/attributes\n\n\nList available metrics/attributes of specific report type.\n\n\nmetrics(report='ACCOUNT_PERFORMANCE_REPORT')", 
+            "title": "reports and metrics"
+        }, 
+        {
+            "location": "/reports/#reports-and-metrics", 
+            "text": "With RAdwords you can explore the reports and related metrics provided by the AdWords API.", 
+            "title": "reports and metrics"
+        }, 
+        {
+            "location": "/reports/#list-reports", 
+            "text": "Prints all available reports in the R console.  reports()", 
+            "title": "List reports"
+        }, 
+        {
+            "location": "/reports/#list-metricsattributes", 
+            "text": "List available metrics/attributes of specific report type.  metrics(report='ACCOUNT_PERFORMANCE_REPORT')", 
+            "title": "List metrics/attributes"
+        }, 
+        {
+            "location": "/query/", 
+            "text": "Build a query\n\n\nWith \nstatement()\n function you can build a statement for querying the Adwords API. For possible reports and metrics see the \nreports section\n. \n\n\nBest practice is to save the statement output in a R object. You can reuse it on different API calls and keep your code organized.\n\n\nExamples\n\n\n#Example 1\nbody \n- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),\n                    report=\nACCOUNT_PERFORMANCE_REPORT\n,\n                    start=\n2014-03-20\n,\n                    end=\n2014-03-21\n)\n#Example 2\nbody \n- statement(select=c('CampaignName','Clicks','Cost','Ctr'),\n                  report=\nCAMPAIGN_PERFORMANCE_REPORT\n,\n                  where=\nCampaignName STARTS_WITH 'A' AND Clicks \n 100\n,\n                  start=\n2014-03-20\n,\n                  end=\n2014-03-21\n)\n#Example 3\nbody \n- statement(select=c('Criteria','Clicks','Cost','Ctr'),\n                  report=\nKEYWORDS_PERFORMANCE_REPORT\n,\n                  where=\nClicks \n 100\n,\n                  start=\n2014-03-20\n,\n                  end=\n2014-03-21\n)                     \n\n\n\n\nDetails\n\n\nRAdwords uses the AdHoc reporting services of the AdWords API. This service supports statements of the \nAdwords Query Language (AWQL)\n.", 
+            "title": "querybuilder"
+        }, 
+        {
+            "location": "/query/#build-a-query", 
+            "text": "With  statement()  function you can build a statement for querying the Adwords API. For possible reports and metrics see the  reports section .   Best practice is to save the statement output in a R object. You can reuse it on different API calls and keep your code organized.", 
+            "title": "Build a query"
+        }, 
+        {
+            "location": "/query/#examples", 
+            "text": "#Example 1\nbody  - statement(select=c('Clicks','AveragePosition','Cost','Ctr'),\n                    report= ACCOUNT_PERFORMANCE_REPORT ,\n                    start= 2014-03-20 ,\n                    end= 2014-03-21 )\n#Example 2\nbody  - statement(select=c('CampaignName','Clicks','Cost','Ctr'),\n                  report= CAMPAIGN_PERFORMANCE_REPORT ,\n                  where= CampaignName STARTS_WITH 'A' AND Clicks   100 ,\n                  start= 2014-03-20 ,\n                  end= 2014-03-21 )\n#Example 3\nbody  - statement(select=c('Criteria','Clicks','Cost','Ctr'),\n                  report= KEYWORDS_PERFORMANCE_REPORT ,\n                  where= Clicks   100 ,\n                  start= 2014-03-20 ,\n                  end= 2014-03-21 )", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/query/#details", 
+            "text": "RAdwords uses the AdHoc reporting services of the AdWords API. This service supports statements of the  Adwords Query Language (AWQL) .", 
+            "title": "Details"
+        }, 
+        {
+            "location": "/getdata/", 
+            "text": "Retrieve Data\n\n\ngetData()\n posts the Adwords Query Language Statement (AWQL) which you created with the \nstatement() function\n. The function retrieves data from the Adwords API and returns the data as a dataframe if \ntransformation=T\n.\n\n\nExample\n\n\n# make sure to use the Adwords Account Id (MCC Id will not work)\ndata \n- getData(clientCustomerId='xxx-xxx-xxxx',\n                google_auth=google_auth,\n                statement=body, #object created with statement()\n                transformation = T, #data are transformed from xml text to R dataframe\n                changeNames = T) #column names are changed to more useful expressions", 
+            "title": "load data"
+        }, 
+        {
+            "location": "/getdata/#retrieve-data", 
+            "text": "getData()  posts the Adwords Query Language Statement (AWQL) which you created with the  statement() function . The function retrieves data from the Adwords API and returns the data as a dataframe if  transformation=T .", 
+            "title": "Retrieve Data"
+        }, 
+        {
+            "location": "/getdata/#example", 
+            "text": "# make sure to use the Adwords Account Id (MCC Id will not work)\ndata  - getData(clientCustomerId='xxx-xxx-xxxx',\n                google_auth=google_auth,\n                statement=body, #object created with statement()\n                transformation = T, #data are transformed from xml text to R dataframe\n                changeNames = T) #column names are changed to more useful expressions", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/examples/", 
+            "text": "Installation\n\n\ninstall.packages(\nRAdwords\n)\nlibrary(RAdwords)\n\n\n\n\nAuthentication\n\n\nlibrary(RAdwords)\ngoogle_auth \n- doAuth()\n\n\n\n\nCreate Statement\n\n\nbody \n- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),\n                    report=\nACCOUNT_PERFORMANCE_REPORT\n,\n                    start=\n2014-03-20\n,\n                    end=\n2014-03-21\n)\n\n\n\n\nQuery Adwords API and load data as dataframe\n\n\n# make sure to use the Adwords Account Id (MCC Id will not work)\ndata \n- getData(clientCustomerId='xxx-xxx-xxxx',\n                google_auth=google_auth,\n                statement=body)\n\n\n\n\nList available report types\n\n\nreports()\n\n\n\n\nList available metrics/attributes of specific report type\n\n\nmetrics(report='ACCOUNT_PERFORMANCE_REPORT')", 
+            "title": "code examples"
+        }, 
+        {
+            "location": "/examples/#installation", 
+            "text": "install.packages( RAdwords )\nlibrary(RAdwords)", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/examples/#authentication", 
+            "text": "library(RAdwords)\ngoogle_auth  - doAuth()", 
+            "title": "Authentication"
+        }, 
+        {
+            "location": "/examples/#create-statement", 
+            "text": "body  - statement(select=c('Clicks','AveragePosition','Cost','Ctr'),\n                    report= ACCOUNT_PERFORMANCE_REPORT ,\n                    start= 2014-03-20 ,\n                    end= 2014-03-21 )", 
+            "title": "Create Statement"
+        }, 
+        {
+            "location": "/examples/#query-adwords-api-and-load-data-as-dataframe", 
+            "text": "# make sure to use the Adwords Account Id (MCC Id will not work)\ndata  - getData(clientCustomerId='xxx-xxx-xxxx',\n                google_auth=google_auth,\n                statement=body)", 
+            "title": "Query Adwords API and load data as dataframe"
+        }, 
+        {
+            "location": "/examples/#list-available-report-types", 
+            "text": "reports()", 
+            "title": "List available report types"
+        }, 
+        {
+            "location": "/examples/#list-available-metricsattributes-of-specific-report-type", 
+            "text": "metrics(report='ACCOUNT_PERFORMANCE_REPORT')", 
+            "title": "List available metrics/attributes of specific report type"
+        }, 
+        {
+            "location": "/faq/", 
+            "text": "NAs introduced by coercion\n\n\ngetData()\n prints a warning message:  \n\n\nWarning message:\nNAs introduced by coercion \n\n\n\n\nMost likley you query data which are not available by the AdWords API. \n\n\nThere are specific metrics like \nSearchRankLostImpressionShare, SearchExactMatchImpressionShare, SearchImpressionShare, SearchPredictedCtr\n which do not have data on certain AdWords segments (e.g. the content network).  \n\n\nA commen case of this issue occures when you query competition metrics (\nSearchRankLostImpressionShare\n) which are only available for the google search. However your keywords are running in the google search and in the google content network at the same time.\n\n\nCannot get keywords\n\n\nSince AdWords API version 201601 the attribute name \nKeywordText\nis no longer valid. Use \nCriteria\ninstead.\n\n\nSend mutate jobs\n\n\nIs it possible to send mutate jobs wo the API?  \n\n\nNo it\u00b4s not. RAdwords uses the reporting service of the AdWords API which only allows to retrieve data. Changing campaigns, keywords, AdWords settings, etc. is not possible with the package.\n\n\nList account IDs\n\n\nHow to list all AdWords account IDs which are in my MCC?\n\n\nWe would love to implement this feature! Unfortunately the Adwords API reporting service does not allow to query the account information on client center level.  \n\n\nHowever the good is, you only need to authenticate once in order to access all accounts within your MCC. Best practice is to create a vector containing the account IDs and loop over the vector.\n\n\nExample:\n\n\n# authentication, once done you can access all accounts in your MCC\ngoogle_auth \n- doAuth()\n# specify date range, i.e. last two weeks until yesterday\nyesterday \n- Sys.Date()-1\ntwoWeeks \n- Sys.Date()-14\n# create statement\nbody \n- statement(select=c'Date','AccountDescriptiveName','CampaignName','Impressions','Clicks','Cost','Conversions'),\n                  report=\nCAMPAIGN_PERFORMANCE_REPORT\n,\n                  start=twoWeeks,\n                  end=yesterday)\n#vector of account IDs\naccounts \n- c(\nxxx-xxx-xxxx\n,#Account 1\n              \nxxx-xxx-xxxx\n,#Account 2\n              \nxxx-xxx-xxxx\n)#Account 3\n#loop over accounts and rbind data to dataframe\ndataList \n- list()\nfor(account in accounts){\n    dataList[account] \n- getData(clientCustomerId=account,statement=body,google_auth = google_auth)\n}\ndata \n- do.call(rbind, dataList)", 
+            "title": "FAQ / troubleshooting"
+        }, 
+        {
+            "location": "/faq/#nas-introduced-by-coercion", 
+            "text": "getData()  prints a warning message:    Warning message:\nNAs introduced by coercion   Most likley you query data which are not available by the AdWords API.   There are specific metrics like  SearchRankLostImpressionShare, SearchExactMatchImpressionShare, SearchImpressionShare, SearchPredictedCtr  which do not have data on certain AdWords segments (e.g. the content network).    A commen case of this issue occures when you query competition metrics ( SearchRankLostImpressionShare ) which are only available for the google search. However your keywords are running in the google search and in the google content network at the same time.", 
+            "title": "NAs introduced by coercion"
+        }, 
+        {
+            "location": "/faq/#cannot-get-keywords", 
+            "text": "Since AdWords API version 201601 the attribute name  KeywordText is no longer valid. Use  Criteria instead.", 
+            "title": "Cannot get keywords"
+        }, 
+        {
+            "location": "/faq/#send-mutate-jobs", 
+            "text": "Is it possible to send mutate jobs wo the API?    No it\u00b4s not. RAdwords uses the reporting service of the AdWords API which only allows to retrieve data. Changing campaigns, keywords, AdWords settings, etc. is not possible with the package.", 
+            "title": "Send mutate jobs"
+        }, 
+        {
+            "location": "/faq/#list-account-ids", 
+            "text": "How to list all AdWords account IDs which are in my MCC?  We would love to implement this feature! Unfortunately the Adwords API reporting service does not allow to query the account information on client center level.    However the good is, you only need to authenticate once in order to access all accounts within your MCC. Best practice is to create a vector containing the account IDs and loop over the vector.  Example:  # authentication, once done you can access all accounts in your MCC\ngoogle_auth  - doAuth()\n# specify date range, i.e. last two weeks until yesterday\nyesterday  - Sys.Date()-1\ntwoWeeks  - Sys.Date()-14\n# create statement\nbody  - statement(select=c'Date','AccountDescriptiveName','CampaignName','Impressions','Clicks','Cost','Conversions'),\n                  report= CAMPAIGN_PERFORMANCE_REPORT ,\n                  start=twoWeeks,\n                  end=yesterday)\n#vector of account IDs\naccounts  - c( xxx-xxx-xxxx ,#Account 1\n               xxx-xxx-xxxx ,#Account 2\n               xxx-xxx-xxxx )#Account 3\n#loop over accounts and rbind data to dataframe\ndataList  - list()\nfor(account in accounts){\n    dataList[account]  - getData(clientCustomerId=account,statement=body,google_auth = google_auth)\n}\ndata  - do.call(rbind, dataList)", 
+            "title": "List account IDs"
+        }, 
+        {
+            "location": "/bug/", 
+            "text": "Discovered any bugs?\n\n\n\n\n\n\nPlease make sure you run with the latest RAdwords version before you report any issues.  \n\n\n\n\n\n\nIf your issue corresponds to loading data, try to run \ngetData(..., transformation=FALSE)\n with \ntransformation\n set to \nFALSE\n. This prints the AdWords API respond to your prompt and may point you towards the reason of your issue.\n\n\n\n\n\n\nIf you are still in trouble, please report the issue on \ngithub: https://github.com/jburkhardt/RAdwords/issues\n\n\n\n\n\n\nWe appreciate if you provide the following information along with the issue:\n\n\n\n\nOperating System\n\n\nR Version\n\n\nRAdwords version\n\n\nthe R code which leads to the error\n\n\nthe error message, prompt output\n\n\ncode as text rather than screenshots\n\n\n\n\nWe will try to get back to you as soon as possible!", 
+            "title": "bug reporting"
+        }, 
+        {
+            "location": "/bug/#discovered-any-bugs", 
+            "text": "Please make sure you run with the latest RAdwords version before you report any issues.      If your issue corresponds to loading data, try to run  getData(..., transformation=FALSE)  with  transformation  set to  FALSE . This prints the AdWords API respond to your prompt and may point you towards the reason of your issue.    If you are still in trouble, please report the issue on  github: https://github.com/jburkhardt/RAdwords/issues    We appreciate if you provide the following information along with the issue:   Operating System  R Version  RAdwords version  the R code which leads to the error  the error message, prompt output  code as text rather than screenshots   We will try to get back to you as soon as possible!", 
+            "title": "Discovered any bugs?"
+        }
+    ]
+}
