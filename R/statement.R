@@ -52,15 +52,17 @@ statement <- function(select= c("AccountDescriptiveName",
   start <- gsub("-","",start)
   end <- gsub("-","",end)
   selectA <- paste(select,collapse=",")
-  
   if(missing(where)){
-    body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"+DURING+",start,",",end,"&__fmt=CSV",sep='')
+    #body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"+DURING+",start,",",end,"&__fmt=CSV",sep='')
+    body <- sprintf("__rdquery=SELECT+%s+FROM+%s+DURING+%s,%s&__fmt=CSV",selectA,report,start,end)
   }
   if(!missing(where)){
-    body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"+WHERE+",where,"+DURING+",start,",",end,"&__fmt=CSV",sep='')
+    #body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"+WHERE+",where,"+DURING+",start,",",end,"&__fmt=CSV",sep='')
+    body <- sprintf("__rdquery=SELECT+%s+FROM+%s+%s+DURING+%s,%s&__fmt=CSV",selectA,report,where,start,end)
   }
   if(report == "LABEL_REPORT"){
-    body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"&__fmt=CSV",sep='')
+    #body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"&__fmt=CSV",sep='')
+    body <- sprintf("__rdquery=SELECT+%s+FROM+%s&__fmt=CSV",selectA,report)
     print("The Adwords API does not support date ranges in the Label Report. Thus, date ranges will be ignored in the Label Report")
   }
   # attach report Type as attributes of body
