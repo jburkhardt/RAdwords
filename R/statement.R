@@ -58,7 +58,7 @@ statement <- function(select= c("AccountDescriptiveName",
   }
   if(!missing(where)){
     #body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"+WHERE+",where,"+DURING+",start,",",end,"&__fmt=CSV",sep='')
-    body <- sprintf("__rdquery=SELECT+%s+FROM+%s+%s+DURING+%s,%s&__fmt=CSV",selectA,report,where,start,end)
+    body <- sprintf("__rdquery=SELECT+%s+FROM+%s+WHERE+%s+DURING+%s,%s&__fmt=CSV",selectA,report,where,start,end)
   }
   if(report == "LABEL_REPORT"){
     #body <- paste("__rdquery=SELECT+",selectA,"+FROM+",report,"&__fmt=CSV",sep='')
