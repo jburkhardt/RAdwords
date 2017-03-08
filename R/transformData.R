@@ -22,7 +22,7 @@ transformData <- function(data,
   #
   # Returns:
   #   R Dataframe
-  data <- read.csv2(textConnection(data),sep=",",header=F)[-1,]
+  data <- read.csv2(text=data,sep=",",header=F)[-1,]#textConnection(data)
   data <- as.data.frame(data)
   #Rename columns
   for(i in 1:ncol(data)){
