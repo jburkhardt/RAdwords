@@ -4,12 +4,12 @@
 \alias{metrics}
 \title{Get Metrics/Attributes of specified Report}
 \usage{
-metrics(report = "ACCOUNT_PERFORMANCE_REPORT", apiVersion = "201609")
+metrics(report = "ACCOUNT_PERFORMANCE_REPORT", apiVersion = "201702")
 }
 \arguments{
 \item{report}{Report type}
 
-\item{apiVersion}{Supports 201609, 201607, 201605. Default is 201609.}
+\item{apiVersion}{Supports 201702, 201609, 201607. Defaults to 201702.}
 }
 \value{
 List of available metrics/attributes.

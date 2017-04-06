@@ -6,7 +6,7 @@
 \usage{
 statement(select = c("AccountDescriptiveName", "AccountId", "Impressions",
   "Clicks", "Cost", "Date"), report = "ACCOUNT_PERFORMANCE_REPORT", where,
-  start = "2016-01-01", end = "2016-01-10")
+  start = "2017-01-01", end = "2017-01-10")
 }
 \arguments{
 \item{select}{Attributes}

@@ -9,7 +9,7 @@ Description: Aims at loading Google Adwords data into R. Adwords is an online
     R and query the Adwords API with ad-hoc reports. Third, the received data are
     transformed into suitable data formats for further data processing and data
     analysis.
-Version: 0.1.11
+Version: 0.1.12
 Author: Johannes Burkhardt <johannes.burkhardt@gmail.com>, Matthias Bannert
     <matthias.bannert@gmail.com>
 Maintainer: Johannes Burkhardt <johannes.burkhardt@gmail.com>

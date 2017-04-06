@@ -4,14 +4,14 @@
 \alias{transformData}
 \title{Transform data into R dataframe}
 \usage{
-transformData(data, report = reportType, apiVersion = "201609")
+transformData(data, report = reportType, apiVersion = "201702")
 }
 \arguments{
 \item{data}{Raw csv data from Adwords API.}
 
 \item{report}{Report type.}
 
-\item{apiVersion}{set automatically by \code{\link{getData}}. Supported are 201605, 201603 and 201601. Default is 201605.}
+\item{apiVersion}{set automatically by \code{\link{getData}}. Supported are 201702, 201609, 201607. Defaults to 201702.}
 }
 \value{
 Dataframe with the Adwords Data.
