@@ -17,7 +17,7 @@ The following section helps you to get started straight away.
 
 The package can be installed from CRAN
 
-`install.packages("RAdwords"")`  
+`install.packages("RAdwords")`  
 
 or directly from this Github repository with:
 
