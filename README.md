@@ -5,10 +5,21 @@ First, the package provides an **authentication process** for **R** with the **A
 Second, the package offers an interface to apply the [Adwords query language](https://developers.google.com/adwords/api/docs/guides/awql) in R and **query the Adwords API** with [ad-hoc reports](https://developers.google.com/adwords/api/docs/guides/reporting).
 Third, the received **data are transformed into suitable data formats** for further data processing and data analysis.
 
+## Documentation
+
+We provide a detailed documentation here: [RAdwords Documentation](http://jburkhardt.github.io/RAdwords/)
+
+## Quickstart Guide
+
+The following section helps you to get started straight away.
 
 ### Installation ###
 
-The package can be installed directly from this Github repository with:
+The package can be installed from CRAN
+
+`install.packages("RAdwords"")`  
+
+or directly from this Github repository with:
 
 `require(devtools)`  
 `install_github('jburkhardt/RAdwords')`
@@ -39,8 +50,8 @@ Once the API projects for native application is set up, `getAuth` is able to aut
 #### Create Statement ####
 `body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),`  
                   `report="ACCOUNT_PERFORMANCE_REPORT",`  
-                  `start="20140320",`  
-                  `end="20140321")`  
+                  `start="2017-01-01",`  
+                  `end="2017-01-10")`  
 #### Query Adwords API and get data as dataframe ####
 `#make sure to use the Adwords Account Id (MCC Id will not work)`  
 `data <- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)`
