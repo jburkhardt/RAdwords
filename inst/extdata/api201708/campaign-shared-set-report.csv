@@ -1,0 +1,19 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountDescriptiveName,Account,account,String,True,False,,Attribute,The descriptive name of the Customer account.
+CampaignId,Campaign ID,campaignID,Long,True,False,,Attribute,The ID of the Campaign.
+CampaignName,Campaign,campaign,String,True,False,,Attribute,The name of the Campaign.
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,The status of the Campaign.
+ExternalCustomerId,Customer ID,customerID,Long,True,False,,Attribute,The Customer ID.
+SharedSetName,Shared Set Name,sharedSetName,String,True,False,,Attribute,The name of the SharedSet.
+SharedSetType,Shared Set Type,sharedSetType,SharedSetType,True,False,"NEGATIVE_KEYWORDS / Negative keywords
+NEGATIVE_PLACEMENTS / Negative placements
+UNKNOWN / unknown
+",Attribute,The type of the SharedSet.
+Status,State,state,Status,True,False,"ENABLED / Enabled
+REMOVED / Removed
+UNKNOWN / unknown
+",Attribute,"The status of the main object in this row. For example, in a Campaign Performance Report this will be the status of each row's Campaign. In an Ad Group Performance Report this will be the status of each row's AdGroup."

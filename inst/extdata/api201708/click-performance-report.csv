@@ -1,0 +1,125 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountDescriptiveName,Account,account,String,True,False,,Attribute,The descriptive name of the Customer account.
+AdFormat,Ad type,adType,AdFormat,True,False,"UNKNOWN / unknown
+TEXT / text
+IMAGE / image
+DYNAMIC_IMAGE / dynamic_image
+FLASH / flash
+VIDEO / video
+HTML / html
+AUDIO / audio
+COMPOSITE / composite
+PRINT / print
+",Attribute,"The underlying media format of the ad. Values can be one of the <b>formats</b> on the <a href='https://developers.google.com/adwords/api/docs/appendix/templateads'>Template Ads</a> page, or a <a href='https://developers.google.com/adwords/api/docs/reference/latest/AdGroupAdService.Media.MediaType'>MediaType</a> enum."
+AdGroupId,Ad group ID,adGroupID,Long,True,False,,Attribute,The ID of the AdGroup.
+AdGroupName,Ad group,adGroup,String,True,False,,Attribute,The name of the AdGroup.
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,True,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,Status of the ad group.
+AdNetworkType1,Network,network,AdNetworkType1,True,False,"UNKNOWN / unknown
+SEARCH / Search Network
+CONTENT / Display Network
+YOUTUBE_SEARCH / YouTube Search
+YOUTUBE_WATCH / YouTube Videos
+",Attribute,First level network type.
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,True,False,"UNKNOWN / unknown
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+YOUTUBE_SEARCH / YouTube Search
+YOUTUBE_WATCH / YouTube Videos
+",Attribute,Second level network type (includes search partners).
+AoiCityCriteriaId,City (Location of interest),cityLocationOfInterest,Integer,True,False,,Attribute,ID of the city of the Location criterion matching the <a href='https://support.google.com/adwords/answer/2453995'>area of interest (AOI)</a> associated with the impression. You can look up the corresponding name and other information using <a href='https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService'>LocationCriterionService</a>.
+AoiCountryCriteriaId,Country/Territory (Location of interest),countryTerritoryLocationOfInterest,Integer,True,False,,Attribute,ID of the country of the Location criterion matching the <a href='https://support.google.com/adwords/answer/2453995'>area of interest (AOI)</a> associated with the impression. You can look up the corresponding name and other information using <a href='https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService'>LocationCriterionService</a>.
+AoiMetroCriteriaId,Metro area (Location of interest),metroAreaLocationOfInterest,Integer,True,False,,Attribute,ID of the metro area of the Location criterion matching the <a href='https://support.google.com/adwords/answer/2453995'>area of interest (AOI)</a> associated with the impression. You can look up the corresponding name and other information using <a href='https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService'>LocationCriterionService</a>.
+AoiMostSpecificTargetId,Most specific location target (Location of interest),mostSpecificLocationTargetLocationOfInterest,Long,True,False,,Attribute,The most specific location target (<a href='https://support.google.com/adwords/answer/2453995'>Location of interest</a>).
+AoiRegionCriteriaId,Region (Location of interest),regionLocationOfInterest,Integer,True,False,,Attribute,ID of the region of the Location criterion matching the <a href='https://support.google.com/adwords/answer/2453995'>area of interest (AOI)</a> associated with the impression. You can look up the corresponding name and other information using <a href='https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService'>LocationCriterionService</a>.
+CampaignId,Campaign ID,campaignID,Long,True,False,,Attribute,The ID of the Campaign.
+CampaignLocationTargetId,Campaign location target,campaignLocationTarget,Long,True,False,,Attribute,Location ID of the matching campaign criterion.
+CampaignName,Campaign,campaign,String,True,False,,Attribute,The name of the Campaign.
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,False,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,The status of the Campaign.
+Clicks,Clicks,clicks,Long,True,False,,Attribute,The number of clicks.
+ClickType,Click type,clickType,ClickType,True,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Shopping ad - Standard
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+STORE_LOCATOR / Show nearby locations
+APP_DEEPLINK / App engagement ad deep link
+PRICE_EXTENSION / Price Extension
+VIDEO_WEBSITE_CLICKS / Website
+VIDEO_CALL_TO_ACTION_CLICKS / Call-to-Action overlay
+VIDEO_APP_STORE_CLICKS / App store
+VIDEO_CARD_ACTION_HEADLINE_CLICKS / Cards
+VIDEO_END_CAP_CLICKS / End cap
+CLICK_ON_ENGAGEMENT_AD / Click on engagement ad
+LOCATION_FORMAT_MAP / Map
+LOCATION_FORMAT_LANDING_PAGE / Go to landing page
+LOCATION_FORMAT_STORE_INFO / Go to store info
+LOCATION_FORMAT_DIRECTIONS / Directions
+LOCATION_FORMAT_CALL / Call
+LOCATION_FORMAT_TEXT / Text
+LOCATION_FORMAT_IMAGE / Image(s)
+BROADBAND_PLAN / Broadband Plan
+WIRELESS_PLAN / Wireless Plan
+VISUAL_SITELINKS / Visual Sitelinks
+PROMOTION_EXTENSION / Promotion Extension
+UNKNOWN / unknown
+",Attribute,"The Impressions field will reflect how often the ad was served with that click type available. Since ads can serve with multiple click types displayed, impressions may be double counted and the totals may not be accurate."
+CreativeId,Ad ID,adID,Long,True,False,,Attribute,ID of the ad.
+CriteriaId,Keyword ID,keywordID,Long,True,False,,Attribute,The Criterion ID.
+CriteriaParameters,Keyword / Placement,keywordPlacement,String,True,False,,Attribute,"Descriptive string for the Criterion. For more information on the format of criteria types in reports, see <a href='https://developers.google.com/adwords/api/docs/guides/reporting#criteria_prefixes'>the <b>Criteria prefixes</b> section of the reporting guide</a>."
+Date,Day,day,Date,True,False,,Attribute,The date formatted as yyyy-MM-dd.
+Device,Device,device,DeviceType,True,False,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Attribute,Device type where the impression was shown.
+ExternalCustomerId,Customer ID,customerID,Long,True,False,,Attribute,The Customer ID.
+GclId,Google Click ID,googleClickID,String,True,False,,Attribute,The Google Click ID.
+KeywordMatchType,Match type,matchType,KeywordMatchType,True,False,"UNKNOWN / unknown
+EXACT / Exact
+PHRASE / Phrase
+BROAD / Broad
+",Attribute,The match type for the Keyword.
+LopCityCriteriaId,City (Physical location),cityPhysicalLocation,Integer,True,False,,Attribute,ID of the city of the Location criterion matching the <a href='https://support.google.com/adwords/answer/2453995'>location of presence (LOP)</a> associated with the impression. You can look up the corresponding name and other information using <a href='https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService'>LocationCriterionService</a>.
+LopCountryCriteriaId,Country/Territory (Physical location),countryTerritoryPhysicalLocation,Integer,True,False,,Attribute,ID of the country of the Location criterion matching the <a href='https://support.google.com/adwords/answer/2453995'>location of presence (LOP)</a> associated with the impression. You can look up the corresponding name and other information using <a href='https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService'>LocationCriterionService</a>.
+LopMetroCriteriaId,Metro area (Physical location),metroAreaPhysicalLocation,Integer,True,False,,Attribute,ID of the metro area of the Location criterion matching the <a href='https://support.google.com/adwords/answer/2453995'>location of presence (LOP)</a> associated with the impression. You can look up the corresponding name and other information using <a href='https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService'>LocationCriterionService</a>.
+LopMostSpecificTargetId,Most specific location target (Physical location),mostSpecificLocationTargetPhysicalLocation,Long,True,False,,Attribute,The most specific location target (<a href='https://support.google.com/adwords/answer/2453995'>Physical location</a>).
+LopRegionCriteriaId,Region (Physical location),regionPhysicalLocation,Integer,True,False,,Attribute,ID of the region of the Location criterion matching the <a href='https://support.google.com/adwords/answer/2453995'>location of presence (LOP)</a> associated with the impression. You can look up the corresponding name and other information using <a href='https://developers.google.com/adwords/api/docs/reference/latest/LocationCriterionService'>LocationCriterionService</a>.
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,False,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Attribute,"The name of the month of the year, e.g., ""December""."
+Page,Page,page,Integer,False,False,,Attribute,Page number in search results where the ad was shown.
+Slot,Top vs. Other,topVsOther,Slot,True,False,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Unknown / 
+",Attribute,The position of the Ad.
+UserListId,User List ID,userListID,Long,True,False,,Attribute,The ID of the UserList (audience).
