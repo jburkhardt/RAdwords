@@ -44,4 +44,3 @@ body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr','ClickConvers
                   start="2016-03-20",
                   end="2016-06-21") 
 }
-

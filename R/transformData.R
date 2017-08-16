@@ -13,7 +13,7 @@
 #' @return Dataframe with the Adwords Data.
 transformData <- function(data,
                           report=reportType,
-                          apiVersion="201702"){
+                          apiVersion="201708"){
   # Transforms the csv into a dataframe. Moreover the variables are converted into suitable formats.
   #
   # Args:
@@ -61,8 +61,7 @@ transformData <- function(data,
   report <- tolower(report)
   switch(apiVersion,
          "201702" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201702/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
-         "201609" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201609/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8"),
-         "201607" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201607/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
+         "201708" = reportType <- read.csv(paste(system.file(package="RAdwords"),'/extdata/api201708/',report,'.csv',sep=''), sep = ',', encoding = "UTF-8")
   )
 #   else if (apiVersion=="201502"){
 #     report <- gsub('_','-',report)

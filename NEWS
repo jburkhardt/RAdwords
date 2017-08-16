@@ -1,3 +1,11 @@
+RAdwords v0.1.13 (Release Date: 2017-08-16)
+-------------------------------------------
+* Migration towards API version v201708
+* Sunset support of API versions older than v201708
+* More information about the Adwords API changes can be found here:
+* https://developers.google.com/adwords/api/docs/guides/migration/v201708
+
+
 RAdwords v0.1.12 (Release Date: 2017-04-06)
 -------------------------------------------
 * Migration towards API version v201702

@@ -16,4 +16,3 @@ New access token with corresponding time stamp.
 refreshToken returns a new valid access token. The access token deprecates after one hour and has to updated with the refresh token.
 Usually you need not to run refreshToken() explicitly since the whole authentication process is managed by \code{\link{doAuth}}.
 }
-

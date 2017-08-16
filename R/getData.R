@@ -8,7 +8,7 @@
 #' @param clientCustomerId Adwords Account Id
 #' @param google_auth list of authentication
 #' @param statement awql statement generated with \code{\link{statement}}.
-#' @param apiVersion supports 201702, 201609, 201607, defaults to 201702.
+#' @param apiVersion supports 201702, 201708 defaults to 201708.
 #' @param transformation If TRUE, data will be transformed with \code{\link{transformData}} into suitable R dataframe.
 #' Else, the data are returned in raw format.
 #' @param includeZeroImpressions If TRUE zero impressions will be included. Defaults to FALSE.
@@ -19,7 +19,7 @@
 getData <- function(clientCustomerId,
                     google_auth,
                     statement,
-                    apiVersion = "201702",
+                    apiVersion = "201708",
                     transformation=TRUE,
                     changeNames=TRUE,
                     includeZeroImpressions=FALSE,

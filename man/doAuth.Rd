@@ -16,4 +16,3 @@ Note that this functions needs user interaction.
 \seealso{
 \code{\link{getAuth}},\code{\link{loadToken}}
 }
-

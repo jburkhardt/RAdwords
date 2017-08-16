@@ -15,4 +15,3 @@ New column names of dataframe.
 \description{
 Converts the default display names into nicer or more practical names.
 }
-

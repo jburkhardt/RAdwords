@@ -4,7 +4,7 @@
 \alias{transformData}
 \title{Transform data into R dataframe}
 \usage{
-transformData(data, report = reportType, apiVersion = "201702")
+transformData(data, report = reportType, apiVersion = "201708")
 }
 \arguments{
 \item{data}{Raw csv data from Adwords API.}
@@ -20,4 +20,3 @@ Dataframe with the Adwords Data.
 Transforms the csv data file received from the Adwords API into a dataframe. Moreover the variables are converted into suitable formats.
  The function is used inside \code{\link{getData}} and parameters are set automatically.
 }
-
