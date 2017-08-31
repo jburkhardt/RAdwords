@@ -1,7 +1,7 @@
 RAdwords <img src="man/figures/RAdwords.png" align="right" />
 ========================================================
 
-[![RAdwords Cran Release](https://www.r-pkg.org/badges/version-last-release/RAdwords)](http://cran.rstudio.com/web/packages/RAdwords/index.html) [![RAdwords Cran Downloads](http://cranlogs.r-pkg.org/badges/RAdwords)](http://cran.rstudio.com/web/packages/RAdwords/index.html)
+[![RAdwords Cran Release](https://www.r-pkg.org/badges/version-last-release/RAdwords)](https://cran.rstudio.com/web/packages/RAdwords/index.html) [![RAdwords Cran Downloads](https://cranlogs.r-pkg.org/badges/RAdwords)](https://cran.rstudio.com/web/packages/RAdwords/index.html)
 
 ## Loading Google Adwords data into R
 
@@ -12,7 +12,7 @@ Third, the received **data are transformed into suitable data formats** for furt
 
 ## Documentation
 
-We provide a detailed documentation here: [RAdwords Documentation](http://jburkhardt.github.io/RAdwords/)
+We provide a detailed documentation here: [RAdwords Documentation](https://jburkhardt.github.io/RAdwords/)
 
 ## Quickstart Guide
 
