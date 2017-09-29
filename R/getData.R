@@ -44,7 +44,7 @@ getData <- function(clientCustomerId,
   # Returns:
   #   Dataframe with the Adwords Data.
   google.auth <- paste(access$token_type, access$access_token)
-  cert <- system.file("CurlSSL", "ca-bundle.crt", package = "RCurl")#SSL certification Fix for Windows
+  #cert <- system.file("CurlSSL", "ca-bundle.crt", package = "RCurl")#SSL certification Fix for Windows
   data <- RCurl::getURL(paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep=""),
                         httpheader = c("Authorization" = google.auth,
                                         "developerToken" = credlist$auth.developerToken,
@@ -52,7 +52,7 @@ getData <- function(clientCustomerId,
                                        "includeZeroImpressions" = includeZeroImpressions),
                  postfields=statement,
                  verbose = verbose,
-                 cainfo = cert, #add SSL certificate
+  #               cainfo = cert, #add SSL certificate
                  ssl.verifypeer = TRUE)
   
   # check 
