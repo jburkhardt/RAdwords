@@ -1,3 +1,10 @@
+RAdwords v0.1.14 (Release Date: 2017-10-02)
+-------------------------------------------
+
+BUG FIXES
+
+* SSL certificate issues on Windows system resolved in getData().
+
 RAdwords v0.1.13 (Release Date: 2017-08-16)
 -------------------------------------------
 * Migration towards API version v201708
