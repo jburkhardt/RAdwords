@@ -1,7 +1,7 @@
 RAdwords <img src="man/figures/RAdwords.png" align="right" />
 ========================================================
 
-[![RAdwords Cran Release](https://www.r-pkg.org/badges/version-last-release/RAdwords)](https://cran.rstudio.com/web/packages/RAdwords/index.html) [![RAdwords Cran Downloads](https://cranlogs.r-pkg.org/badges/RAdwords)](https://cran.rstudio.com/web/packages/RAdwords/index.html)
+[![RAdwords Cran Release](https://www.r-pkg.org/badges/version-last-release/RAdwords)](https://cran.rstudio.com/web/packages/RAdwords/index.html) [![RAdwords Cran Downloads](https://cranlogs.r-pkg.org/badges/grand-total/RAdwords)](https://cran.rstudio.com/web/packages/RAdwords/index.html)
 
 ## Loading Google Adwords data into R
 
