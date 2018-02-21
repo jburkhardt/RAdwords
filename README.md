@@ -53,10 +53,10 @@ Once the API projects for native application is set up, `getAuth` is able to aut
 `library(RAdwords)`  
 `google_auth <- doAuth()`
 #### Create Statement ####
-`body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),`  
-                  `report="ACCOUNT_PERFORMANCE_REPORT",`  
-                  `start="2017-01-01",`  
-                  `end="2017-01-10")`  
+`body <- statement(select = c('Clicks','AveragePosition','Cost','Ctr'),`  
+                  `report = "ACCOUNT_PERFORMANCE_REPORT",`  
+                  `start = "2018-01-01",`  
+                  `end = "2018-01-10")`  
 #### Query Adwords API and get data as dataframe ####
 `#make sure to use the Adwords Account Id (MCC Id will not work)`  
 `data <- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)`

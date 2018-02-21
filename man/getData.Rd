@@ -6,7 +6,7 @@
 \alias{transformation}
 \title{Get Adwords Data}
 \usage{
-getData(clientCustomerId, google_auth, statement, apiVersion = "201708",
+getData(clientCustomerId, google_auth, statement, apiVersion = "201710",
   transformation = TRUE, changeNames = TRUE,
   includeZeroImpressions = FALSE, verbose = FALSE)
 }
@@ -17,7 +17,7 @@ getData(clientCustomerId, google_auth, statement, apiVersion = "201708",
 
 \item{statement}{awql statement generated with \code{\link{statement}}.}
 
-\item{apiVersion}{supports 201702, 201708 defaults to 201708.}
+\item{apiVersion}{supports 201702, 201708, 201710 defaults to 201710.}
 
 \item{transformation}{If TRUE, data will be transformed with \code{\link{transformData}} into suitable R dataframe.
 Else, the data are returned in raw format.}
