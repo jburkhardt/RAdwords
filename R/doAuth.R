@@ -39,4 +39,3 @@ doAuth <- function(save = T){
   }
   
 }
-

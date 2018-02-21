@@ -32,18 +32,18 @@ Once the API projects for native application is set up, \code{\link{getAuth}} is
 Authentication:
 google_auth <- doAuth()
 Create Statement:
-body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),
-                  report="ACCOUNT_PERFORMANCE_REPORT",
-                  start="2016-03-20",
-                  end="2016-03-21")
+body <- statement(select = c('Clicks','AveragePosition','Cost','Ctr'),
+                  report = "ACCOUNT_PERFORMANCE_REPORT",
+                  start = "2018-01-01",
+                  end = "2018-01-10")
 Query Adwords API and load data as dataframe:
-data <- getData(clientCustomerId='xxx-xxx-xxxx', #use Adwords Account Id (MCC Id will not work)
-                google_auth=google_auth,
-                statement=body)
+data <- getData(clientCustomerId = 'xxx-xxx-xxxx', #use Adwords Account Id (MCC Id will not work)
+                google_auth = google_auth,
+                statement = body)
 Get available report types:
 reports()
 Get available metrics/attributes of specific report type:
-metrics(report='ACCOUNT_PERFORMANCE_REPORT')
+metrics(report = 'ACCOUNT_PERFORMANCE_REPORT')
 }
 }
 
