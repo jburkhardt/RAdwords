@@ -5,7 +5,7 @@
 #' 
 #' @param data Raw csv data from Adwords API.
 #' @param report Report type.
-#' @param apiVersion set automatically by \code{\link{getData}}. Supported are 201702, 201708, 201710. Defaults to 201710.
+#' @param apiVersion set automatically by \code{\link{getData}}. Supported are 201802, 201710. Defaults to 201802.
 #' 
 #' @importFrom utils read.csv read.csv2
 #' @export
@@ -13,7 +13,7 @@
 #' @return Dataframe with the Adwords Data.
 transformData <- function(data,
                           report = reportType,
-                          apiVersion = "201710"){
+                          apiVersion = "201802"){
   # Transforms the csv into a dataframe. Moreover the variables are converted into suitable formats.
   #
   # Args:
