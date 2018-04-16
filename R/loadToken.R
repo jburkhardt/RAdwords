@@ -30,13 +30,3 @@ loadToken = function(credlist) {
   a
   
 }
-
-
-
-
-
-
-
-
-
-
