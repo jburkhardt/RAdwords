@@ -6,7 +6,7 @@
 \usage{
 statement(select = c("AccountDescriptiveName", "AccountId", "Impressions",
   "Clicks", "Cost", "Date"), report = "ACCOUNT_PERFORMANCE_REPORT", where,
-  start = "2018-01-01", end = "2018-01-10")
+  start = "2018-01-01", end = "2018-01-10", compress = FALSE)
 }
 \arguments{
 \item{select}{Attributes}
@@ -21,6 +21,8 @@ CONTAINS | CONTAINS_IGNORE_CASE | DOES_NOT_CONTAIN | DOES_NOT_CONTAIN_IGNORE_CAS
 \item{start}{Beginning of date range. Format: 2018-01-01}
 
 \item{end}{End of date rage. Format: 2018-01-10}
+
+\item{compress}{TRUE / FALSE, Gzipped data download if TRUE}
 }
 \value{
 The statement neccessary for the \code{\link{getData}} function.
