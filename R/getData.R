@@ -45,16 +45,43 @@ getData <- function(clientCustomerId,
   #   Dataframe with the Adwords Data.
   google.auth <- paste(access$token_type, access$access_token)
   #cert <- system.file("CurlSSL", "ca-bundle.crt", package = "RCurl")#SSL certification Fix for Windows
-  data <- RCurl::getURL(paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep=""),
-                        httpheader = c("Authorization" = google.auth,
-                                        "developerToken" = credlist$auth.developerToken,
-                                        "clientCustomerId" = clientCustomerId,
-                                       "includeZeroImpressions" = includeZeroImpressions),
-                 postfields=statement,
-                 verbose = verbose,
-  #               cainfo = cert, #add SSL certificate
-                 ssl.verifypeer = TRUE)
-  
+  # data <- RCurl::getURL(paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep=""),
+  #                       httpheader = c("Authorization" = google.auth,
+  #                                       "developerToken" = credlist$auth.developerToken,
+  #                                       "clientCustomerId" = clientCustomerId,
+  #                                      "includeZeroImpressions" = includeZeroImpressions),
+  #                postfields=statement,
+  #                verbose = verbose,
+  # #               cainfo = cert, #add SSL certificate
+  #                ssl.verifypeer = TRUE)
+  url <- paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep="")
+  header <- c("Authorization" = google.auth,
+              "developerToken" = credlist$auth.developerToken,
+              "clientCustomerId" = clientCustomerId,
+              "includeZeroImpressions" = includeZeroImpressions)
+  if(attributes(statement)$compressed){
+    data <- RCurl::getBinaryURL(url, 
+                                httpheader = header,
+                                postfields=statement,
+                                verbose = verbose,
+    #                           cainfo = cert, #add SSL certificate
+                                ssl.verifypeer = TRUE)
+    tmp <- tempfile()
+    if(.Platform$OS.type == "unix" && file.exists('/dev/shm') && file.info('/dev/shm')$isdir) {
+         tmp <- tempfile(tmpdir = '/dev/shm')
+        }
+        on.exit(unlink(tmp), add = TRUE)
+        writeBin(data, con=tmp)
+        data <- paste(readLines(con <- gzfile(tmp)), collapse = "\n")
+        close(con)
+  } else {
+    data <- RCurl::getURL(url, 
+                          httpheader = header,
+                          postfields=statement,
+                          verbose = verbose,
+    #                     cainfo = cert, #add SSL certificate
+                          ssl.verifypeer = TRUE)
+  }
   # check 
   valid <- grepl(attr(statement,"reportType"),data)
   
