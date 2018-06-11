@@ -2,15 +2,16 @@
 #' 
 #' @description reports provides an overview of all available Adwords report types. The report type is specified in \code{\link{statement}}.
 #' 
-#' @param apiVersion Supports 201802 and 201710. Defaults to 201802.
+#' @param apiVersion Supports 201806, 201802 and 201710. Defaults to 201806.
 #' 
 #' @export
 #' @return Available report types.
-reports <- function(apiVersion = "201802"){
+reports <- function(apiVersion = "201806"){
 # Function which returns all available report types
 # Args: apiVersion
 # Returns: Report types
   switch (apiVersion,
+          "201806" = reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201806/')),
           "201802" = reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201802/')),
           "201710" = reportTypes <- list.files(system.file(package="RAdwords",'extdata/api201710/'))
   )

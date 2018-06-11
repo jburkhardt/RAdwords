@@ -18,49 +18,72 @@ We provide a detailed documentation here: [RAdwords Documentation](https://jburk
 
 The following section helps you to get started straight away.
 
-### Installation ###
+### Installation
 
 The package can be installed from CRAN
 
-`install.packages("RAdwords")`  
+```R
+install.packages("RAdwords")
+```
 
 or directly from this Github repository with:
 
-`require(devtools)`  
-`install_github('jburkhardt/RAdwords')`
+```R
+require(devtools)
+install_github('jburkhardt/RAdwords')
+```
 
+### Usage
 
-### Usage ###
-
-#### Requirements: ####
+#### Requirements:
 In order to access the Adwords API you have to set up a [Google API project](https://developers.google.com/console/help/) for native apps. The Google API project provides a **Client Id** and **Client Secret** which is necessary for the authentication. Moreover you need to have a [Adwords MCC](https://developers.google.com/adwords/api/docs/signingup) with an **Adwords developer token**.
 
-#### Authentication: ####
+#### Authentication:
+
 The function `doAuth` manages the complete authentication process. Meaning `doAuth` authenticates the R app for the first time, loads the access token or refreshes the access token if expired. Hence, you only run `doAuth()` to authenticate whether it is your initial R Session or a later instance.
 
-##### What's happening in details? #####
+##### What's happening in details?
+
 Once the API projects for native application is set up, `getAuth` is able to authenticate the R app with the credentials (Client Id, Client Secret) from the Google API project. The Google authentication server returns a client token, which later is used by `loadToken` to receive the access token. If the access token is expired after one hour, it can be updated with `refreshToken`. The access token in combination with the Adwords developer token enables a connection with the Adwords API.
 
-#### Create Statement: ####
+#### Create Statement:
 `statement` creates the Adwords Query Language Statement.
 
-#### Loading Data: ####
+#### Loading Data:
 `getData` queries the data from the Adwords API and transforms the data into an R dataframe.
 
-### Example ###
+### Example
 
-#### Authentication ####
-`library(RAdwords)`  
-`google_auth <- doAuth()`
-#### Create Statement ####
-`body <- statement(select = c('Clicks','AveragePosition','Cost','Ctr'),`  
-                  `report = "ACCOUNT_PERFORMANCE_REPORT",`  
-                  `start = "2018-01-01",`  
-                  `end = "2018-01-10")`  
-#### Query Adwords API and get data as dataframe ####
-`#make sure to use the Adwords Account Id (MCC Id will not work)`  
-`data <- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)`
-#### Get available report types ####
-`reports()`
-#### Get available metrics/attributes of specific report type ####
-`metrics(report='ACCOUNT_PERFORMANCE_REPORT')`
+#### Authentication
+
+```R
+library(RAdwords)
+google_auth <- doAuth()
+```
+#### Create Statement
+
+```R
+body <- statement(select = c('Clicks', 'AveragePosition', 'Cost', 'Ctr'),
+                  report = "ACCOUNT_PERFORMANCE_REPORT",
+                  start = "2018-01-01",
+                  end = "2018-01-10")
+```
+#### Query Adwords API and get data as dataframe
+
+```R
+# make sure to use the Adwords Account Id (MCC Id will not work)
+data <- getData(clientCustomerId = 'xxx-xxx-xxxx',
+                google_auth = google_auth,
+                statement = body)
+```
+#### Get available report types
+
+```R
+reports()
+```
+
+#### Get available metrics/attributes of specific report type
+
+```R
+metrics(report = 'ACCOUNT_PERFORMANCE_REPORT')
+```
