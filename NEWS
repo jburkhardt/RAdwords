@@ -1,3 +1,17 @@
+RAdwords v0.1.17 (Release Date: 2018-06-11)
+-------------------------------------------
+
+* Migration towards Adwords API version v201806
+
+FEATURES
+
+* Support compression support in statement(compress = TRUE)
+
+BUG FIXES
+
+* R/getAuth.R: Uses default SSL configuration in RCurl.
+* R/refreshToken.R: Converts raw data input from RCurl to character format.
+
 RAdwords v0.1.16 (Release Date: 2018-04-16)
 -------------------------------------------
 * Migration towards API version v201802
