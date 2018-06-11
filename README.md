@@ -22,13 +22,13 @@ The following section helps you to get started straight away.
 
 The package can be installed from CRAN
 
-```{r}
+```R
 install.packages("RAdwords")
 ```
 
 or directly from this Github repository with:
 
-```{r}
+```R
 require(devtools)
 install_github('jburkhardt/RAdwords')
 ```
@@ -56,22 +56,34 @@ Once the API projects for native application is set up, `getAuth` is able to aut
 
 #### Authentication
 
-```{r}
+```R
 library(RAdwords)
 google_auth <- doAuth()
 ```
 #### Create Statement
 
-```{r}
-body <- statement(select = c('Clicks','AveragePosition','Cost','Ctr'),
+```R
+body <- statement(select = c('Clicks', 'AveragePosition', 'Cost', 'Ctr'),
                   report = "ACCOUNT_PERFORMANCE_REPORT",
                   start = "2018-01-01",
                   end = "2018-01-10")
-#### Query Adwords API and get data as dataframe ####
-#make sure to use the Adwords Account Id (MCC Id will not work)
-data <- getData(clientCustomerId='xxx-xxx-xxxx', google_auth=google_auth ,statement=body)
-#### Get available report types ####
+```
+#### Query Adwords API and get data as dataframe
+
+```R
+# make sure to use the Adwords Account Id (MCC Id will not work)
+data <- getData(clientCustomerId = 'xxx-xxx-xxxx',
+                google_auth = google_auth,
+                statement = body)
+```
+#### Get available report types
+
+```R
 reports()
-#### Get available metrics/attributes of specific report type ####
-metrics(report='ACCOUNT_PERFORMANCE_REPORT')
+```
+
+#### Get available metrics/attributes of specific report type
+
+```R
+metrics(report = 'ACCOUNT_PERFORMANCE_REPORT')
 ```
