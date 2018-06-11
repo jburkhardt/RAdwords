@@ -1,0 +1,282 @@
+Name,Display Name,XML Attribute,Type,Filterable,Supports Zero Impressions,Enum Values,Behavior,Notes
+AccountCurrencyCode,Currency,currency,String,True,True,,Attribute,The currency of the Customer account.
+AccountDescriptiveName,Account,account,String,True,True,,Attribute,The descriptive name of the Customer account.
+AccountTimeZone,Time zone,timeZone,String,True,True,,Attribute,"Name of the timezone selected for the Customer account. For example: ""(GMT-05:00) Eastern Time"". This field does not reflect the current state of daylight saving time for the timezone."
+ActiveViewCpm,Active View avg. CPM,activeViewAvgCPM,Money,True,True,,Metric,"Average cost of viewable impressions (ActiveViewImpressions).
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+ActiveViewCtr,Active View viewable CTR,activeViewViewableCTR,Double,True,True,,Metric,"How often people clicked your ad after it became viewable.
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+ActiveViewImpressions,Active View viewable impressions,activeViewViewableImpressions,Long,True,True,,Metric,How often your ad has become viewable on a Display Network site.
+ActiveViewMeasurability,Active View measurable impr. / impr.,activeViewMeasurableImprImpr,Double,True,True,,Metric,"The ratio of impressions that could be measured by Active View over the number of served impressions.
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+ActiveViewMeasurableCost,Active View measurable cost,activeViewMeasurableCost,Money,True,True,,Metric,"The cost of the impressions you received that were measurable by Active View.
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+ActiveViewMeasurableImpressions,Active View measurable impr.,activeViewMeasurableImpr,Long,True,True,,Metric,The number of times your ads are appearing on placements in positions where they can be seen.
+ActiveViewViewability,Active View viewable impr. / measurable impr.,activeViewViewableImprMeasurableImpr,Double,True,True,,Metric,"The percentage of time when your ad appeared on an Active View enabled site (measurable impressions) and was viewable (viewable impressions).
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+AdGroupId,Ad group ID,adGroupID,Long,True,True,,Segment,The ID of the AdGroup.
+AdGroupName,Ad group,adGroup,String,True,True,,Segment,The name of the AdGroup.
+AdGroupStatus,Ad group state,adGroupState,AdGroupStatus,True,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Segment,Status of the ad group.
+AdNetworkType1,Network,network,AdNetworkType1,True,True,"UNKNOWN / unknown
+SEARCH / Search Network
+CONTENT / Display Network
+YOUTUBE_SEARCH / YouTube Search
+YOUTUBE_WATCH / YouTube Videos
+MIXED / Cross-network
+",Segment,First level network type.
+AdNetworkType2,Network (with search partners),networkWithSearchPartners,AdNetworkType2,True,True,"UNKNOWN / unknown
+SEARCH / Google search
+SEARCH_PARTNERS / Search partners
+CONTENT / Display Network
+YOUTUBE_SEARCH / YouTube Search
+YOUTUBE_WATCH / YouTube Videos
+MIXED / Cross-network
+",Segment,Second level network type (includes search partners).
+AllConversionRate,All conv. rate,allConvRate,Double,True,True,,Metric,"AllConversions divided by total clicks that can be conversion-tracked. This is how often a click on your ad resulted in a conversion. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+AllConversions,All conv.,allConv,Double,True,True,,Metric,"Best estimate of the total number of conversions that AdWords drives. Includes website, cross-device, and phone call conversions. This field is formatted with dot (""."") for decimal separator, precision of two decimal positions and no thousands separator (e.g. 1000000.00).
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+AllConversionValue,All conv. value,allConvValue,Double,True,True,,Metric,"The total value of all of your conversions, including those that are estimated. This field is formatted with dot (""."") for decimal separator, precision of two decimal positions and no thousands separator (e.g. 1000000.00).
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+AverageCost,Avg. Cost,avgCost,Money,True,True,,Metric,"The average amount you pay per interaction. This amount is the total cost of your ads divided by the total number of interactions.
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+AverageCpc,Avg. CPC,avgCPC,Money,True,True,,Metric,"The total cost of all clicks divided by the total number of clicks received.
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+AverageCpe,Avg. CPE,avgCPE,Double,True,True,,Metric,"The average amount that you've been charged for an ad engagement. This amount is the total cost of all ad engagements divided by the total number of ad engagements.
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+AverageCpm,Avg. CPM,avgCPM,Money,True,True,,Metric,"Average Cost-per-thousand impressions (CPM).
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+AverageCpv,Avg. CPV,avgCPV,Double,True,True,,Metric,"The average amount you pay each time someone views your ad. The average CPV is defined by the total cost of all ad views divided by the number of views.
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+AveragePosition,Avg. position,avgPosition,Double,True,True,,Metric,"Your ad's position relative to those of other advertisers.
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+BaseAdGroupId,Base Ad group ID,baseAdGroupID,Long,True,True,,Attribute,"The ID of base ad group of trial ad groups. For regular ad groups, this is equal to AdGroupId. For campaign-level user lists, this will always be 0."
+BaseCampaignId,Base Campaign ID,baseCampaignID,Long,True,True,,Attribute,"The ID of base campaign of trial campaigns. For regular campaigns, this is equal to CampaignId."
+BiddingStrategyId,Bid Strategy ID,bidStrategyID,Long,True,True,,Attribute,The ID of the BiddingStrategyConfiguration.
+BiddingStrategyName,Bid Strategy Name,bidStrategyName,String,True,True,,Attribute,The name of the BiddingStrategyConfiguration.
+BiddingStrategyType,Bid Strategy Type,bidStrategyType,BiddingStrategyType,True,True,"MANUAL_CPC / cpc
+MANUAL_CPV / cpv
+MANUAL_CPM / cpm
+PAGE_ONE_PROMOTED / Target search page location
+TARGET_SPEND / Maximize clicks
+TARGET_CPA / Target CPA
+TARGET_ROAS / Target ROAS
+MAXIMIZE_CONVERSIONS / Maximize Conversions
+MAXIMIZE_CONVERSION_VALUE / Maximize Conversion Value
+TARGET_OUTRANK_SHARE / Target Outranking Share
+NONE / None
+UNKNOWN / unknown
+",Attribute,The type of the BiddingStrategyConfiguration.
+BidModifier,Bid adj.,bidAdj,Double,True,True,,Attribute,"The bid modifier. To filter by this field, use values greater than 0 and less than or equal to 1. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+CampaignId,Campaign ID,campaignID,Long,True,True,,Attribute,The ID of the Campaign.
+CampaignName,Campaign,campaign,String,True,True,,Attribute,The name of the Campaign.
+CampaignStatus,Campaign state,campaignState,CampaignStatus,True,True,"UNKNOWN / unknown
+ENABLED / enabled
+PAUSED / paused
+REMOVED / removed
+",Attribute,The status of the Campaign.
+Clicks,Clicks,clicks,Long,True,True,,Metric,The number of clicks.
+ClickType,Click type,clickType,ClickType,True,False,"URL_CLICKS / Headline
+CALLS / Phone calls
+OTHER / Other
+PRODUCT_EXTENSION_CLICKS / Product plusbox offer
+SITELINKS / Sitelink
+PRODUCT_LISTING_AD_CLICKS / Shopping ad - Standard
+GET_DIRECTIONS / Driving direction
+OFFER_PRINTS / Print offer
+BREADCRUMBS / Breadcrumbs
+CALL_TRACKING / Manually dialed phone calls
+MOBILE_CALL_TRACKING / Mobile phone calls
+LOCATION_EXPANSION / Get location details
+STORE_LOCATOR / Show nearby locations
+APP_DEEPLINK / App engagement ad deep link
+SHOWCASE_AD_CATEGORY_LINK / Shopping - Showcase - Category
+SHOWCASE_AD_LOCAL_STOREFRONT_LINK / Shopping - Showcase - Local storefront
+SHOWCASE_AD_ONLINE_PRODUCT_LINK / Shopping - Showcase - Online product
+SHOWCASE_AD_LOCAL_PRODUCT_LINK / Shopping - Showcase - Local product
+PRICE_EXTENSION / Price Extension
+VIDEO_WEBSITE_CLICKS / Website
+VIDEO_CALL_TO_ACTION_CLICKS / Call-to-Action overlay
+VIDEO_APP_STORE_CLICKS / App store
+VIDEO_CARD_ACTION_HEADLINE_CLICKS / Cards
+VIDEO_END_CAP_CLICKS / End cap
+CLICK_ON_ENGAGEMENT_AD / Click on engagement ad
+LOCATION_FORMAT_MAP / Map
+LOCATION_FORMAT_LANDING_PAGE / Go to landing page
+LOCATION_FORMAT_STORE_INFO / Go to store info
+LOCATION_FORMAT_DIRECTIONS / Directions
+LOCATION_FORMAT_CALL / Call
+LOCATION_FORMAT_TEXT / Text
+LOCATION_FORMAT_IMAGE / Image(s)
+BROADBAND_PLAN / Broadband Plan
+WIRELESS_PLAN / Wireless Plan
+VISUAL_SITELINKS / Visual Sitelinks
+PROMOTION_EXTENSION / Promotion Extension
+SWIPEABLE_GALLERY_AD_HEADLINE / Ad Headline
+SWIPEABLE_GALLERY_AD_SWIPES / Swipes
+SWIPEABLE_GALLERY_AD_SEE_MORE / See More
+SWIPEABLE_GALLERY_AD_SITELINK_ONE / Sitelink 1
+SWIPEABLE_GALLERY_AD_SITELINK_TWO / Sitelink 2
+SWIPEABLE_GALLERY_AD_SITELINK_THREE / Sitelink 3
+SWIPEABLE_GALLERY_AD_SITELINK_FOUR / Sitelink 4
+SWIPEABLE_GALLERY_AD_SITELINK_FIVE / Sitelink 5
+UNKNOWN / unknown
+",Segment,"Indicates the click type for metric fields such as Impressions. Since ads that serve can be attributed to multiple click types, metric fields may be double-counted and thus totals may not be accurate, especially for Display network campaigns."
+ConversionCategoryName,Conversion category,conversionCategory,String,True,False,,Segment,"A category that describes the action the user will take to complete a conversion. Prevents zero-conversion rows from being returned. Values: ""Download"", ""Lead"", ""Purchase/Sale"", ""Signup"", ""View of a key page"", and ""Other""."
+ConversionRate,Conv. rate,convRate,Double,True,True,,Metric,"The number of conversions divided by total clicks that can be tracked to conversions. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+Conversions,Conversions,conversions,Double,True,True,,Metric,"The number of conversions for all conversion actions that you have opted into optimization. This field is formatted with dot (""."") for decimal separator, precision of two decimal positions and no thousands separator (e.g. 1000000.00).
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+ConversionTrackerId,Conversion Tracker Id,conversionTrackerId,Long,True,False,,Segment,ID of the conversion tracker.
+ConversionTypeName,Conversion name,conversionName,String,True,False,,Segment,The name of the conversion type. Prevents zero-conversion rows from being returned.
+ConversionValue,Total conv. value,totalConvValue,Double,True,True,,Metric,"The sum of conversion values for all conversions. This field is formatted with dot (""."") for decimal separator, precision of two decimal positions and no thousands separator (e.g. 1000000.00).
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+Cost,Cost,cost,Money,True,True,,Metric,"The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this period.
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+CostPerAllConversion,Cost / all conv.,costAllConv,Money,True,True,,Metric,"Total cost divided by all conversions.
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+CostPerConversion,Cost / conv.,costConv,Money,True,True,,Metric,"The Cost attributable to conversion-tracked clicks divided by the number of conversions
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+CpcBid,Max. CPC,maxCPC,Money,True,True,,Attribute,"Cost per click bid. Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if no CPC bid applies to the row.
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+CpcBidSource,Max CPC source,maxCPCSource,BidSource,True,True,"ADGROUP / ad groups
+CRITERION / ad group criteria
+ADGROUP_BIDDING_STRATEGY / ad group bidding strategy
+CAMPAIGN_BIDDING_STRATEGY / campaign bidding strategy
+",Attribute,Source of the CPC bid.
+CpmBid,Max. CPM,maxCPM,Money,True,True,,Attribute,"CPM (cost per thousand impressions) bid.
+Values can be one of: a) a money amount in micros, b) ""auto: x"" or ""auto"" if this field is a bid and AdWords is automatically setting the bid via the chosen bidding strategy, or c) ""--"" if this field is a bid and no bid applies to the row."
+CpmBidSource,Max CPM Source,maxCPMSource,BidSource,True,True,"ADGROUP / ad groups
+CRITERION / ad group criteria
+ADGROUP_BIDDING_STRATEGY / ad group bidding strategy
+CAMPAIGN_BIDDING_STRATEGY / campaign bidding strategy
+",Attribute,Source of the CPM bid.
+Criteria,Audience,audience,String,True,True,,Attribute,"Descriptive string for the Criterion. For more information on the format of criteria types in reports, see <a href='https://developers.google.com/adwords/api/docs/guides/reporting#criteria_prefixes'>the <b>Criteria prefixes</b> section of the reporting guide</a>."
+CriteriaDestinationUrl,Destination URL,destinationURL,String,True,True,,Attribute,Destination URL of the criterion that triggered ads.
+CriterionAttachmentLevel,Level,level,EntityCriterionAttachmentLevel,True,True,"UNKNOWN / Unknown
+ADGROUP / Ad group
+CAMPAIGN / Campaign
+CUSTOMER / Customer
+",Attribute,The level at which the criterion association is defined.
+CrossDeviceConversions,Cross-device conv.,crossDeviceConv,Double,True,True,,Metric,"Conversions from when a customer clicks on an AdWords ad on one device, then converts on a different device or browser. Cross-device conversions are already included in your AllConversions column. This field is formatted with dot (""."") for decimal separator, precision of two decimal positions and no thousands separator (e.g. 1000000.00).
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+Ctr,CTR,ctr,Double,True,True,,Metric,"The number of clicks your ad receives (Clicks) divided by the number of times your ad is shown (Impressions). Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+CustomerDescriptiveName,Client name,clientName,String,True,True,,Attribute,The descriptive name of the Customer.
+Date,Day,day,Date,True,True,,Segment,The date formatted as yyyy-MM-dd.
+DayOfWeek,Day of week,dayOfWeek,DayOfWeek,True,True,"MONDAY / Monday
+TUESDAY / Tuesday
+WEDNESDAY / Wednesday
+THURSDAY / Thursday
+FRIDAY / Friday
+SATURDAY / Saturday
+SUNDAY / Sunday
+",Segment,"The name of the day of the week, e.g., ""Monday""."
+Device,Device,device,DeviceType,True,True,"UNKNOWN / Other
+DESKTOP / Computers
+HIGH_END_MOBILE / Mobile devices with full browsers
+TABLET / Tablets with full browsers
+",Segment,Device type where the impression was shown.
+EngagementRate,Engagement rate,engagementRate,Double,True,True,,Metric,"How often people engage with your ad after it's shown to them. This is the number of ad expansions divided by the number of times your ad is shown. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+Engagements,Engagements,engagements,Long,True,True,,Metric,"The number of engagements. An engagement occurs when a viewer expands your Lightbox ad. Also, in the future, other ad types may support engagement metrics."
+ExternalConversionSource,Conversion source,conversionSource,ExternalConversionSource,True,False,"UNKNOWN / Other
+WEBPAGE / Website
+ANALYTICS / Analytics
+UPLOAD / Import from clicks
+AD_CALL_METRICS / Calls from ads
+OFFERS / Offers
+ENGAGEMENT / Engagement ads
+WEBSITE_CALL_METRICS / Calls from website
+STORE_VISITS / Store visits
+ANDROID_IN_APP / Android in-app action
+ANDROID_DOWNLOAD / Android app install (from Google Play)
+IOS_IN_APP / iOS in-app action
+IOS_FIRST_OPEN / iOS app install (first open)
+APP_UNSPECIFIED / Mobile app
+ANDROID_FIRST_OPEN / Android app install (first open)
+UPLOAD_CALLS / Import from calls
+FIREBASE / Firebase
+CLICK_TO_CALL / Phone number clicks
+SALESFORCE / Salesforce.com
+STORE_SALES_CRM / Store sales (data partner)
+STORE_SALES_PAYMENT_NETWORK / Store sales (automated)
+GOOGLE_PLAY / Google Play
+THIRD_PARTY_APP_ANALYTICS / Third-party app analytics
+GOOGLE_ATTRIBUTION / Google Attribution
+STORE_SALES_DIRECT / Store sales (direct upload)
+",Segment,"The source of conversion such as website, import from calls."
+ExternalCustomerId,Customer ID,customerID,Long,True,True,,Attribute,The Customer ID.
+FinalAppUrls,App final URL,appFinalURL,AppUrlList,True,True,,Attribute,"List of final app URLs of the main object of this row. List entries will start with one of: a) ""android-app:"" (for Android apps) or b) ""os-app:"" (for iOS apps).
+AppUrlList elements are returned in JSON list format."
+FinalMobileUrls,Mobile final URL,mobileFinalURL,UrlList,True,True,,Attribute,"List of final mobile URLs of the main object of this row.
+UrlList elements are returned in JSON list format."
+FinalUrls,Final URL,finalURL,UrlList,True,True,,Attribute,"List of final URLs of the main object of this row.
+UrlList elements are returned in JSON list format."
+GmailForwards,Gmail forwards,gmailForwards,Long,True,True,,Metric,The number of times your ad was forwarded to someone else as a message.
+GmailSaves,Gmail saves,gmailSaves,Long,True,True,,Metric,The number of times someone has saved your Gmail ad to their inbox as a message.
+GmailSecondaryClicks,Gmail clicks to website,gmailClicksToWebsite,Long,True,True,,Metric,The number of clicks to your landing page on the expanded state of Gmail ads.
+Id,Criterion ID,criterionID,Long,True,True,,Attribute,ID of the main object of this row.
+Impressions,Impressions,impressions,Long,True,True,,Metric,Count of how often your ad has appeared on a search results page or website on the Google Network.
+InteractionRate,Interaction Rate,interactionRate,Double,True,True,,Metric,"How often people interact with your ad after it is shown to them. This is the number of interactions divided by the number of times your ad is shown. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+Interactions,Interactions,interactions,Long,True,True,,Metric,"The number of interactions. An interaction is the main user action associated with an ad format--clicks for text and shopping ads, views for video ads, and so on."
+InteractionTypes,Interaction Types,interactionTypes,EnumSet,True,True,,Metric,"The types of interactions that are reflected in the Interactions, InteractionRate, and AverageCost columns."
+IsRestrict,Is restricting,isRestricting,Enum,True,True,"TRUE / true
+FALSE / false
+",Attribute,"A value of 'true' indicates that the criterion type is used for bidding and restricting targeting. A value of 'false' indicates that the criterion type is used only for bidding. This will have the opposite value from that of targetAll for the criteria's corresponding AdGroup.TargetingSettingDetail. For example, if the TargetingSettingDetail for criterionTypeGroup = PLACEMENT has targetAll = true, then the IsRestrict field will be false for Placement criteria."
+Month,Month,month,String,True,True,,Segment,"The first day of the month, formatted as yyyy-MM-dd."
+MonthOfYear,Month of Year,monthOfYear,MonthOfYear,True,True,"JANUARY / January
+FEBRUARY / February
+MARCH / March
+APRIL / April
+MAY / May
+JUNE / June
+JULY / July
+AUGUST / August
+SEPTEMBER / September
+OCTOBER / October
+NOVEMBER / November
+DECEMBER / December
+",Segment,"The name of the month of the year, e.g., ""December""."
+Quarter,Quarter,quarter,String,True,True,,Segment,"The first day of the quarter, formatted as yyyy-MM-dd. Uses the calendar year for quarters, e.g., the second quarter of 2014 starts on 2014-04-01."
+Slot,Top vs. Other,topVsOther,Slot,True,True,"SearchRhs / Google search: Side
+SearchTop / Google search: Top
+SearchOther / Google search: Other
+Content / Google Display Network
+AfsTop / Search partners: Top
+AfsOther / Search partners: Other
+Mixed / Cross-network
+Unknown / 
+",Segment,The position of the Ad.
+Status,Audience state,audienceState,UserStatus,True,True,"ENABLED / enabled
+REMOVED / removed
+PAUSED / paused
+",Attribute,"The status of the main object in this row. For example, in a Campaign Performance Report this will be the status of each row's Campaign. In an Ad Group Performance Report this will be the status of each row's AdGroup."
+TrackingUrlTemplate,Tracking template,trackingTemplate,String,True,True,,Attribute,Tracking template of the main object of this row.
+UrlCustomParameters,Custom parameter,customParameter,CustomParameters,True,True,,Attribute,"Custom URL parameters of the main object of this row.
+CustomParameters elements are returned in JSON map format."
+UserListName,User list name,userListName,String,True,True,,Attribute,The name of the AdwordsUserList.
+ValuePerAllConversion,Value / all conv.,valueAllConv,Double,True,True,,Metric,"The value, on average, of all conversions. This field is formatted with dot (""."") for decimal separator, precision of two decimal positions and no thousands separator (e.g. 1000000.00).
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+ValuePerConversion,Value / conv.,valueConv,Double,True,True,,Metric,"The total value of your conversions divided by the total number of conversions. This field is formatted with dot (""."") for decimal separator, precision of two decimal positions and no thousands separator (e.g. 1000000.00).
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+VideoQuartile100Rate,Video played to 100%,videoPlayedTo100,Double,True,True,,Metric,"Percentage of impressions where the viewer watched all of your video. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+VideoQuartile25Rate,Video played to 25%,videoPlayedTo25,Double,True,True,,Metric,"Percentage of impressions where the viewer watched 25% of your video. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+VideoQuartile50Rate,Video played to 50%,videoPlayedTo50,Double,True,True,,Metric,"Percentage of impressions where the viewer watched 50% of your video. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+VideoQuartile75Rate,Video played to 75%,videoPlayedTo75,Double,True,True,,Metric,"Percentage of impressions where the viewer watched 75% of your video. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+VideoViewRate,View rate,viewRate,Double,True,True,,Metric,"The number of views your TrueView video ad receives divided by its number of impressions, including thumbnail impressions for TrueView in-display ads. Percentage returned as ""x.xx%"".
+To prevent calculation accuracy issues, fields whose data type is <code>Double</code> can be used <em>only</em> with the following operators in predicates: <code>LESS_THAN</code> or <code>GREATER_THAN</code>. This is also true for <a href='/adwords/api/docs/guides/awql'>AWQL</a>: <em>Only</em> the operators <code>&lt;</code> and <code>&gt;</code> are allowed in the <code>WHERE</code> clause."
+VideoViews,Views,views,Long,True,True,,Metric,The number of times your video ads were viewed.
+ViewThroughConversions,View-through conv.,viewThroughConv,Long,True,True,,Metric,"The total number of view-through conversions. These happen when a customer sees a Display network ad, then later completes a conversion on your site without interacting with (e.g. clicking on) another ad. This field is formatted using US locale, i.e., using comma "","" for thousands and dot ""."" for decimals."
+Week,Week,week,String,True,True,,Segment,"The date for the Monday of the week, formatted as yyyy-MM-dd."
+Year,Year,year,Integer,True,True,,Segment,"The year, formatted as yyyy."
