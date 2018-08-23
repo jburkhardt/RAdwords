@@ -65,9 +65,13 @@ statement <- function(select = c("AccountDescriptiveName",
   if(!missing(where)){
     body <- sprintf("__rdquery=SELECT+%s+FROM+%s+WHERE+%s+DURING+%s,%s&__fmt=%s",selectA,report,where,start,end,fmt)
   }
-  if(report == "LABEL_REPORT"){
+  # reports without statistics and date column
+  if(report %in% c("LABEL_REPORT",
+                   "CAMPAIGN_NEGATIVE_KEYWORDS_PERFORMANCE_REPORT",
+                   "CAMPAIGN_NEGATIVE_LOCATIONS_REPORT",
+                   "CAMPAIGN_NEGATIVE_PLACEMENTS_PERFORMANCE_REPORT")){
     body <- sprintf("__rdquery=SELECT+%s+FROM+%s&__fmt=%s",selectA,report,fmt)
-    print("The Adwords API does not support date ranges in the Label Report. Thus, date ranges will be ignored in the Label Report")
+    print(sprintf("The Adwords API does not support date ranges in the %s. Thus, date ranges will be ignored.", report))
   }
   # attach report Type and compression as attributes of body
   attr(body,"reportType") <- report
