@@ -20,6 +20,8 @@ Depends:
 Imports:
     RCurl,
     rjson
+Suggests:
+    testthat
 License: MIT + file LICENSE
 URL: https://github.com/jburkhardt/RAdwords, https://developers.google.com/adwords, https://developers.google.com/adwords/api/
 BugReports: https://github.com/jburkhardt/RAdwords/issues
