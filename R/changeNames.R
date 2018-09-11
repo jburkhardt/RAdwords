@@ -16,5 +16,8 @@ changeNames <- function(data){
   names(data)[names(data)=="Cost/convertedclick"] <- "CPO"
   names(data)[names(data)=="Value/convertedclick"] <- "ValuePerConversion"
   names(data)[names(data)=="Value/conv."] <- "ValuePerConversion"
+  names(data)[names(data)=="Cost.convertedclick"] <- "CPO"
+  names(data)[names(data)=="Value.convertedclick"] <- "ValuePerConversion"
+  names(data)[names(data)=="Value.conv."] <- "ValuePerConversion"
   return(data)
 }
