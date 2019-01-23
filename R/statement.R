@@ -10,7 +10,7 @@
 #' CONTAINS | CONTAINS_IGNORE_CASE | DOES_NOT_CONTAIN | DOES_NOT_CONTAIN_IGNORE_CASE
 #' @param start Beginning of date range. Format: 2018-01-01
 #' @param end End of date rage. Format: 2018-01-10
-#' @param apiVersion Adwords API Version, supports 201806, 201802, 201710 defaults to 201806.
+#' @param apiVersion Adwords API Version, supports 201809, 201806, 201802 defaults to 201809.
 #' @param compress TRUE / FALSE, Gzipped data download if TRUE
 #' 
 #' @export
@@ -40,7 +40,7 @@ statement <- function(select = c("AccountDescriptiveName",
                       where,
                       start = "2018-01-01",
                       end = "2018-01-10",
-                      apiVersion = "201806",
+                      apiVersion = "201809",
                       compress = TRUE){  
   # Generates and builds the Adwords Query Language Statement for querying the Adwords API.
   #
@@ -53,7 +53,7 @@ statement <- function(select = c("AccountDescriptiveName",
   #                       CONTAINS | CONTAINS_IGNORE_CASE | DOES_NOT_CONTAIN | DOES_NOT_CONTAIN_IGNORE_CASE
   #   start:  Start date
   #   end:    End date
-  #   apiVersion. Adwords API version 201806
+  #   apiVersion. Adwords API version 201809
   #   compress: TRUE / FALSE, Gzipped data download if TRUE
   #
   # Returns:
