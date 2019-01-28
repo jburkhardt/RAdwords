@@ -25,7 +25,7 @@
 #'                   where="Clicks > 100",
 #'                   start="2018-01-20",
 #'                   end="2018-01-21")    
-#' body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr','ClickConversionRate'),
+#' body <- statement(select=c('Clicks','AveragePosition','Cost','Ctr'),
 #'                   report="ACCOUNT_PERFORMANCE_REPORT",
 #'                   start="2018-01-20",
 #'                   end="2018-01-21") 
