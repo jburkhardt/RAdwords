@@ -19,10 +19,11 @@ Depends:
     R (>= 3.0.0)
 Imports:
     RCurl,
-    rjson
+    rjson,
+    purrr
 Suggests:
     testthat
 License: MIT + file LICENSE
 URL: https://github.com/jburkhardt/RAdwords, https://developers.google.com/adwords, https://developers.google.com/adwords/api/
 BugReports: https://github.com/jburkhardt/RAdwords/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
