@@ -72,7 +72,7 @@ getData <- function(clientCustomerId,
         }
         on.exit(unlink(tmp), add = TRUE)
         writeBin(data, con=tmp)
-        data <- paste(readLines(con <- gzfile(tmp)), collapse = "\n")
+        data <- paste(readLines(con <- gzfile(tmp), encoding = "UTF-8"), collapse = "\n")
         close(con)
   } else {
     data <- RCurl::getURL(url, 
