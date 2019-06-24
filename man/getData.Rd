@@ -11,7 +11,7 @@ getData(clientCustomerId, google_auth, statement, apiVersion = "201809",
   includeZeroImpressions = FALSE, verbose = FALSE)
 }
 \arguments{
-\item{clientCustomerId}{Adwords Account Id}
+\item{clientCustomerId}{Adwords Account Id; supports a single account id: "xxx-xxx-xxxx" or a vector of ids from the same Google Ads MCC: c("xxx-xxx-xxxx", "xxx-xxx-xxxx")}
 
 \item{google_auth}{list of authentication}
 
