@@ -4,10 +4,10 @@
 \alias{statement}
 \title{Build Adwords Query Language Statement}
 \usage{
-statement(select = c("AccountDescriptiveName", "AccountId", "Impressions",
-  "Clicks", "Cost", "Date"), report = "ACCOUNT_PERFORMANCE_REPORT", where,
-  start = "2018-01-01", end = "2018-01-10", apiVersion = "201809",
-  compress = TRUE)
+statement(select = c("AccountDescriptiveName", "AccountId",
+  "Impressions", "Clicks", "Cost", "Date"),
+  report = "ACCOUNT_PERFORMANCE_REPORT", where, start = "2018-01-01",
+  end = "2018-01-10", apiVersion = "201809", compress = TRUE)
 }
 \arguments{
 \item{select}{Attributes}

@@ -5,7 +5,7 @@
 #' @description getData posts the Adwords Query Language (awql) Statement which is generated with \code{\link{statement}}.
 #' The data are retrieved from the Adwords API as a dataframe.
 #' 
-#' @param clientCustomerId Adwords Account Id
+#' @param clientCustomerId Adwords Account Id; supports a single account id: "xxx-xxx-xxxx" or a vector of ids from the same Google Ads MCC: c("xxx-xxx-xxxx", "xxx-xxx-xxxx")
 #' @param google_auth list of authentication
 #' @param statement awql statement generated with \code{\link{statement}}.
 #' @param apiVersion supports 201809, 201806, 201802 defaults to 201806.
@@ -14,7 +14,9 @@
 #' @param includeZeroImpressions If TRUE zero impressions will be included. Defaults to FALSE.
 #' @param changeNames If TRUE, the display names of the transformed data are converted into more nicer/practical names. Requires transformation = TRUE
 #' @param verbose Defaults to FALSE. If TRUE, the curl connection output will be printed.
+#' 
 #' @export
+#' 
 #' @return Dataframe with the Adwords Data.
 getData <- function(clientCustomerId,
                     google_auth,
@@ -24,74 +26,18 @@ getData <- function(clientCustomerId,
                     changeNames=TRUE,
                     includeZeroImpressions=FALSE,
                     verbose=FALSE){
-  
-  # for a better overview split google auth
-  access <- google_auth$access
-  credlist <- google_auth$credentials
-  
-  # because access token can expire 
-  # we need to check whether this is the case
-  if(as.numeric(Sys.time())-3600 >= access$timeStamp){
-    access <- refreshToken(google_auth) 
-  } 
-  # getData posts the Adwords Query Language Statement and retrieves the data.
-  #
-  # Args:
-  #   clientCustomerId: Adwords Account Id
-  #   statement: Object generated with statement() including the Api request.
-  #   transformation: If true, transformData() will be applied on data. Else raw csv data will be returned.
-  # 
-  # Returns:
-  #   Dataframe with the Adwords Data.
-  google.auth <- paste(access$token_type, access$access_token)
-  #cert <- system.file("CurlSSL", "ca-bundle.crt", package = "RCurl")#SSL certification Fix for Windows
-  # data <- RCurl::getURL(paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep=""),
-  #                       httpheader = c("Authorization" = google.auth,
-  #                                       "developerToken" = credlist$auth.developerToken,
-  #                                       "clientCustomerId" = clientCustomerId,
-  #                                      "includeZeroImpressions" = includeZeroImpressions),
-  #                postfields=statement,
-  #                verbose = verbose,
-  # #               cainfo = cert, #add SSL certificate
-  #                ssl.verifypeer = TRUE)
-  url <- paste("https://adwords.google.com/api/adwords/reportdownload/v",apiVersion,sep="")
-  header <- c("Authorization" = google.auth,
-              "developerToken" = credlist$auth.developerToken,
-              "clientCustomerId" = clientCustomerId,
-              "includeZeroImpressions" = includeZeroImpressions)
-  if(attributes(statement)$compressed){
-    data <- RCurl::getBinaryURL(url, 
-                                httpheader = header,
-                                postfields=statement,
-                                verbose = verbose,
-    #                           cainfo = cert, #add SSL certificate
-                                ssl.verifypeer = TRUE)
-    tmp <- tempfile()
-    if(.Platform$OS.type == "unix" && file.exists('/dev/shm') && file.info('/dev/shm')$isdir) {
-         tmp <- tempfile(tmpdir = '/dev/shm')
-        }
-        on.exit(unlink(tmp), add = TRUE)
-        writeBin(data, con=tmp)
-        data <- paste(readLines(con <- gzfile(tmp), encoding = "UTF-8"), collapse = "\n")
-        close(con)
-  } else {
-    data <- RCurl::getURL(url, 
-                          httpheader = header,
-                          postfields=statement,
-                          verbose = verbose,
-    #                     cainfo = cert, #add SSL certificate
-                          ssl.verifypeer = TRUE)
-  }
-  # check 
-  valid <- grepl(attr(statement,"reportType"),data)
-  
-  if (transformation & valid){
-    data <- transformData(data,
-                          report = attributes(statement)$reportType,
-                          apiVersion = apiVersion)
-    if (changeNames){
-     data <- changeNames(data)
-    }
-  }
-  data  
+  # applies .getDataHelper for each account and saves data in list object
+  data_list <- lapply(X = clientCustomerId,
+                      FUN = .getDataHelper,
+                      google_auth = google_auth,
+                      statement = statement,
+                      apiVersion = apiVersion,
+                      transformation = transformation,
+                      changeNames = changeNames,
+                      includeZeroImpressions = includeZeroImpressions,
+                      verbose = verbose)
+  # binds list to dataframe
+  data <- do.call(rbind, data_list)
+  # return
+  data
 }

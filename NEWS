@@ -1,3 +1,14 @@
+RAdwords v0.1.19 (Release Date: 2019-06-24)
+-------------------------------------------
+
+FEATURES
+
+* Supports multiple Google Ads accounts from inside one Google Ads MCC in getData(clientCustomerId = c("xxx-xxx-xxxx", "xxx-xxx-xxxx"))
+
+BUG FIXES
+
+* Forces UTF-8 encoding in readLines (getData(compress = T)) related to issues with special characters on Windows machines.
+
 RAdwords v0.1.18 (Release Date: 2019-01-28)
 -------------------------------------------
 
