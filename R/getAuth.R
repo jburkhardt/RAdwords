@@ -31,7 +31,7 @@ getAuth = function() {
       return(print('You have to provide a Client ID from the Adwords API Project for native apps.'))
     }
     else {
-      credentials <- data.frame(c.id)
+      credentials <- data.frame(c.id, stringsAsFactors = F)
       cat('Authentication process needs your Client secret from the Adwords API project.')
       credentials$c.secret <- readline(as.character(cat("\n\nPaste the Client secret here",
                                                         ":=>")))
@@ -49,10 +49,6 @@ getAuth = function() {
                  'redirect_uri=urn:ietf:wg:oauth:2.0:oob&',
                  'access_type=offline&',
                  'approval_prompt=force', sep='', collapse='')
-    #cert <- system.file("CurlSSL", "ca-bundle.crt", package = "RCurl")#SSL Certificate Fix for Windows
-    RCurl::getURL(url,
-                  #cainfo=cert, # Explicitly setting certificate verification for an error in OS X
-                  ssl.verifypeer = TRUE)
     browseURL(url)
     # Manual next-step: input code-parameter to c.token variable and run loadToken()
     cat('Authentication process needs your Client token in order to receive the access token from the API. Copy the Client token from your webbrowser and paste it here.')
