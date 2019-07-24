@@ -28,7 +28,10 @@ doAuth <- function(save = T){
         cat(".google.auth.RData",file=".gitignore",sep="\n")
       } 
       if (file.exists(".gitignore")){
-        cat(".google.auth.RData",file=".gitignore",append=TRUE)
+        gitignore <- readLines(".gitignore")
+        if(!is.element(".google.auth.RData", gitignore)) {
+          cat(".google.auth.RData", file = ".gitignore", append = TRUE, fill = TRUE)
+        }
       }
     }
   }
