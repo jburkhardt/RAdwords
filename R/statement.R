@@ -86,7 +86,9 @@ statement <- function(select = c("AccountDescriptiveName",
   if(report %in% c("LABEL_REPORT",
                    "CAMPAIGN_NEGATIVE_KEYWORDS_PERFORMANCE_REPORT",
                    "CAMPAIGN_NEGATIVE_LOCATIONS_REPORT",
-                   "CAMPAIGN_NEGATIVE_PLACEMENTS_PERFORMANCE_REPORT")){
+                   "CAMPAIGN_NEGATIVE_PLACEMENTS_PERFORMANCE_REPORT",
+                   "CAMPAIGN_SHARED_SET_REPORT",
+                   "CAMPAIGN_CRITERIA_REPORT")){
     body <- sprintf("__rdquery=SELECT+%s+FROM+%s&__fmt=%s",selectA,report,fmt)
     print(sprintf("The Adwords API does not support date ranges in the %s. Thus, date ranges will be ignored.", report))
   }
