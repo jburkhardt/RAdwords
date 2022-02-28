@@ -3,12 +3,20 @@ RAdwords <img src="man/figures/RAdwords.png" align="right" />
 
 [![RAdwords Cran Release](https://www.r-pkg.org/badges/version-last-release/RAdwords)](https://cran.r-project.org/web/packages/RAdwords/index.html) [![RAdwords Cran Downloads](https://cranlogs.r-pkg.org/badges/grand-total/RAdwords)](https://cran.r-project.org/web/packages/RAdwords/index.html)
 
+<a href="https://www.buymeacoffee.com/banboo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 ## Loading Google Adwords data into R
 
 **RAdwords** is a R package with the aim to load Adwords data into R. Therefore the package implements three main features.
 First, the package provides an **authentication process** for **R** with the **Adwords API** via OAUTH2.
 Second, the package offers an interface to apply the [Adwords query language](https://developers.google.com/adwords/api/docs/guides/awql) in R and **query the Adwords API** with [ad-hoc reports](https://developers.google.com/adwords/api/docs/guides/reporting).
 Third, the received **data are transformed into suitable data formats** for further data processing and data analysis.
+
+## :exclamation: :exclamation: Google AdWords API Sunset
+
+> **The Google AdWords API will [sunset on April 27, 2022](https://ads-developers.googleblog.com/2021/04/upgrade-to-google-ads-api-from-adwords.html).  
+> Upgrade to the Google Ads API with our new R package [{r4googleads}](https://github.com/banboo-data/r4googleads).
+> Follow our [RAdwords Migration Guide](https://banboo-data.github.io/r4googleads/articles/radwords-migration-guide.html).**
 
 ## Documentation
 
