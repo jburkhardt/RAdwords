@@ -12,7 +12,7 @@ First, the package provides an **authentication process** for **R** with the **A
 Second, the package offers an interface to apply the [Adwords query language](https://developers.google.com/adwords/api/docs/guides/awql) in R and **query the Adwords API** with [ad-hoc reports](https://developers.google.com/adwords/api/docs/guides/reporting).
 Third, the received **data are transformed into suitable data formats** for further data processing and data analysis.
 
-## :exclamation: :exclamation: Google AdWords API Sunset
+## :exclamation::exclamation: Google AdWords API Sunset :exclamation::exclamation:
 
 > **The Google AdWords API will [sunset on April 27, 2022](https://ads-developers.googleblog.com/2021/04/upgrade-to-google-ads-api-from-adwords.html).  
 > Upgrade to the Google Ads API with our new R package [{r4googleads}](https://github.com/banboo-data/r4googleads).
